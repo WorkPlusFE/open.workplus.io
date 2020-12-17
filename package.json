@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
+    "open:dev": "vuepress dev open",
+    "open:build": "vuepress build open",
+    "fed:dev": "vuepress dev FED",
+    "fed:build": "vuepress build FED"
   },
   "repository": "https://github.com/WorkPlusFE/open.workplus.io.git",
   "author": "hejianxian <531601727@qq.com>",
@@ -13,6 +15,7 @@
     "@w6s/vuepress-code-wrapper": "^1.1.4",
     "babel-runtime": "^6.26.0",
     "element-ui": "^2.14.1",
-    "vuepress": "^1.7.1"
+    "vuepress": "^1.7.1",
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }
 }
