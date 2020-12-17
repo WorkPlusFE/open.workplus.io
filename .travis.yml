@@ -1,0 +1,14 @@
+sudo: false
+cache:
+  directories:
+    - $HOME/.yarn-cache
+language: node_js
+node_js: 10
+os:
+  - linux
+  - osx
+install:
+  - yarn
+script:
+  - yarn open:build
+  - yarn fed:build
