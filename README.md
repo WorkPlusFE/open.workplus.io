@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/WorkPlusFE/open.workplus.io.svg?branch=main)](https://travis-ci.org/WorkPlusFE/open.workplus.io)
 ### 高科开放平台
 
 * `/open`
