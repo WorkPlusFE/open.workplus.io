@@ -1,0 +1,18 @@
+{
+  "name": "open.workplus.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "repository": "https://github.com/WorkPlusFE/open.workplus.io.git",
+  "author": "hejianxian <531601727@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@w6s/vuepress-code-wrapper": "^1.1.4",
+    "babel-runtime": "^6.26.0",
+    "element-ui": "^2.14.1",
+    "vuepress": "^1.7.1"
+  }
+}
