@@ -12,9 +12,14 @@
   "author": "hejianxian <531601727@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.7.1",
+    "@vuepress/plugin-last-updated": "^1.7.1",
+    "@vuepress/plugin-medium-zoom": "^1.7.1",
     "@w6s/vuepress-code-wrapper": "^1.1.4",
     "babel-runtime": "^6.26.0",
+    "core-js": "^2",
     "element-ui": "^2.14.1",
+    "moment": "^2.29.1",
     "vuepress": "^1.7.1",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }
