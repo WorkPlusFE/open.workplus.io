@@ -28,20 +28,29 @@ module.exports = {
   themeConfig: {
     version: pkg.version,
     logo: '/logo.png',
+    searchPlaceholder: '搜索文档',
     nav: [
-      { text: '轻应用', link: '/light-app/' },
+      { text: '快速开始', link: '/light-app/' },
       // { text: '应用主题', link: '/theme/' },
-      { text: 'API 文档', link: '/api/' },
-      { text: 'JS-SDK', link: '/js-sdk/' },
-      // { text: '开发工具', link: '/dev-tools' },
+      { text: '服务端 API', link: '/api/' },
+      { text: '前端 JS-SDK', link: '/js-sdk/' },
+      { text: '开发及调试', link: '/dev-tools/' },
       { text: '常见问题', link: '/qa' },
-      { text: 'Cordova 文档', link: 'https://open.workplus.io/cordova/' },
+      {
+        text: '其他',
+        items: [
+          { text: '官方网站', link: 'https://workplus.io/' },
+          { text: 'WorkPlus Lite', link: 'https://lite.workplus.io/' },
+          { text: 'Cordova 文档', link: 'https://open.workplus.io/cordova/' },
+        ]
+      },
     ],
     sidebar: {
       '/light-app/': getLightAppBar(),
       '/js-sdk/': getJsSdkBar(),
       '/api/': getApiBar(),
       '/theme/': getThemeBar(),
+      '/dev-tools/': getDevToolsBar(),
     },
 
     docsRepo: 'WorkPlusFE/js-sdk',
@@ -138,14 +147,6 @@ function getLightAppBar (group) {
         'notify',
         'workbench',
       ]
-    }, {
-      title: '调试',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        'vconsole',
-        'debug',
-      ]
     }
   ]
 }
@@ -226,3 +227,25 @@ function getThemeBar () {
     },
   ];
 }
+
+function getDevToolsBar() {
+  return [
+    {
+      title: '开发工具',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        '',
+      ]
+    }, 
+    {
+      title: '轻应用调试',
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        'debug',
+        'vconsole',
+      ]
+    }
+  ]
+};
