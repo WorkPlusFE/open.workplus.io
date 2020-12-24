@@ -15,6 +15,8 @@
 
 你可在线下载最新版本的[vConsole](https://github.com/Tencent/vConsole/releases/latest)，或者使用 npm 进行安装。
 
+> CDN: https://cdn.bootcdn.net/ajax/libs/vConsole/3.3.4/vconsole.min.js
+
 ```bash
 npm install vconsole
 ```
