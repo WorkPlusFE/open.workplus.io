@@ -53,12 +53,15 @@ const options = {
 ```js
 const options = {
   ...,
+  body_type: 'ARTICLE', 
   body: {
     ...,
     display_mode: 'FULL_SCREEN'
   }
 };
 ```
+
+> 仅在推送图文消息（即 body_type: 'ARTICLE'）时支持。
 
 **打开会话：**
 
