@@ -26,7 +26,7 @@ module.exports = {
     ['meta', { itemprop: 'name', content: 'WorkPlus - 企业移动办公管理平台,移动门户,移动办公OA,企业办公沟通,智慧办公解决方案专家' }]
   ],
   themeConfig: {
-    version: pkg.version,
+    version: '1.1.0-beta.4',
     logo: '/logo.png',
     searchPlaceholder: '搜索文档',
     nav: [
@@ -37,7 +37,7 @@ module.exports = {
       { text: '开发及调试', link: '/dev-tools/' },
       { text: '常见问题', link: '/qa' },
       {
-        text: '其他',
+        text: '更多',
         items: [
           { text: '官方网站', link: 'https://workplus.io/' },
           { text: 'WorkPlus Lite', link: 'https://lite.workplus.io/' },
@@ -57,7 +57,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'master',
 
-    editLinks: false,
+    editLinks: true,
     editLinkText: '帮助我们完善此文档',
 
     lastUpdated: '上次编辑于', 
