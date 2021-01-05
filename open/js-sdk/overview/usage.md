@@ -59,6 +59,74 @@ w6s.auth.getUserTicket({
 相关资源说明，请查看[此处](/js-sdk/overview/demo.html#资源文件)。
 :::
 
+## 配合 Vue 使用
+
+**NPM 模式：**
+
+基于 @vue/cli 创建的项目，可以通过`Vue.use(w6s, initOptions)`的方式初始化 sdk。
+
+```js
+import Vue from 'vue';
+import App from './App.vue';
+import * as w6s from '@w6s/sdk';
+
+Vue.config.productionTip = false
+
+// 初始化 sdk
+Vue.use(w6s, {
+  debug: true,
+  useHttp: true,
+  cordovajs: {
+    android: 'https://open.workplus.io/static/android.cordova.min.js',
+    iOS: 'https://open.workplus.io/static/ios.cordova.min.js',
+  },
+});
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app');
+
+```
+
+接下来，可以在 Vue 组件内，直接访问`this.$w6s`对象，以调用 sdk 方法。
+
+```js
+export default {
+  mounted() {
+    this.$w6s.header.setTitle('JS-SDK VueJS Demo');
+    this.$w6s.device.getDeviceInfo()
+      .then((res) => {
+        this.deviceInfo = res.result;
+      });
+  },
+}
+```
+
+**Script 标签模式：**
+
+除此之外，sdk 还支持以 script 标签引入的方式，结合 vue 进行使用，如下：
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<!-- 以实际sdk访问地址为准 -->
+<script src="./sdk.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      deviceInfo: '',
+    },
+    mounted() {
+      // 必须主动调用初始化方法
+      this.$w6s.init();
+      this.$w6s.device.getDeviceInfo()
+        .then((res) => {
+          this.deviceInfo = JSON.stringify(res.result, null, 4);
+        });
+    },
+  });
+</script>
+```
 
 ## 配置
 
