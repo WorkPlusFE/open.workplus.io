@@ -6,7 +6,7 @@
 
 **一、基于`npm`包的方式引入：**
 
-使用`npm`或`yarn`安装模块：
+1、使用`npm`或`yarn`安装模块：
 
 ```sh
 npm install @w6s/sdk --save
@@ -15,7 +15,7 @@ npm install @w6s/sdk --save
 yarn add @w6s/sdk
 ```
 
-安装成功后，使用`es module`或`commonjs`模块规范引入，支持全量及按模块引入：
+2、安装成功后，使用`es module`或`commonjs`模块规范引入，支持全量及按模块引入：
 
 ```js
 // 全量引入
@@ -25,7 +25,19 @@ import * as w6s from '@w6s/sdk';
 import auth from '@w6s/sdk/auth';
 ```
 
-所有接口支持`promise`及`callback`的调用方式：
+3、引入模块后，需先调用初始化方法`init`：
+
+```js
+w6s.init({ debug: true });
+```
+
+`init`方法所支持的配置项，请看下方[配置说明](./usage.html#配置)。
+
+::: tip 注意!!
+只有在 init 方法被调用后，sdk的其他方法才可正常执行。
+:::
+
+4、sdk 初始化后，将可调用各模块方法，所有接口均支持`promise`及`callback`的调用方式：
 
 ```js
 // Promise
@@ -50,7 +62,7 @@ w6s.auth.getUserTicket({
 
 </CodeWrapper>
 
-引入后，会在全局暴露`w6s`对象，直接调用相关接口即可。
+引入后，会在全局暴露`w6s`对象，初始化后，将可调用各模块接口。
 
 
 ::: warning 关于 JS-SDK 资源
@@ -61,31 +73,19 @@ w6s.auth.getUserTicket({
 
 ## 配合 Vue 使用
 
-**NPM 模式：**
+**一、`npm` 模式：**
 
 基于 @vue/cli 创建的项目，可以通过`Vue.use(w6s, initOptions)`的方式初始化 sdk。
 
 ```js
 import Vue from 'vue';
-import App from './App.vue';
 import * as w6s from '@w6s/sdk';
 
-Vue.config.productionTip = false
-
-// 初始化 sdk
+// 初始化 sdk，同时会在 Vue 原型链上挂载 $w6s 对象
 Vue.use(w6s, {
   debug: true,
-  useHttp: true,
-  cordovajs: {
-    android: 'https://open.workplus.io/static/android.cordova.min.js',
-    iOS: 'https://open.workplus.io/static/ios.cordova.min.js',
-  },
+  timeout: 10 * 1000,
 });
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app');
-
 ```
 
 接下来，可以在 Vue 组件内，直接访问`this.$w6s`对象，以调用 sdk 方法。
@@ -94,15 +94,11 @@ new Vue({
 export default {
   mounted() {
     this.$w6s.header.setTitle('JS-SDK VueJS Demo');
-    this.$w6s.device.getDeviceInfo()
-      .then((res) => {
-        this.deviceInfo = res.result;
-      });
   },
 }
 ```
 
-**Script 标签模式：**
+**二、`script` 标签模式：**
 
 除此之外，sdk 还支持以 script 标签引入的方式，结合 vue 进行使用，如下：
 
@@ -113,16 +109,11 @@ export default {
 <script>
   const app = new Vue({
     el: '#app',
-    data: {
-      deviceInfo: '',
-    },
     mounted() {
       // 必须主动调用初始化方法
       this.$w6s.init();
       this.$w6s.device.getDeviceInfo()
-        .then((res) => {
-          this.deviceInfo = JSON.stringify(res.result, null, 4);
-        });
+        .then((res) => {});
     },
   });
 </script>
