@@ -45,7 +45,7 @@ module.exports = {
 };
 ```
 
-刚才有说到 Eslint 是一个 JS 代码检查和修复的工具，那么怎么在编写代码是获得它的错误提示和修复的功能呢？已 VSCode 编辑器为例，安装 ESLint 插件并在编辑器设置 settings.json 添加以下配置：
+刚才有说到 Eslint 是一个 JS 代码检查和修复的工具，那么怎么在编写代码是获得它的错误提示和修复的功能呢？以 VSCode 编辑器为例，安装 ESLint 插件并在编辑器设置 settings.json 添加以下配置：
 
 ```json
 "editor.codeActionsOnSave": {
@@ -143,8 +143,7 @@ npm install -D lint-staged
 "lint-staged": {
   "*.{ts,tsx,js,vue}": "eslint --fix",
   "*.{vue,css,scss}": "stylelint --fix",
-  "*.md": "prettier --write",
-  "*.{ts,tsx,js,vue,scss}": "prettier --write"
+  "*.{ts,tsx,js,vue,scss,md}": "prettier --write"
 },
 "husky": {
   "hooks": {
