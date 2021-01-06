@@ -11,6 +11,7 @@
 ## 演示代码
 
 * [直接引入](https://github.com/WorkPlusFE/js-sdk-demo/tree/master/normal)
+* [vue script 标签引入](https://github.com/WorkPlusFE/js-sdk-demo/tree/master/vue-base)
 * [vue 技术栈](https://github.com/WorkPlusFE/js-sdk-demo/tree/master/vue)
 * [react 技术栈](https://github.com/WorkPlusFE/js-sdk-demo/tree/master/react)
 
