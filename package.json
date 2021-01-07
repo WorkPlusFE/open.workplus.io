@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "open:dev": "vuepress dev open",
-    "open:build": "vuepress build open",
+    "open:build": "npm update -S @w6s/sdk && vuepress build open",
     "fed:dev": "vuepress dev FED",
     "fed:build": "vuepress build FED"
   },
@@ -15,10 +15,12 @@
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/plugin-last-updated": "^1.7.1",
     "@vuepress/plugin-medium-zoom": "^1.7.1",
+    "@w6s/sdk": "^1.1.0-beta.8",
     "@w6s/vuepress-code-wrapper": "^1.1.4",
     "babel-runtime": "^6.26.0",
     "core-js": "^2",
     "element-ui": "^2.14.1",
+    "latest-version": "^5.1.0",
     "moment": "^2.29.1",
     "vuepress": "^1.7.1",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"

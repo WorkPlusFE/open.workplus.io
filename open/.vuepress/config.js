@@ -1,4 +1,5 @@
 const fs = require('fs');
+const sdk = require('@w6s/sdk/package.json');
 const pkg = require(process.cwd() + '/package.json');
 const docDir = process.cwd() + '/docs';
 
@@ -25,9 +26,13 @@ module.exports = {
     ['meta', { itemprop: 'name', content: 'WorkPlus - 企业移动办公管理平台,移动门户,移动办公OA,企业办公沟通,智慧办公解决方案专家' }]
   ],
   themeConfig: {
-    version: '1.1.0-beta.6',
+    version: sdk.version,
     logo: '/logo.png',
     searchPlaceholder: '搜索文档',
+    // algolia: {
+    //   apiKey: '',
+    //   indexName: ''
+    // },
     nav: [
       { text: '快速开始', link: '/light-app/' },
       // { text: '应用主题', link: '/theme/' },
