@@ -29,10 +29,10 @@ module.exports = {
     version: sdk.version,
     logo: '/logo.png',
     searchPlaceholder: '搜索文档',
-    // algolia: {
-    //   apiKey: '',
-    //   indexName: ''
-    // },
+    algolia: {
+      apiKey: '1e1e188d5cc1f18ca6648322f3716333',
+      indexName: 'workplus'
+    },
     nav: [
       { text: '快速开始', link: '/light-app/' },
       // { text: '应用主题', link: '/theme/' },
