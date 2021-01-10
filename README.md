@@ -1,8 +1,11 @@
-## 高科开放平台
+![WorkPlus 开放平台](https://open.workplus.io/v4/home.png)
+
+# 高科开放平台
 
 WorkPlus 开放平台，助力业务系统快速移动化。
 
 [https://open.workplus.io/v4/](https://open.workplus.io/v4/) 
+
 [![Build Status](https://travis-ci.org/WorkPlusFE/open.workplus.io.svg?branch=main)](https://travis-ci.org/WorkPlusFE/open.workplus.io)
 
 * **多种对接方式**
