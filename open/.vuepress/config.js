@@ -61,7 +61,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'master',
 
-    editLinks: true,
+    editLinks: false,
     editLinkText: '帮助我们完善此文档',
 
     lastUpdated: '上次编辑于', 
