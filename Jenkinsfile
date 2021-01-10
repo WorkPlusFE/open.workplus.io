@@ -25,27 +25,15 @@ pipeline {
             }
         }
 
-        stage("Build:open") {
+        stage("Build") {
             steps {
-                sh 'npm run open:build'
+                sh 'npm run build'
             }
         }
 
-        stage("Build:FED") {
-            steps {
-                sh 'npm run fed:build'
-            }
-        }
-
-        stage("Deploy:open") {
+        stage("Deploy") {
             steps {
                 sh 'echo "Deploy:open"'
-            }
-        }
-
-        stage("Deploy:FED") {
-            steps {
-                sh 'echo "Deploy:FED"'
             }
         }
     }

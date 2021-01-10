@@ -10,5 +10,4 @@ os:
 install:
   - yarn
 script:
-  - yarn open:build
-  - yarn fed:build
+  - yarn build
