@@ -9,7 +9,6 @@ branches:
     - main
 os:
   - linux
-  - osx
 install:
   - yarn
 script:
