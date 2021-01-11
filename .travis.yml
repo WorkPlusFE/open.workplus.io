@@ -1,9 +1,12 @@
 sudo: false
 cache:
   directories:
-    - $HOME/.yarn-cache
+    - "$HOME/.yarn-cache"
 language: node_js
 node_js: 10
+branches:
+  only:
+    - main
 os:
   - linux
   - osx
@@ -11,3 +14,11 @@ install:
   - yarn
 script:
   - yarn build
+before_install:
+  - openssl aes-256-cbc -K $encrypted_435b8ad2da05_key -iv $encrypted_435b8ad2da05_iv
+    -in id_rsa.enc -out ~/.ssh/id_rsa -d
+addons:
+  ssh_known_hosts: 106.13.212.147
+
+after_success:
+  - rsync --delete -avz -e ssh ./docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/temp/
