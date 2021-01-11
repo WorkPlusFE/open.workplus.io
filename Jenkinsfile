@@ -3,12 +3,7 @@ def repoName = "open.workplus.io"
 def version = env.BRANCH_NAME
 
 pipeline {
-    agent {
-        docker {
-            image 'node:10.23.0-alpine3.10' 
-            args '-e HOME=/tmp -e NPM_CONFIG_PREFIX=/tmp/.npm'
-        }
-    }
+    agent any
     environment {
         CI = 'true'
     }
@@ -19,21 +14,22 @@ pipeline {
             }
         }
 
-        stage("Bootstrap") {
+        stage("Bootstrap && Build") {
+            agent {
+                docker {
+                    image 'node:10.23.0-alpine3.10' 
+                    args '-e HOME=/tmp -e NPM_CONFIG_PREFIX=/tmp/.npm'
+                }
+            }
             steps {
                 sh 'npm install'
-            }
-        }
-
-        stage("Build") {
-            steps {
                 sh 'npm run build'
             }
         }
 
         stage("Deploy") {
             steps {
-                sh 'echo "Deploy:open"'
+                sh 'rsync --delete -avz -e ssh ./docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/temp/'
             }
         }
     }
