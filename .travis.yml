@@ -13,12 +13,3 @@ install:
   - yarn
 script:
   - yarn build
-before_install:
-  - openssl aes-256-cbc -K $encrypted_435b8ad2da05_key -iv $encrypted_435b8ad2da05_iv
-    -in id_rsa.enc -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
-  - eval $(ssh-agent)
-addons:
-  ssh_known_hosts: 106.13.212.147
-after_success:
-  - scp -o stricthostkeychecking=no -r ./docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/temp/
