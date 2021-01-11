@@ -1,22 +1,22 @@
 sudo: false
 cache:
   directories:
-    - "$HOME/.yarn-cache"
+  - "$HOME/.yarn-cache"
 language: node_js
 node_js: 10
 branches:
   only:
-    - main
+  - main
 os:
-  - linux
+- linux
 install:
-  - yarn
+- yarn
 script:
-  - yarn build
+- yarn build
 before_install:
-  - openssl aes-256-cbc -K $encrypted_435b8ad2da05_key -iv $encrypted_435b8ad2da05_iv
-    -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_435b8ad2da05_key -iv $encrypted_435b8ad2da05_iv
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
 addons:
   ssh_known_hosts: 106.13.212.147
 after_success:
-  - scp -o stricthostkeychecking=no -r ./docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/temp/
+- scp -o stricthostkeychecking=no -r ./docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/temp/
