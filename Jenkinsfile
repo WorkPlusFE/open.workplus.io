@@ -3,12 +3,7 @@ def repoName = "open.workplus.io"
 def version = env.BRANCH_NAME
 
 pipeline {
-    agent {
-        docker {
-            image 'node:10.23.0-alpine3.10' 
-            args '-e HOME=/tmp -e NPM_CONFIG_PREFIX=/tmp/.npm'
-        }
-    }
+    agent any
     environment {
         CI = 'true'
     }
