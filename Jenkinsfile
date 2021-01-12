@@ -29,7 +29,7 @@ pipeline {
 
         stage("Deploy") {
             steps {
-                sh 'rsync --delete -avz -e ssh ./docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/temp/'
+                sh 'rsync --delete -avz -e ssh ./docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/temp/v4/'
             }
         }
     }
