@@ -57,7 +57,7 @@ module.exports = {
       '/dev-tools/': getDevToolsBar(),
     },
 
-    docsRepo: 'WorkPlusFE/js-sdk',
+    docsRepo: 'WorkPlusFE/open.workplus.io',
     docsDir: 'docs',
     docsBranch: 'master',
 
