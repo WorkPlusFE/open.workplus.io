@@ -81,7 +81,7 @@ http://app-test.link?ticket={{用户_Ticket}}&username={{用户名}}&user_id={{�
 
 ### 应用设置
 
-`微信小程序开发工具`支持切换主题和语言，同时提供一些使用说明和文档入口，后续会扩展更多的设置功能。
+`高科前端开发工具`支持切换主题和语言，同时提供一些使用说明和文档入口，后续会扩展更多的设置功能。
 
 <p style="text-align: left">
   <img :src="$withBase('/devtools/devtools-setting.png')" alt="5debug-qrcode" width="220">
@@ -89,11 +89,24 @@ http://app-test.link?ticket={{用户_Ticket}}&username={{用户名}}&user_id={{�
 
 ## 方法列表
 
-整理中，敬请期待！
+在`H5模拟器`的打开方式下，通过接入 JS-SDK，可以使用以下方法：
 
-## 常见问题
+| 功能模块 |  支持方法 |
+| - | - |
+| 认证 | [获取 Ticket](/js-sdk/auth.html#获取临时-ticket) |
+| 用户 | [获取登录用户详情](/js-sdk/user.html#获取登录用户详情) <br/> [获取用户的雇员信息](/js-sdk/user.html#获取用户的雇员信息) |
+| 联系人 | [单选联系人](/js-sdk/contact.html#单选联系人) <br/> [多选联系人](/js-sdk/contact.html#多选联系人) <br/> [多选当前组织的雇员列表](/js-sdk/contact.html#多选当前组织的雇员列表) <br/>[打开通用选择人员界面](/js-sdk/contact.html#打开通用选择人员界面)  | 
+| 图片 | [选择照片](/js-sdk/image.html#选择照片) <br/> [图片预览](/js-sdk/image.html#图片预览) | 
+| 网络 | [获取当前连接 Wifi 信息](/js-sdk/network.html#当前连接wifi信息) |
+| 地理位置 | [获取定位信息](/js-sdk/location.html#获取定位信息) |
+| 设备 | [获取 IP 地址](/js-sdk/device.html#获取-ip-地址) </br> [获取设备信息](/js-sdk/device.html#获取设备信息) <br/> [获取 App 信息](/js-sdk/device.html#获取-app-信息)|
+| | |
 
-整理中，敬请期待！
-## 下载
+## 工具下载
 
-整理中，敬请期待！
+最新版本`v1.0.0-beta.1`，请点击下方链接进行下载：
+
+* [下载 MacOS 版本](https://open.workplus.io/static/dev-tools/mac/)
+* [下载 Windows 版本](https://open.workplus.io/static/dev-tools/win/)
+
+[查看更新日志](https://github.com/WorkPlusFE/dev-tools/blob/master/CHANGLOG.md)
