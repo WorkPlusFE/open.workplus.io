@@ -102,6 +102,10 @@ http://app-test.link?ticket={{用户_Ticket}}&username={{用户名}}&user_id={{�
 | 设备 | [获取 IP 地址](/js-sdk/device.html#获取-ip-地址) </br> [获取设备信息](/js-sdk/device.html#获取设备信息) <br/> [获取 App 信息](/js-sdk/device.html#获取-app-信息)|
 | | |
 
+::: tip 方法未被支持怎么办？
+工具仅对常用方法进行模拟支持，未被支持的方法，如果被调用，将不会得到任何相应或异常。若有需要，可以通过 JS-SDK 的接口模拟功能进行使用。
+:::
+
 ## 工具下载
 
 最新版本`v1.0.0-beta.1`，请点击下方链接进行下载：
