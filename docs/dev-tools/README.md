@@ -108,9 +108,11 @@ http://app-test.link?ticket={{用户_Ticket}}&username={{用户名}}&user_id={{�
 
 ## 工具下载
 
-最新版本`v1.0.0-beta.1`，请点击下方链接进行下载：
+整理中，敬请期待！
+
+<!-- 最新版本`v1.0.0-beta.1`，请点击下方链接进行下载：
 
 * [下载 MacOS 版本](https://open.workplus.io/static/dev-tools/mac/)
 * [下载 Windows 版本](https://open.workplus.io/static/dev-tools/win/)
 
-[查看更新日志](https://github.com/WorkPlusFE/dev-tools/blob/master/CHANGELOG.md)
+[查看更新日志](https://github.com/WorkPlusFE/dev-tools/blob/master/CHANGELOG.md) -->
