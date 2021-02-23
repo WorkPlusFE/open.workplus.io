@@ -35,9 +35,9 @@ module.exports = {
     },
     nav: [
       { text: '快速开始', link: '/light-app/' },
-      // { text: '应用主题', link: '/theme/' },
       { text: '服务端 API', link: '/api/' },
       { text: '前端 JS-SDK', link: '/js-sdk/' },
+      { text: '设计规范', link: '/design-specification/' },
       { text: '开发及调试', link: '/dev-tools/' },
       { text: '常见问题', link: '/qa' },
       {
@@ -53,11 +53,11 @@ module.exports = {
       '/light-app/': getLightAppBar(),
       '/js-sdk/': getJsSdkBar(),
       '/api/': getApiBar(),
-      '/theme/': getThemeBar(),
+      '/design-specification/': getThemeBar(),
       '/dev-tools/': getDevToolsBar(),
     },
 
-    docsRepo: 'WorkPlusFE/js-sdk',
+    docsRepo: 'WorkPlusFE/open.workplus.io',
     docsDir: 'docs',
     docsBranch: 'master',
 
@@ -215,20 +215,17 @@ function getApiBar () {
 function getThemeBar () {
   return [
     {
-      title: '应用主题',
+      title: '设计规范',
       collapsable: false,
       sidebarDepth: 2,
+      
       children: [
         '',
+        'visual-specification',
+        'download',
+        'case',
       ]
-    }, {
-      title: '使用主题',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        'usage'
-      ]
-    },
+    }
   ];
 }
 
