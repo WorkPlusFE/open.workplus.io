@@ -82,6 +82,13 @@ module.exports = {
         }
       }
     ],
+    ['vuepress-plugin-container', {
+      type: 'vue-code',
+      before: '<pre class="vue-container"><code>',
+      after: '</code></pre>'
+    }],
+
+
   ]
 };
 
@@ -143,7 +150,7 @@ function getLightAppBar (group) {
     }, {
       title: '平台接入',
       collapsable: false,
-      sidebarDepth: 2,
+      sidebarDepth: 3,
       children: [
         'noun',
         'sso',
