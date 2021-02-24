@@ -150,6 +150,7 @@ function getLightAppBar (group) {
         'message',
         'notify',
         'workbench',
+        'theme'
       ]
     }
   ]
