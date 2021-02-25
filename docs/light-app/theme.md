@@ -322,3 +322,30 @@ css 变量对应的值具体以当前使用主题为准，以上仅提供参考�
     <div style="line-height:30px; padding-left:10px">  --main-background: #000000</div>
   </div>
 </div>
+
+
+
+<br/><br/>
+对于不需要暗黑模式的轻应用，可以增加`dark=disabled`来禁止掉，如下：
+
+<CodeWrapper :qrcode="false">
+
+&lt;link rel="stylesheet" href="reslocal://api.workplus.io/w6s_skin_theme.css?dark=disabled"&gt;
+
+</CodeWrapper>
+
+
+支持参数:
+
+| 参数 | 说明| 备注|
+| - | - | - |
+| dark=auto  | 自动匹配上当前使用的皮肤, 也即如果当前用着暗黑模式, 那就直接返回暗黑对应的w6s_skin_theme.css, 否则, 就正常的 w6s_skin_theme.css | 默认为auto |
+| dark=disabled  | 禁止使用暗黑模式, 直接返回 w6s_skin_theme.css | |
+| dark=forced表示  | 强制使用暗黑模式, 直接返回 w6s_skin_dark_theme.css |  |
+
+
+### 更多支持
+
+更多特性正在开发中，敬请期待~ 如支持通过`@media (prefers-color-scheme: dark) `语法支持暗黑，让轻应用哪怕脱离了WorkPlus 平台，也能继续支持暗黑模式。
+
+
