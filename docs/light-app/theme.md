@@ -1,4 +1,6 @@
-# 主题
+# 应用主题
+
+## 概要
 
 WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技术方案，支撑WorkPlus 应用在不同企业文化场景，提供Android、iOS、PC、html 全链路生态支持，轻松构建企业专属的应用程序。
 
@@ -7,7 +9,7 @@ WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技�
 :::
 
 
-## Android / iOS
+## 创建主题
 
 移动端通过`主题包`的形似，来构建或者变换主题，主题包包含色值、字体、icon等展示元素信息。存在以下概念：
 
@@ -19,7 +21,7 @@ WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技�
 
 通过远程服务器动态下发的`主题包`，具有以及范围以及时效性。
 
-### 创建主题
+### 管理后台操作
 
 登录管理后台，在`客户端管理`点击`主题换肤`，打开页面后点击`添加主题`即可进入创建主题界面。
 
@@ -186,3 +188,137 @@ WorkPlus 在UI 一致性建设的过程中，已经陆续完成了200+个iconfon
 <p style="text-align: left">
   <img :src="$withBase('/theme/display-iconfont.jpg')" alt="display-iconfont" width="80%">
 </p>
+
+
+## 使用主题
+
+### 快速开始
+
+WorkPlus 支持简单快捷的方式，让html 前端快速对接当前WorkPlus正在使用的主题，仅需要应用主题对应的css文件即可，css文件里包含了`字体`，`色值`，`iconfont`等主题信息，当前支持`本地`以及`在线`的引入方式。
+
+`本地`引入规则如下👇
+
+<CodeWrapper :qrcode="false">
+
+&lt;link rel="stylesheet" href="reslocal://api.workplus.io/w6s_skin_theme.css"&gt;
+
+</CodeWrapper>
+
+
+WorkPlus 移动端识别到规则后，会对应返回当前主题包内的css资源给到前端，无需任何网络交互。
+
+
+::: warning 注意
+目前`本地`方式在http部署的轻应用使用时，根据部署情况，在iOS 里可能会存在跨域问题，需要开发者关注处理，离线应用就不存在该问题。
+<br/>
+`在线`方式待后续提供，暂时需要开发者自行维护。
+:::
+
+
+### w6s\_skin\_theme.css
+
+引入后，前端css包含如下内容👇
+
+#### 色值
+
+```css
+:root {
+  --primary: #333333;
+  --secondary: #007AFF;
+  --accent0: #FF3B30;
+  --accent1: #333333;
+  --primary-text: #333333;
+  --secondary-text: #666666;
+  --tertiary-text: #333333;
+  --common-text0: #FFFFFF;
+  --main-background: #F5F5F5;
+  --title-background: #FFFFFF;
+  --tabbar-background: #FFFFFF;
+  --nav-shadow: #DDDDDD;
+  --surface-background0-normal: #FFFFFF;
+  --surface-background0-pressed: #E4E5E6;
+  --surface-background1-normal: #FFFFFF;
+  --surface-background1-pressed: #E4E5E6;
+  --surface-background2-normal: #F5F5F5;
+  --common-background0: #FFFFFF;
+  --common-background1: #F5F5F5;
+  --common-divider0: #0C000000;
+  --icf-primary: #333333;
+  --button-background: #007AFF;
+  --popup-background: #FFFFFF;
+  --toast-background: #333333;
+  --tabbar-item-unselected: #333333;
+  --tabbar-item-selected: #007AFF;
+  --tabbar-item-text-unselected: #333333;
+  --tabbar-item-text-selected: #F12525;
+  --search-background: #F5F5F5;
+  --page-control-selected: #007AFF;
+  --page-control-unselected: #F5F5F5;
+}
+```
+
+css 变量对应的值具体以当前使用主题为准，以上仅提供参考，具体定义严格遵守[设计规范-视觉规范](/design-specification/visual-specification#颜色)。
+
+
+
+#### 字体
+
+``` css
+@font-face {
+  font-family: "hcbm";
+  src: url('data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAG7UABIAAAAA2Aw...QwAAAA==') format('woff2');
+  src: url('hcbm_Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+```
+
+
+#### iconfont
+``` css 
+.skin_icf {
+  font-family: "skin_icf" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_skin_icf_friendship_friend:before {
+  content: "\e6c9";
+}
+
+.icon_skin_icf_friendship_star:before {
+  content: "\e6ca";
+}
+
+.icon_skin_icf_session_remind:before {
+  content: "\e6c8";
+}
+
+.icon_skin_icf_common_mac:before {
+  content: "\e6bf";
+}
+
+...
+
+
+```
+
+
+
+
+### 暗黑模式
+
+前端引入css 后，相关色值css 变量就自然支持暗黑模式了。WorkPlus 会在进入暗黑模式后，对应把色值变量无感知修改掉。
+例如: 
+<div style="display: flex">
+  <div style="display: flex; ">
+      <div style="background:#F5F5F5;width: 30px; height: 30px; "></div>
+      <div style="line-height:30px; padding-left:10px">  --main-background: #F5F5F5 &nbsp;&nbsp;&nbsp; 替换为👉 &nbsp;&nbsp;&nbsp;</div>
+  </div>
+  
+  <div style="display: flex; ">
+    <div style="background:#000000;width: 30px; height: 30px;"></div>
+    <div style="line-height:30px; padding-left:10px">  --main-background: #000000</div>
+  </div>
+</div>
