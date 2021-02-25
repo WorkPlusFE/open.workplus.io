@@ -200,7 +200,7 @@ WorkPlus 支持简单快捷的方式，让html 前端快速对接当前WorkPlus�
 
 <CodeWrapper :qrcode="false">
 
-&lt;link rel="stylesheet" href="reslocal://api.workplus.io/w6s_skin_theme.css"&gt;
+&lt;link rel="stylesheet" href="reslocal://open.workplus.io/w6s_skin_theme.css"&gt;
 
 </CodeWrapper>
 
@@ -330,7 +330,7 @@ css 变量对应的值具体以当前使用主题为准，以上仅提供参考�
 
 <CodeWrapper :qrcode="false">
 
-&lt;link rel="stylesheet" href="reslocal://api.workplus.io/w6s_skin_theme.css?dark=disabled"&gt;
+&lt;link rel="stylesheet" href="reslocal://open.workplus.io/w6s_skin_theme.css?dark=disabled"&gt;
 
 </CodeWrapper>
 
