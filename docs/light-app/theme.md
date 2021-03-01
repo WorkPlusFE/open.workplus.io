@@ -1,17 +1,21 @@
-# 应用主题 <Badge type="success" text="v4.10.0+" />
+# 应用主题
+
+::: warning 提示 
+该功能需要升级 WorkPlus 到`v4.10.0`或更高版本。
+:::
 
 ## 概要
 
-WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技术方案，支撑WorkPlus 应用在不同企业文化场景，提供Android、iOS、PC、html 全链路生态支持，轻松构建企业专属的应用程序。
+WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技术方案，支撑 WorkPlus 应用在不同企业文化场景，提供Android、iOS、PC、HTML 全链路生态支持，轻松构建企业专属的应用程序。
 
-::: tip
+::: tip 提示
 更进一步，我们支持基于主题的千变万化、节日主题、暗黑模式、千人千面、灰度发布等特性。
 :::
 
 
 ## 创建主题
 
-移动端通过`主题包`的形似，来构建或者变换主题，主题包包含色值、字体、icon等展示元素信息。存在以下概念：
+移动端通过`主题包`的形似，来构建或者变换主题，主题包包含色值、字体、icon 等展示元素信息。存在以下概念：
 
 - **默认主题**
 
@@ -19,15 +23,17 @@ WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技�
 
 - **远程主题**
 
-通过远程服务器动态下发的`主题包`，具有以及范围以及时效性。
+通过远程服务器动态下发的`主题包`，具有范围以及时效性。
 
 ### 管理后台操作
 
-登录管理后台，在`客户端管理`点击`主题换肤`，打开页面后点击`添加主题`即可进入创建主题界面。
+登录管理后台，在`客户端管理`点击`主题换肤`：
 
 <p style="text-align: left">
   <img :src="$withBase('/theme/list-theme.png')" alt="list-theme" width="80%">
 </p>
+
+打开页面后点击`添加主题`，即可进入创建主题界面：
 
 <p style="text-align: left">
   <img :src="$withBase('/theme/new-theme.png')" alt="new-theme" width="80%">
@@ -37,7 +43,7 @@ WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技�
 
 ### 主题包结构
 
-主题包以`.zip`压缩包的形式存在，具体结构以及定义如下👇
+主题包以`.zip`压缩包的形式存在，具体结构以及定义如下：
 
 ::: vue-code
 
@@ -58,27 +64,57 @@ theme
 
 :::
 
-- `img`: 用以存放主题的图片资源，命名格式为->  w6s_skin_img_icon_*.png/jpg
-- `theme.json`: 主题包配置入口文件，用以定义主题名，主题版本，主题包含的色彩参数，字体，iconfont资源映射，详细介绍请查看[theme.json定义](#theme-json)
-- `dark_theme.json`: 主题包暗黑模式的配置文件
-- `font_*_regular.ttf`: 字体文件，常规类型
-- `font_*_bold.ttf`: 字体文件，粗体类型
-- `native_iconfont.ttf`: 原生使用的iconfont 文件
-- `native_iconfont.json`: 原生使用的iconfont 定义json，包括font_class、unicode等
-- `web_iconfont.ttf`: html web使用的iconfont 文件
-- `web_iconfont.json`: html web使用的iconfont 定义json，包括font_class、unicode等
-- `w6s_skin_theme.css`: h5 本地对接引入的css文件
-- `w6s_skin_dark_theme.css`: *w6s_skin_theme.css* 暗黑模式对应的css文件
-- `w6s_skin_common_theme.css`: *w6s_skin_theme.css*, *w6s_skin_dark_theme.css* 公共依赖的css文件
+- `img` 
 
-::: tip
-以上涉及iconfont的数据，可通过工具或者[www.iconfont.cn](https://www.iconfont.cn/) 生成
+用以存放主题的图片资源，命名格式为：w6s_skin_img_icon_*.png/jpg；
+
+- `theme.json` 
+
+主题包配置入口文件，用以定义主题名、版本、包含的色彩参数、字体及 iconfont 资源映射，详细介绍请查看 [theme.json 定义](#theme-json)；
+
+- `dark_theme.json` 
+
+主题包暗黑模式的配置文件；
+
+- `font_*_regular.ttf` 
+
+字体文件，常规类型；
+
+- `font_*_bold.ttf` 
+
+字体文件，粗体类型；
+
+- `native_iconfont.ttf` 
+
+原生使用的 iconfont 文件；
+
+- `native_iconfont.json` 
+
+原生使用的 iconfont 定义 json，包括 font_class、unicode 等；
+
+- `web_iconfont.ttf` 
+
+web 端使用的 iconfont 文件；
+
+- `web_iconfont.json`
+
+web 端使用的 iconfont 定义 json，包括 font_class、unicode 等；
+
+- `w6s_skin_theme.css` 
+
+H5 本地对接引入的 CSS 文件；
+
+- `w6s_skin_dark_theme.css` 
+
+**w6s_skin_theme.css** 暗黑模式对应的 CSS 文件；
+
+- `w6s_skin_common_theme.css` 
+
+**w6s_skin_theme.css**，**w6s_skin_dark_theme.css** 公共依赖的 CSS 文件。
+
+::: tip 提示
+以上涉及 iconfont 的数据，可通过工具或者[www.iconfont.cn](https://www.iconfont.cn/) 生成。
 :::
-
-
-
-
-
 
 
 ### theme.json
@@ -150,15 +186,12 @@ theme
   "version": 123,  //主题版本号
   "timestamp": -1 
 }
-
-
 ```
-
 
 详细说明：
 
 | 参数 | 说明| 备注 |
-| - | - |  - |
+| - | ---- |  -- |
 | color  | 按照[设计规范](/design-specification)色彩约定 | 必填 |
 | font  | 全局字体规范，覆盖全局文本控件 |  选填 |
 | iconfont  | iconfont文件映射, 我们推荐主题包按约定引入iconfont，以达到更好的展示效果跟灵活变换，具体参考[详细说明]| 选填 | 
@@ -166,7 +199,7 @@ theme
 | theme  | 主题包名称，例如: `新春版` | 必填 |
 | version  | 主题包版本号，每次更新时必须+1，否则会无法生效 | 必填 |
 
-::: tip
+::: tip 提示
 iconfont 以及暗黑模式开启后，对应资源不存在时都会有对应的降级处理，也即按照优先级依次寻找对应需要的资源文件，优先级顺序如下：
 
 `远程定制主题包 > 远程默认主题包 -> 构建时默认主题包`
@@ -175,28 +208,28 @@ iconfont 以及暗黑模式开启后，对应资源不存在时都会有对应�
 :::
 
 
-
-
 ### iconfont
 
-iconfont可译为图标字体，顾名思义就是用字体文件取代图片文件来展示图标、特殊字体等元素的一种方法。简单来说，iconfont就是把多个图标文件打包为ttf字体文件，注册到系统中，app 可以像使用字体一样使用图标。其原理可以简单理解为通过ttf 字体文件维护一个unicode 码与图形的映射关系。当使用iconfont为项目助力的时候，配置多个图标不再需要去下载数个png 文件，仅需要维护一套ttf 字体文件即可。iconfont 不仅具有矢量性、可自由变化大小的特点，而且支持任意改变颜色。从项目角度来看，由于无需针对不同手机分辨率内置多张图片，可以一定程度减小包体积，而且方便UI同学对图标进行统一管理，为无用icon 和相似icon 检测做基础。
+iconfont 可译为图标字体，顾名思义就是用字体文件取代图片文件来展示图标、特殊字体等元素的一种方法。简单来说，iconfont 就是把多个图标文件打包为 ttf 字体文件，注册到系统中，app 可以像使用字体一样使用图标。
 
-WorkPlus 在UI 一致性建设的过程中，已经陆续完成了200+个iconfont的替换，去除了许多冗余的icon。通过主题的介入，基于WorkPlus 平台建设的html 应用，我们也支持使用同一套iconfont，达到全面UI 一致的目标。
+其原理可以简单理解为通过 ttf 字体文件维护一个 unicode 码与图形的映射关系。当使用 iconfont 为项目助力的时候，配置多个图标不再需要去下载数个 png 文件，仅需要维护一套 ttf 字体文件即可。iconfont 不仅具有矢量性、可自由变化大小的特点，而且支持任意改变颜色。从项目角度来看，由于无需针对不同手机分辨率内置多张图片，可以一定程度减小包体积，而且方便UI同学对图标进行统一管理，为无用 icon 和相似 icon 检测做基础。
 
-以下为我们通过[iconfont.cn](https://www.iconfont.cn/)维护管理的部分icon👇
+WorkPlus 在 UI 一致性建设的过程中，已经陆续完成了 200+ 个 iconfont 的替换，去除了许多冗余的 icon。通过主题的介入，基于WorkPlus 平台建设的轻应用，我们也支持使用同一套 iconfont，达到全面 UI 一致的目标。
+
+我们通过 [iconfont.cn](https://www.iconfont.cn/) 维护管理的部分 icon，如下：
 
 <p style="text-align: left">
   <img :src="$withBase('/theme/display-iconfont.jpg')" alt="display-iconfont" width="80%">
 </p>
 
 
-## 使用主题 <Badge type="success" text="v4.10.0+" />
+## 使用主题
 
 ### 快速开始
 
-WorkPlus 支持简单快捷的方式，让html 前端快速对接当前WorkPlus正在使用的主题，仅需要应用主题对应的css文件即可，css文件里包含了`字体`，`色值`，`iconfont`等主题信息，当前支持`本地`以及`在线`的引入方式。
+WorkPlus 支持简单快捷的方式，让轻应用前端快速对接当前 WorkPlus 正在使用的主题，仅需要应用主题对应的 CSS 文件即可，CSS 文件里包含了`字体`、`色值`、`iconfont`等主题信息，当前支持`本地`以及`在线`的引入方式。
 
-`本地`引入规则如下👇
+`本地`引入规则如下：
 
 <CodeWrapper :qrcode="false">
 
@@ -204,9 +237,7 @@ WorkPlus 支持简单快捷的方式，让html 前端快速对接当前WorkPlus�
 
 </CodeWrapper>
 
-
-WorkPlus 移动端识别到规则后，会对应返回当前主题包内的css资源给到前端，无需任何网络交互。
-
+WorkPlus 移动端识别到规则后，会对应返回当前主题包内的 CSS 资源给到前端，无需任何网络交互。
 
 ::: warning 注意
 目前`本地`方式在http部署的轻应用使用时，根据部署情况，在iOS 里可能会存在跨域问题，需要开发者关注处理，离线应用就不存在该问题。
@@ -257,7 +288,7 @@ WorkPlus 移动端识别到规则后，会对应返回当前主题包内的css�
 }
 ```
 
-css 变量对应的值具体以当前使用主题为准，以上仅提供参考，具体定义严格遵守[设计规范-视觉规范](/design-specification/visual-specification#颜色)。
+CSS 变量对应的值具体以当前使用主题为准，以上仅提供参考，具体定义严格遵守 [设计规范-视觉规范](/design-specification/visual-specification#颜色)。
 
 
 
@@ -309,12 +340,13 @@ css 变量对应的值具体以当前使用主题为准，以上仅提供参考�
 
 ### 暗黑模式
 
-前端引入css 后，相关色值css 变量就自然支持暗黑模式了。WorkPlus 会在进入暗黑模式后，对应把色值变量无感知修改掉。
+前端引入 CSS 后，相关色值 CSS 变量就自然支持暗黑模式了。WorkPlus 会在进入暗黑模式后，对应把色值变量无感知修改掉。
+
 例如: 
 <div style="display: flex">
   <div style="display: flex; ">
       <div style="background:#F5F5F5;width: 30px; height: 30px; "></div>
-      <div style="line-height:30px; padding-left:10px">  --main-background: #F5F5F5 &nbsp;&nbsp;&nbsp; 替换为👉 &nbsp;&nbsp;&nbsp;</div>
+      <div style="line-height:30px; padding-left:10px">  --main-background: #F5F5F5 &nbsp;&nbsp;&nbsp; 替换为 &nbsp;&nbsp;&nbsp;</div>
   </div>
   
   <div style="display: flex; ">
@@ -346,7 +378,7 @@ css 变量对应的值具体以当前使用主题为准，以上仅提供参考�
 
 ### 更多支持
 
-更多特性正在开发中，敬请期待~ 
+更多特性正在开发中，敬请期待！
 
 <!-- 如支持通过`@media (prefers-color-scheme: dark) `语法支持暗黑，让轻应用哪怕脱离了WorkPlus 平台，也能继续支持暗黑模式。 -->
 
