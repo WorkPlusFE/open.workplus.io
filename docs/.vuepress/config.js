@@ -154,7 +154,7 @@ function getLightAppBar (group) {
       children: [
         'noun',
         'sso',
-        'theme'
+        'theme',
         'message',
         'notify',
         'workbench',
