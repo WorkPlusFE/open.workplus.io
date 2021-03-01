@@ -108,7 +108,10 @@
 <script>
     
 	function themeColor(color) {
-        return getComputedStyle(document.documentElement).getPropertyValue(color)
+        if(typeof getComputedStyle != "function") {
+            return
+        }
+        return window.getComputedStyle(document.documentElement).getPropertyValue(color)
     }
     
 

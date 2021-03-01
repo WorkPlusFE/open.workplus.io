@@ -284,10 +284,13 @@
 
 <script>
   
-function themeColor(color) {
-      return getComputedStyle(document.documentElement).getPropertyValue(color)
-  }
-  
+  function themeColor(color) {
+        if(typeof getComputedStyle != "function") {
+            return
+        }
+        return window.getComputedStyle(document.documentElement).getPropertyValue(color)
+    }
+    
 
   export default {
   data () {
