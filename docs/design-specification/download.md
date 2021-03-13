@@ -1,4 +1,10 @@
 # 素材资源下载
 
-整理中，敬请期待！
+### 设计资源下载
+
+[WorkPlusDesign.sketch]()
+
+### WokrPlus App icon
+
+[WokrPlus App icon.ai]()
 

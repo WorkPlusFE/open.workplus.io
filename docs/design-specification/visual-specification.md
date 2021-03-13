@@ -183,7 +183,6 @@
         </div>
         <div class="theme-color-desc">辅助色, 常用语红点提示, 警告⚠️等</div>
     </div>
-    
 </div>
 
 ### 文字
