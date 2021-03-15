@@ -2,6 +2,7 @@ const fs = require('fs');
 const sdk = require('@w6s/sdk/package.json');
 const pkg = require(process.cwd() + '/package.json');
 const docDir = process.cwd() + '/docs';
+const sidebar = require('./sidebar');
 
 const generateChildren = () => {
   const dirs = [];
@@ -49,13 +50,7 @@ module.exports = {
         ]
       },
     ],
-    sidebar: {
-      '/light-app/': getLightAppBar(),
-      '/js-sdk/': getJsSdkBar(),
-      '/api/': getApiBar(),
-      '/design-specification/': getThemeBar(),
-      '/dev-tools/': getDevToolsBar(),
-    },
+    sidebar,
 
     docsRepo: 'WorkPlusFE/open.workplus.io',
     docsDir: 'docs',
@@ -87,186 +82,5 @@ module.exports = {
       before: '<pre class="vue-container"><code>',
       after: '</code></pre>'
     }],
-  ]
-};
-
-function getJsSdkBar () {
-  return [
-    {
-      title: 'JS-SDK',
-      collapsable: false,
-      sidebarDepth: 1,
-      children: [
-        '/js-sdk/',
-        '/js-sdk/overview/usage',
-        // '/js-sdk/overview/auth',
-        '/js-sdk/overview/urlScheme',
-        '/js-sdk/overview/demo',
-        '/js-sdk/overview/origin',
-        '/js-sdk/overview/changelog',
-      ]
-    },
-    {
-      title: '方法列表',
-      collapsable: false,
-      sidebarDepth: 1,
-      children: [
-        'auth',
-        'user',
-        'image',
-        'file',
-        'contact',
-        'webview',
-        'header',
-        'session',
-        'device',
-        'app',
-        'network',
-        'location',
-        'email',
-        'pay',
-        'eventListener',
-        // 'notification',
-        'shared',
-        // 'storage',
-      ]
-    }
-  ]
-}
-
-function getLightAppBar (group) {
-  return [
-    {
-      title: '轻应用',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        '',
-        'offline',
-        // 'isv',
-      ]
-    }, {
-      title: '平台接入',
-      collapsable: false,
-      sidebarDepth: 3,
-      children: [
-        'noun',
-        'sso',
-        'theme',
-        'message',
-        'notify',
-        'workbench',
-      ]
-    }
-  ]
-}
-
-function getApiBar () {
-  return [
-    {
-      title: 'API 文档',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        '',
-        'getStart',
-        'callback',
-        'response',
-        'errorCode',
-      ]
-    }, {
-      title: '接口列表',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        'auth',
-        'users',
-        {
-          title: '组织架构',
-          collapsable: false,
-          sidebarDepth: 2,
-          path: '/api/organizations/employee',
-          children: [
-            '/api/organizations/employee',
-            '/api/organizations/org',
-          ]
-        },
-        {
-          title: '媒体',
-          collapsable: false,
-          sidebarDepth: 2,
-          path: '/api/medias/query',
-          children: [
-            '/api/medias/query',
-            '/api/medias/vfs',
-            '/api/medias/translator',
-          ]
-        },
-        {
-          title: '应用',
-          collapsable: false,
-          sidebarDepth: 2,
-          path: '/api/app/mbox',
-          children: [
-            '/api/app/mbox',
-            '/api/app/scope',
-            '/api/app/template',
-          ]
-        },
-      ]
-    }
-  ]
-}
-
-function getThemeBar () {
-  return [
-    {
-      title: '设计规范',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        '',
-        'basic-principles',
-        {
-          title: '视觉规范',
-          collapsable: false,
-          sidebarDepth: 2,
-          path: '/design-specification/visual-norms/style',
-          children: [
-            '/design-specification/visual-norms/style',
-            '/design-specification/visual-norms/component',
-            '/design-specification/visual-norms/layout',
-            '/design-specification/visual-norms/response',
-            '/design-specification/visual-norms/dark-mode',
-          ]
-        },
-        'resource-size',
-        'download',
-        'case',
-        'visual-specification',
-      ]
-    }
-  ];
-}
-
-function getDevToolsBar() {
-  return [
-    {
-      title: '开发工具',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        '',
-      ]
-    }, 
-    {
-      title: '轻应用调试',
-      collapsable: false,
-      sidebarDepth: 2,
-      children: [
-        'debug',
-        'vconsole',
-      ]
-    }
   ]
 };
