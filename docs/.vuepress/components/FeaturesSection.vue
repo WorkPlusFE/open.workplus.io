@@ -35,6 +35,9 @@
         </div>
       </div>
     </section>
+    <div class="footer">
+      ©2015-{{year}} 深圳恒拓高科信息技术有限公司 版权所有&nbsp;&nbsp;|&nbsp;&nbsp;<a class="beian-link" href="https://beian.miit.gov.cn " target="__blank">粤ICP备15040561号</a>
+    </div>
   </div>
 </template>
 
@@ -58,11 +61,18 @@ export default {
         },
       ]
     },
+    year() {
+      return new Date().getFullYear();
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+a.beian-link {
+  color: #4e6e8e;
+  font-weight: normal;
+}
 .features-section{
   section{
     &.wish {
