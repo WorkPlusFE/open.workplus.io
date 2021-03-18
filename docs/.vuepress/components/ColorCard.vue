@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .w6s-color-card {
     padding-left: 6px; 
     padding-right: 6px;

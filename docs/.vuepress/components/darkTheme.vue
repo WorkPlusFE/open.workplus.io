@@ -185,7 +185,7 @@
   </div>
 </template>
 
-<style type="text/css">
+<style type="text/css" scoped>
 
   .theme-color-box-group .theme-color-box {
       border-radius: 0px;
