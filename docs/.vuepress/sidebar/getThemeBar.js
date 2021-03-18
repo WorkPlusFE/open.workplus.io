@@ -21,7 +21,6 @@ const themeSideBar = [
       'resource-size',
       'download',
       'case',
-      'visual-specification',
     ]
   }
 ];
