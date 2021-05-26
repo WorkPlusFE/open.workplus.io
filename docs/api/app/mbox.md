@@ -35,13 +35,10 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 | body.file_status | int | N | 文件状态,0为正常 |
 | body.name | String | N | 名称 |
 | body.articles.summary | String | N | 文章摘要 |
-| body.articles.cover_url | String | N | 封面URL,此字段为空时,读取cover_media_id显示封面 |
-| body.articles.show_cover | boolean | N | 是否显示封面,true/false |
-| body.articles.cover_media_id | String | N | 封面媒体ID,具体生成请参考媒体相关接口 |
+| body.articles.cover_url | String | N | 封面URL |
+| body.articles.cover_enabled | boolean | N | 是否显示封面,true/false |
 | body.articles.create_time | long | N | 创建时间 |
-| body.articles.author | String | N | 作者 |
 | body.articles.title | String | N | 文章标题 |
-| body.articles.content | String | N | 当url字段为空时,图文详情显示content内容 |
 | body.articles.url | String | N | 图文详情内容,有些获取url内容,为空时,图文详情显示content内容 |
 | body.template_id | String | N | 模板ID,模板消息必填 |
 | body.data | String | N | 模板数据,模板消息必填,value为变量值,color为颜色,font_size为字号大小 |
@@ -262,92 +259,6 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 | 10011 |token not found.|访问令牌不存在|
 | 202012 |没有对应的雇员|没有对应的雇员|
 
-## 消息确认
-
-```js
-POST /v1/apps/mbox/{deliveryId}/confirm?access_token={access_token}
-```
-
-**请求头部：**
-
-|请求头|说明 |
-|---|---|
-| Content-Type |application/json|
-
-**请求参数：**
-
-| 字段| 类型 | 是否必填|说明|
-|---|---|---|---|
-| access_token | String | Y | 访问令牌 |
-| deliveryId | String | Y | 消息标记字段 |
-| type | String | Y | SERVE_NO,LIGHT_APP,NATIVE_APP,目前只支持SERVE_NO |
-| org_id | String | Y | 组织标识 |
-| app_id | String | Y | 应用标识 |
-| plan_id | String | Y | 服务号消息发送的计划ID,SERVE_NO时必填 |
-
-**请求示例：**
-
-```js
-/v1/apps/mbox/1111/confirm?access_token=1113d1dd90ae4a2ea7b3e10eebbf5ec7
-```
-
-```json
-{
-  "type": "SERVE_NO", 
-  "org_id": "a918d8a6-67e9-4e76-8503-baa73d3c6fd2", 
-  "app_id": "3c417fef-42f9-4071-9f3e-aae18f155adc", 
-  "plan_id": "fb55977c-c45e-4306-b1f6-3bee08b481f2"
-}
-```
-
-**返回数据：**
-
-<details>
-<summary>点击查看返回数据</summary>
-
-```json
-{
-  "status": 0,
-  "message": "Everything is ok.",
-  "result": {
-    // result
-  }
-}
-```
-
-```json
-{
-  "_id" : ObjectId("5a178f53d4dabf59b2951aec"),
-  "_class" : "poggyio.mbox.mongodb.MongoEnvelop",
-  "addresserDomain" : "atwork",
-  "addresserType" : "APP",
-  "addresserId" : "APP_HELPER",
-  "recipientDomain" : "atwork",
-  "recipientType" : "USER",
-  "recipientId" : "cc9605e8f9ef46f59c92fc46c6ec6252",
-  "bodyType" : "NOTICE",
-  "platforms" : [ 
-      "PC", 
-      "IOS", 
-      "ANDROID"
-  ],
-  "undo" : false,
-  "removed" : false,
-  "deliveryId" : "0edaa153-7e0a-4746-9a6e-eafd33eb84ae",
-  "deliveryTime" : NumberLong(1511493486968),
-  "deletionOn" : NumberLong(0)
-}
-```
-
-```json
-{
-  "device_id": "CDBDB445-B2A1-4D14-8929-4407A39C828C", 
-  "delivery_id": "b0962b27-c44a-43f7-8420-4517c7776f81", 
-  "app_id": "3707dde7-3ed9-4d0e-81b9-3763e3e057b2",
-  "operation": "CONFIRMED"
-}
-```
-</details>
 
 **错误返回值：**
 
