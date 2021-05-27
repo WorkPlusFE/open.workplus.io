@@ -76,7 +76,7 @@ https://test-app.workplus.io?ticket=demo-ticket&language=en
 | username | 用户的 username |  
 
 ::: tip 关于占位符
-因为`PC客户端`默认使用下划线的命名方式设置参数的`key`值，具体原因可以查看[单点登录-获取用户信息](/light-app/sso#pc-客户端)，为了保持一致性，请统一使用下划线的`key`值，如：
+因为`PC客户端`默认使用下划线的命名方式设置参数的`key`值，具体原因可以查看[单点登录-获取用户信息](/light-app/sso.md#pc-客户端)，为了保持一致性，请统一使用下划线的`key`值，如：
 
 `?user_id={userId}&domain_id={domainId}`。
 :::

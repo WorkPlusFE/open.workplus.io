@@ -13,7 +13,7 @@
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/plugin-last-updated": "^1.7.1",
     "@vuepress/plugin-medium-zoom": "^1.7.1",
-    "@w6s/sdk": "^1.1.0-beta.8",
+    "@w6s/sdk": "^1.2.0",
     "@w6s/vuepress-code-wrapper": "^1.1.4",
     "babel-runtime": "^6.26.0",
     "core-js": "^2",

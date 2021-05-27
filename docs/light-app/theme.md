@@ -6,7 +6,7 @@
 
 ## 概要
 
-WorkPlus 主题是基于[设计规范](/design-specification)落地实践的技术方案，支撑 WorkPlus 应用在不同企业文化场景，提供Android、iOS、PC、HTML 全链路生态支持，轻松构建企业专属的应用程序。
+WorkPlus 主题是基于设计规范落地实践的技术方案，支撑 WorkPlus 应用在不同企业文化场景，提供Android、iOS、PC、HTML 全链路生态支持，轻松构建企业专属的应用程序。
 
 ::: tip 提示
 更进一步，我们支持基于主题的千变万化、节日主题、暗黑模式、千人千面、灰度发布等特性。
