@@ -17,7 +17,7 @@
 
 移动端通常会通过`js-sdk`接口进行获取，例如使用`w6s.auth.getUserTicket`及`w6s.contact.getCurrentUserInfo`方法来获取临时 Ticket 及当前登录的用户信息。
 
-另一种方式，就是通过截取应用启动地址上的参数，具体设置请查看[应用启动地址](/light-app/create.md#启动地址)。
+另一种方式，就是通过截取应用启动地址上的参数，具体设置请查看[应用启动地址](/light-app/README.md#启动地址)。
 
 ### PC 客户端
 
