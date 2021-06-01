@@ -71,6 +71,12 @@ w6s.auth.getUserTicket({
 相关资源说明，请查看[此处](/js-sdk/overview/demo.html#资源文件)。
 :::
 
+## JS-API 鉴权
+
+为了保证 JS-SDK 的调用者是可信任的，同时对当前页面可用的 API 进行安全限制，防止恶意网页通过 JS-API 随意获取用户私密信息，对用户财产造成损失。因此在部分 JS-API 在被调用前，需要通过接口进行鉴权，只有鉴权成功的情况下，JS-API 的调用才会正常生效。
+
+更多 JS-API 鉴权的信息，请查看[鉴权流程](/js-sdk/overview/auth.md)。
+
 ## 配合 Vue 使用
 
 **一、`npm` 模式：**

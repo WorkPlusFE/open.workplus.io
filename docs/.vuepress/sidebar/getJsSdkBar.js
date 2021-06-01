@@ -7,7 +7,7 @@ const jsSDKBar = [
     children: [
         '/js-sdk/',
         '/js-sdk/overview/usage',
-        // '/js-sdk/overview/auth',
+        '/js-sdk/overview/auth',
         '/js-sdk/overview/urlScheme',
         '/js-sdk/overview/demo',
         '/js-sdk/overview/origin',

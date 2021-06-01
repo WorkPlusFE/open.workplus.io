@@ -1187,10 +1187,10 @@
     vuepress-plugin-container "^2.0.2"
     vuepress-plugin-smooth-scroll "^0.0.3"
 
-"@w6s/sdk@^1.1.0-beta.8":
-  version "1.1.0-beta.8"
-  resolved "https://registry.npm.taobao.org/@w6s/sdk/download/@w6s/sdk-1.1.0-beta.8.tgz#95e2bb57671d31b2dff4e63f57d54fbc2fff17d3"
-  integrity sha1-leK7V2cdMbLf9OY/V9VPvC//F9M=
+"@w6s/sdk@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/@w6s/sdk/-/sdk-1.2.0.tgz#cac3c621157da9734bf24167c5d75a0c6e446a3a"
+  integrity sha512-U1HQxm52fQPAxiiKf6NXKJEu1PAzjikxFgwUZrKw3QCHM0NpG+eXNKp3614X4RCvkiZvCbrfsZs7HGELp9wH9Q==
 
 "@w6s/vuepress-code-wrapper@^1.1.4":
   version "1.1.4"
@@ -7758,10 +7758,8 @@ watchpack@^1.7.4:
   resolved "https://registry.npm.taobao.org/watchpack/download/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha1-EmfmxV4Lm1vkTCAjrtVDeiwmxFM=
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
