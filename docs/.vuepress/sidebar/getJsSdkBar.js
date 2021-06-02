@@ -19,6 +19,7 @@ const jsSDKBar = [
     collapsable: false,
     sidebarDepth: 1,
     children: [
+        'szient',
         'auth',
         'user',
         'image',
