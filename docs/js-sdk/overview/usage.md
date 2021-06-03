@@ -4,25 +4,25 @@
 
 ## 引入及使用
 
-**一、基于`npm`包的方式引入：**
+**基于`npm`包的方式引入：**
 
 1、使用`npm`或`yarn`安装模块：
 
 ```sh
-npm install @w6s/sdk --save
+npm install szient-js-sdk --save
 
 # 使用 yarn 
-yarn add @w6s/sdk
+yarn add szient-js-sdk
 ```
 
 2、安装成功后，使用`es module`或`commonjs`模块规范引入，支持全量及按模块引入：
 
 ```js
 // 全量引入
-import * as w6s from '@w6s/sdk';
+import * as w6s from 'szient-js-sdk';
 
 // 按模块引入
-import auth from '@w6s/sdk/auth';
+import auth from 'szient-js-sdk/auth';
 ```
 
 3、引入模块后，需先调用初始化方法`init`：
@@ -54,23 +54,6 @@ w6s.auth.getUserTicket({
 });
 ```
 
-**二、`script`标签引入：**
-
-<CodeWrapper :qrcode="false">
-
-&lt;script src="https://open.workplus.io/static/js-sdk/sdk.{{$themeConfig.version}}.js"&gt;&lt;/script&gt;
-
-</CodeWrapper>
-
-引入后，会在全局暴露`w6s`对象，初始化后，将可调用各模块接口。
-
-
-::: warning 关于 JS-SDK 资源
-基于 WorkPlus 部分客户网络环境的特殊性，推荐自行部署`js-sdk`的相关资源，以供自家平台轻应用访问。
-
-相关资源说明，请查看[此处](/js-sdk/overview/demo.html#资源文件)。
-:::
-
 ## JS-API 鉴权
 
 为了保证 JS-SDK 的调用者是可信任的，同时对当前页面可用的 API 进行安全限制，防止恶意网页通过 JS-API 随意获取用户私密信息，对用户财产造成损失。因此在部分 JS-API 在被调用前，需要通过接口进行鉴权，只有鉴权成功的情况下，JS-API 的调用才会正常生效。
@@ -85,7 +68,7 @@ w6s.auth.getUserTicket({
 
 ```js
 import Vue from 'vue';
-import * as w6s from '@w6s/sdk';
+import * as w6s from 'szient-js-sdk';
 
 // 初始化 sdk，同时会在 Vue 原型链上挂载 $w6s 对象
 Vue.use(w6s, {
