@@ -1,5 +1,5 @@
 const fs = require('fs');
-const sdk = require('@w6s/sdk/package.json');
+const sdk = require('szient-js-sdk/package.json');
 const pkg = require(process.cwd() + '/package.json');
 const docDir = process.cwd() + '/docs';
 const sidebar = require('./sidebar');

@@ -9,7 +9,7 @@ const jsSDKBar = [
         '/js-sdk/overview/usage',
         '/js-sdk/overview/auth',
         '/js-sdk/overview/urlScheme',
-        '/js-sdk/overview/demo',
+        // '/js-sdk/overview/demo',
         '/js-sdk/overview/origin',
         '/js-sdk/overview/changelog',
     ]
