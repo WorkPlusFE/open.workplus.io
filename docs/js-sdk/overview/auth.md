@@ -76,7 +76,7 @@ const signature = sha1(str).toString().toLowerCase();
 ## 步骤三：调用鉴权接口
 
 ```js
-import * as w6s from '@w6s/sdk';
+import * as w6s from 'szient-js-sdk';
 
 w6s.config({
   access_key: 'access_key',
