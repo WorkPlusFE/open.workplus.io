@@ -145,3 +145,52 @@ w6s.szient.showMultipartMessage({
 | 参数 | 类型 | 说明|
 | - | - | - |
 | multipart_message |  String | 合并消息的 JSON 字符串数据 |
+
+
+
+## 原生 AJAX 请求
+
+模拟前端的 AJAX 能力，相比之下，更安全和可控，并且不存在跨域问题。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.request({
+  url: '请求的url',
+  data: {},
+  header: { 'Content-Type': 'application/json' },
+  timeout: 30000
+  method: 'GET'
+  success: function(res) {},
+  fail: function(err) {},
+});
+```
+
+**参数说明**
+
+| 参数 | 类型 | 说明|
+| - | - | - |
+| url |  String | 必须，请求的 URL，完整路径 |
+| data | Object | 请求的参数 |
+| header | Object | 请求的 Header 参数扩展 |
+| timeout | Number | 超时时间，单位为毫秒，默认值 30000 毫秒 |
+| method | String | HTTP的请求方法，只支持GET/HEAD/POST/PUT/DELETE，默认 GET |
+
+::: tip 带平台特定信息的请求
+如果你开发的应用，是作为混合开发的 H5 部分，接口是直接调到 WorkPlus 后台，可以使用`w6s.authRequest`方法进行 AJAX 请求，该方法在`已鉴权`的情况下，会默认带上用户验证及平台信息等。
+
+该方法的传参和返回，跟`w6s.request`一致。
+:::
+
+**返回说明**
+
+| 参数 | 类型 | 说明|
+| - | - | - |
+| data | Object/ArrayBuffer |  返回的结果 |
+| header | Object |  请求响应返回的的 Header |
+| statusCode | Number |  HTTP 的状态码 |
