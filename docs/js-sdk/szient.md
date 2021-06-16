@@ -22,7 +22,11 @@ w6s.szient.getLoginState({
 
 | 参数 | 说明 |
 | - | - | 
-| biz | 具体的登录者信息 |
+| biz | 业务属性, 用来做特殊定制的场景 |
+| id_card | 身份证（string） |
+| role_level | 用户在办事企业的可信等级, 取值范围：null, L1, L2, L3, L4 |
+| current_org_name | 用户办事企业名称 |
+| current_org_code | 办事企业统一社会信用代码 |
 
 **异常返回**
 
@@ -54,7 +58,9 @@ w6s.szient.checkLogin({
 
 | 参数 | 说明 |
 | - | - | 
-| biz | 具体的登录者信息 |
+| biz | 业务属性, 用来做特殊定制的场景 |
+| id_card | 身份证（string） |
+| role_level | 用户在办事企业的可信等级, 取值范围：null, L1, L2, L3, L4 |
 
 **异常返回**
 
@@ -64,8 +70,7 @@ w6s.szient.checkLogin({
 | message | 异常描述 |
 
 
-
-## 观察登录状态变化
+## 观察状态变化
 
 前端在首页等场景, 在 WorkPlus 支持游客模式使用时, 当需要感知到登录/登出变化, 可通过该接口进行监听。
 
@@ -78,7 +83,8 @@ w6s.szient.checkLogin({
 
 
 ```js
-w6s.szient.watchLoginStatusChanged(function(res) {
+// 绑定监听事件
+w6s.szient.watchStatusChanged(function(res) {
   // 登录或登出会触发回调
 });
 ```
@@ -87,8 +93,15 @@ w6s.szient.watchLoginStatusChanged(function(res) {
 
 | 参数 | 说明 |
 | - | - | 
-| event | 事件类型，分别为 LOGIN 和 LOGOUT |
-| data | 若登录，会返回登录的用户信息，至少包含 user_id 属性 |
+| event | 事件类型，分别为 LOGIN、LOGOUT 和 BIZ_INTEGRITY |
+| data | 若登录，会返回登录的用户信息，可参考`查询当前登录状态`的接口返回 |
+
+你可以通过`unwatchStatusChanged`方法取消状态的监听：
+
+```js
+// 取消事件监听
+w6s.szient.unwatchStatusChanged();
+```
 
 ## 选择聊天消息
 
@@ -194,3 +207,70 @@ w6s.request({
 | data | Object/ArrayBuffer |  返回的结果 |
 | header | Object |  请求响应返回的的 Header |
 | statusCode | Number |  HTTP 的状态码 |
+
+
+## 检查流程完整性
+
+检查是否关联企业，若未关联，尝试关联操作；已关联，则返回相关信息。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.szient.checkBizIntegrity({
+  success: function(res) {},
+  fail: function(err) {},
+});
+```
+
+**成功返回**
+
+| 参数 | 说明 |
+| - | - | 
+| biz | 业务属性, 用来做特殊定制的场景 |
+
+**异常返回**
+
+| 参数 | 说明 |
+| - | - | 
+| code | -1：失败， -2：取消， -4：没有办事企业，-5：未登录 |
+| message | 异常描述 |
+
+
+## 确定完整性完成(设置当前办事企业)
+
+关联企业（选择办事企业）流程结果回调。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.szient.okBizIntegrity({
+  status: 'success',
+  success: function(res) {},
+  fail: function(err) {},
+});
+```
+
+
+**参数说明**
+
+| 参数 | 类型 | 说明|
+| - | - | - |
+| status |  String | success 成功， fail 失败， cancel 取消 |
+
+
+**成功返回**
+
+| 参数 | 说明 |
+| - | - | 
+| code | 0 |
+| message | 'success' |
