@@ -20,6 +20,7 @@ const jsSDKBar = [
     sidebarDepth: 1,
     children: [
         'szient',
+        'dialog',
         'auth',
         'user',
         'image',
