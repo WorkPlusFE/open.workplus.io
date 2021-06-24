@@ -274,3 +274,55 @@ w6s.szient.okBizIntegrity({
 | - | - | 
 | code | 0 |
 | message | 'success' |
+
+
+## 行为埋点
+
+通过原生接口，进行前端页面埋点，与移动端保持为一个整体。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.szient.buryingPoint({
+  channel: 'tgp',
+  event_code: 'c_event',
+  params: {
+    c_event_name: 'c_event_name_1',
+    c_event_id: 'c_event_id_1',
+  },
+  success: function(res) {},
+  fail: function(err) {},
+});
+```
+
+**参数说明**
+
+| 参数 | 类型 | 说明|
+| - | - | - |
+| channel |  String | 可不传，默认为客户端默认配置的 |
+| event_code | String | 必须的，定义的`event_code`，如`c_event`、`pageview`、`share` |
+| params | Object | 针对`event_code`定义的参数键值对，如 c_event 下有定义：c_event_name 与 c_event_id 两个参数，具体请查看下方 params 的可用参数说明 |
+
+
+::: tip params 可用参数说明
+
+当前共 3 个`event_code`，不同的`event_code`对应的`params`传参不一样，居图如下：
+
+1. `c_event`点击类事件
+    - c_event_name： 事件名称
+    - c_event_id： 事件id
+2. `pageview`页面浏览事件
+    - page_name： 页面名称
+    - page_interval： 页面停留时长(毫秒数)
+3. `share`分享事件
+    - page_name： 页面名称
+
+注意，参数的值需要与运营中心的埋点定义文档一一对应，另`page_interval`需要自行计算，以毫秒数为单位。
+:::
+
+
