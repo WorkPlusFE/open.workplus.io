@@ -1,5 +1,9 @@
 # 更新日志
 
+### 20210624-v1.0.0-beta.14
+
+* `feat`增加埋点接口，`w6s.szient.buryingPoint`
+
 ### 20210618-v1.0.0-beta.10
 
 * `feat`增加 Dialog 原生弹框模块，支持 Loading、Toast、ActionSheet 和 Modal 确认框
