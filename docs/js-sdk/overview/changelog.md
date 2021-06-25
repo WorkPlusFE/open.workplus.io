@@ -1,5 +1,9 @@
 # 更新日志
 
+### 20210625-v1.0.0-beta.15
+
+* `feat`增加键盘信息获取和监听变化接口，`w6s.szient.getKeyboardInfo`及`w6s.szient.watchKeyboardChanged`
+
 ### 20210624-v1.0.0-beta.14
 
 * `feat`增加埋点接口，`w6s.szient.buryingPoint`
