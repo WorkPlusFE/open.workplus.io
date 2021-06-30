@@ -1,5 +1,8 @@
 # 更新日志
 
+### 20210630-v1.0.0-beta.17
+
+* `refactor`选择图片和拍照增加自动上传开关配置
 ### 20210625-v1.0.0-beta.15
 
 * `feat`增加键盘信息获取和监听变化接口，`w6s.szient.getKeyboardInfo`及`w6s.szient.watchKeyboardChanged`

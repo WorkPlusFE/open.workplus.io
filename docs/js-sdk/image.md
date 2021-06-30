@@ -14,6 +14,7 @@
 ```js
 w6s.image.takePicture({
   editable: true,
+  autoUpload: false,
   success: function(res) {},
   fail: function(err) {},
 });
@@ -25,6 +26,7 @@ w6s.image.takePicture({
 | 参数 | 类型 | 说明|
 | - | - | - |
 | editable | Boolean | 是否进行裁剪，适用于设置头像 |
+| autoUpload | Boolean | 是否自动上传图片，默认为 true |
 
 **返回数据**
 
@@ -52,6 +54,7 @@ w6s.image.chooseImages({
   multiple: false,
   imageKeys: ['file://图片本机地址'],
   editable: true,
+  autoUpload: false,
   fileLimit: {
     maxSelectCount: 10,
     singleSelectSize: -1,
@@ -68,6 +71,7 @@ w6s.image.chooseImages({
 | 参数 | 类型 | 说明|
 | - | - | - |
 | multiple | Boolean | 是否为图片多选 |
+| autoUpload | Boolean | 是否自动上传图片，默认为 true |
 | imageKeys | Array[string] | 非必须，图片在本机的地址，用于图片复选 |
 | editable | Boolean | 是否可对图片进行裁剪，仅在单选`multiple: false`时有效，默认为 true |
 | fileLimit.maxSelectCount | Number |  非必须，多选时数量的限制，默认为 9 |
