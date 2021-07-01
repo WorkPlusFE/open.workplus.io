@@ -66,3 +66,26 @@ w6s.event.bindResumeEvent(() => {
 ```
 
 </CodeWrapper>
+
+## 通用页面绑定方法
+
+`iOS/Android`统一`resume/pause/back`事件的监听方式。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+<CodeWrapper :qrcode="false" fn="event.bindMessageChannel">
+
+```js
+w6s.event.bindMessageChannel((res) => {
+  // 返回对应的action类型
+  // {
+  //    "action": "pause" or "resume" or "back"
+  // }
+});
+```
+
+</CodeWrapper>

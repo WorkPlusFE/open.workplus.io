@@ -1,5 +1,8 @@
 # 更新日志
 
+### 20210701-v1.0.0-beta.19
+
+* `feat`增加通用的页面事件监听方法，`w6s.event.bindMessageChannel`
 ### 20210630-v1.0.0-beta.17
 
 * `refactor`选择图片和拍照增加自动上传开关配置
