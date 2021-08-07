@@ -127,6 +127,7 @@ w6s.dialog.showToast({
 // 显示 Loading
 w6s.dialog.showLoading({
   title: '加载中...',
+  block: true
 });
 
 // 隐藏 Loading
@@ -140,3 +141,4 @@ w6s.dialog.hideLoading();
 | 参数 | 类型 | 说明|
 | - | - | - |
 | title |  String | 非必须，标题 |
+| block |  Boolean | 非必须，默认不锁定屏幕 |

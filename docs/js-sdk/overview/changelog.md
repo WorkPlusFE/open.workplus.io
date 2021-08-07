@@ -1,5 +1,10 @@
 # 更新日志
 
+### 20210807-v1.0.0
+
+* `feat`Loading 增加锁定屏幕配置
+* `feat`增加 openWebView 接口参数
+
 ### 20210701-v1.0.0-beta.19
 
 * `feat`增加通用的页面事件监听方法，`w6s.event.bindMessageChannel`

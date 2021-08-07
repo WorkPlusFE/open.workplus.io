@@ -18,7 +18,8 @@ w6s.webview.openWebView({
   title: 'Test',
   useAndroidWebview: true,
   useSystemWebview: true,
-  displayMode: 'FULL_SCREEN'
+  displayMode: 'FULL_SCREEN',
+  muteConfig: ['always_hide_close']
 });
 ```
 </CodeWrapper>
@@ -32,6 +33,7 @@ w6s.webview.openWebView({
 | useAndroidWebview | Boolean | 是否使用 android 原生 webview 打开, 否则使用 workplus 订制的 webview |
 | useSystemWebview | Boolean | 等同于 useAndroidWebview，只是该参数能用于ios以及android平台 |
 | displayMode | String | 全屏打开 webview(即不包含原生标题栏)，默认非全屏 |
+| muteConfig | String[] | 屏蔽移动端设置，具体设置值由移动端制定提供。`always_hide_close`代表一直隐藏"关闭"按钮，传入该参数代表该设置会被无效化。 |
 
 ## 退出
 
