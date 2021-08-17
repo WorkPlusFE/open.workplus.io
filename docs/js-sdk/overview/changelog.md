@@ -1,5 +1,9 @@
 # 更新日志
 
+### 20210817-v1.0.1
+
+- `feat`OkBizIntegrityParams 接口新增属性
+
 ### 20210807-v1.0.0
 
 * `feat`Loading 增加锁定屏幕配置
