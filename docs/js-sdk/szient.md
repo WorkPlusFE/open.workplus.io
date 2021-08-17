@@ -255,6 +255,7 @@ w6s.szient.checkBizIntegrity({
 ```js
 w6s.szient.okBizIntegrity({
   status: 'success',
+  biz: 'your_page_name', //见下面参数说明
   success: function(res) {},
   fail: function(err) {},
 });
@@ -266,6 +267,7 @@ w6s.szient.okBizIntegrity({
 | 参数 | 类型 | 说明|
 | - | - | - |
 | status |  String | success 成功， fail 失败， cancel 取消 |
+| biz |  String | 业务字段，以页面名为准，如申请权限为my-permissions |
 
 
 **成功返回**
