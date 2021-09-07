@@ -1,5 +1,13 @@
 # 更新日志
 
+### 20210906-v1.0.3
+
+- `feat`w6s.webview.launchMiniProgram 增加调起小程序接口
+
+### 20210906-v1.0.2
+
+- `feat`增加轻量存储能力接口
+
 ### 20210817-v1.0.1
 
 - `feat`OkBizIntegrityParams 接口新增属性

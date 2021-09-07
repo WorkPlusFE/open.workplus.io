@@ -376,3 +376,32 @@ w6s.szient.getKeyboardInfo({
 | 参数 | 说明 |
 | - | - | 
 | height | 键盘高度，发生变化就会回调，前端需要持续监听。0 为键盘未打开 |
+
+## 调用小程序
+
+该接口用来调用小程序，获取小程序返回信息。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.webview.launchMiniProgram({
+  user_name: 'gh_xa11', // 小程序id      
+  path: 'pages/xx', // 小程序具体路径          
+  miniprogram_type: 0 , //0 正式版，1 开发版，2 体验版
+  success: function(res) {},
+  fail: function(err) {},
+});
+```
+
+**成功返回**
+
+| 参数 | 说明 |
+| - | - | 
+| code | 0成功，-1失败 |
+| result | 返回的数据 |
+| message | 接口状态描述 |
