@@ -405,3 +405,124 @@ w6s.webview.launchMiniProgram({
 | code | 0成功，-1失败 |
 | result | 返回的数据 |
 | message | 接口状态描述 |
+
+
+## 分享消息到通讯录
+
+发送需要分享的消息到指定会话。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.szient.shareMessage({
+  //可为空
+  conversation: [{ 
+    id: '', //分享对象id
+    domain_id: '',//分享对象domainId
+    type: 'USER' //USER：单聊，DISCUSSION：群聊
+  }],
+  // 不同消息传的数据不一样，请留意
+  message: {
+    //文本：TEXT 传参示例
+    type: 'TEXT',
+    body:{
+      content: '' //文本消息分享的内容
+    }
+    
+    //图片：IMAGE 传参示例
+    type: 'IMAGE',
+    body:{
+      data: '' //图片资源，具体使用规则见备注
+    }
+    
+    // 链接：LINK 传参示例 
+    type: 'LINK',
+    body:{
+      article:{ //分享链接时不可为空
+        title: '', //标题，不可为空
+        url: '', //跳转链接，不可为空
+        summary: '', //摘要，可空
+        cover: '' //封面url，可空
+      }
+    }
+  },
+  success: function(res) {},
+  fail: function(err) {},
+});
+```
+
+
+#### `IMAGE`类型的`data`传值说明：
+
+| 传值   | 说明 | 
+| -------- | ------- | 
+| http://***,https://*** | 资源文件 url  | 
+| base64://*** | 资源文件 base64  | 
+| mediaId://*** | 资源文件 mediaId  | 
+| file://*** | 本地资源文件路径  | 
+	
+
+## 获取用户更多数据
+
+根据提供的参数，返回包括该参数以及基本数据在内的用户数据。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.szient.getLoginStatusMore({
+  privacy_data: ['mobile', 'id_card', 'face_auth_param'],
+  success: function(res) {},
+  fail: function(err) {},
+});
+```
+
+**请求返回数据:**
+
+```json
+{
+  "code": 0,
+  "result": {
+    "source":"APP",
+    "login_type":"face", // 暂定 “face” 或者 “captcha”
+    "user_id": "xxxx",
+    "username": "xxx",
+    "mobile":"",
+    "domain_id":"xxxxxx",
+    "biz": {
+      "source_code":"s01",
+      "login_type_code":"d01", // face 对应 d01，captcha 对应 d02
+      "id_card":"",
+      "role_level":"L4",
+      "current_org_name":"xxxxx",
+      "current_org_code":"xxxxxx",
+      "name":"xxxxxx",
+      "user_state":"",
+      "extension_id":"",
+      "face_swiping_date":"", // 刷脸时间(单位：毫秒)
+      "face_auth_param":"", // 刷脸认证参数
+      // ...
+    }
+  }
+}
+```
+
+> 加密的数据均使用`AES(AES128,cbc)`加密，key 使用 md5 加密之后的`user_id+device_id+domain_id`(按照自然顺序拼接)。
+
+**请求参数`privacy_data`说明：**
+
+| 传值   | 说明 | 
+| -------- | ------- | 
+| mobile | 获取加密之后的手机号数据  | 
+| id_card | 获取加密之后的身份证数据  | 
+| face_auth_param | 获取加密之后的刷脸认证参数 | 
+	

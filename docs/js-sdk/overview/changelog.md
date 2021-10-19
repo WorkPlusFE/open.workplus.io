@@ -1,5 +1,11 @@
 # 更新日志
 
+### 20211019-v1.0.7
+
+- `feat`w6s.szient.shareMessage 分享消息到通讯录
+- `feat`w6s.szient.getLoginStatusMore 获取用户更多数据
+
+
 ### 20210906-v1.0.3
 
 - `feat`w6s.webview.launchMiniProgram 增加调起小程序接口
