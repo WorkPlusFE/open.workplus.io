@@ -18,27 +18,37 @@ w6s.szient.getLoginState({
 });
 ```
 
-**成功返回**
+**返回数据**
 
 | 参数 | 说明 |
-| - | - | 
-| biz | 业务属性, 用来做特殊定制的场景 |
-| id_card | 身份证（string） |
-| role_level | 用户在办事企业的可信等级, 取值范围：null, L1, L2, L3, L4 |
+| - | - |
+| user_id | app 用户 id |
+| username | app 用户账号 |
+| domain_id | app 域标记 |
+| user_type | 用户类型，取值范围：user/crop |
+| login_type | 登录类型，取值范围：face(人脸登录)/captcha(验证码登录) |
+| biz | 业务属性，用来做特殊定制的场景，例如深i企业务数据 |
+| extension_id | 业务用户 id 标记，在深i企里为企业中心 uid |
+| name | 用户名称 |
+| role_level | 用户在办事企业的可信等级，取值范围：null, L1, L2, L3, L4 |
 | current_org_name | 用户办事企业名称 |
 | current_org_code | 办事企业统一社会信用代码 |
+| user_state | 用户状态，取值范围：enable(已审核), disabled(被禁用), auditing(审核中) |
 
-**异常返回**
+**状态码说明**
 
 | 参数 | 说明 |
-| - | - | 
-| code | -1，未登录 |
-| message | 异常描述 |
+| - | - |
+| 0 | 已登录，正常返回数据 |
+| -1 | 未登录 |
+
+
+
 
 
 ## 检查登录流程
 
-若未登录则尝试进行登录操作，已登录则返回人的信息。
+若未登录则尝试进行登录操作，已登录则返回人的信息。区别于 [查询当前登录状态](#查询当前登录状态) ，该接口在未登录的时候，会主动触发登录流程，引导用户进行登录授权。
 
 **使用说明**
 
@@ -54,20 +64,22 @@ w6s.szient.checkLogin({
 });
 ```
 
-**成功返回**
+**返回数据**
+
+参考以上接口[查询当前登录状态](#查询当前登录状态)
+
+**状态码说明**
 
 | 参数 | 说明 |
-| - | - | 
-| biz | 业务属性, 用来做特殊定制的场景 |
-| id_card | 身份证（string） |
-| role_level | 用户在办事企业的可信等级, 取值范围：null, L1, L2, L3, L4 |
+| :- | - |
+| 0 | 已登录 |
+| -1 | 未登录 |
+| -2 | 取消登录 |
 
-**异常返回**
 
-| 参数 | 说明 |
-| - | - | 
-| code | -1，未登录 |
-| message | 异常描述 |
+
+
+
 
 
 ## 观察状态变化
@@ -89,7 +101,7 @@ w6s.szient.watchStatusChanged(function(res) {
 });
 ```
 
-**成功返回**
+**返回数据**
 
 | 参数 | 说明 |
 | - | - | 
@@ -102,6 +114,10 @@ w6s.szient.watchStatusChanged(function(res) {
 // 取消事件监听
 w6s.szient.unwatchStatusChanged();
 ```
+
+
+
+
 
 ## 选择聊天消息
 
@@ -194,13 +210,9 @@ w6s.request({
 | timeout | Number | 超时时间，单位为毫秒，默认值 30000 毫秒 |
 | method | String | HTTP的请求方法，只支持GET/HEAD/POST/PUT/DELETE，默认 GET |
 
-::: tip 带平台特定信息的请求
-如果你开发的应用，是作为混合开发的 H5 部分，接口是直接调到 WorkPlus 后台，可以使用`w6s.authRequest`方法进行 AJAX 请求，该方法在`已鉴权`的情况下，会默认带上用户验证及平台信息等。
 
-该方法的传参和返回，跟`w6s.request`一致。
-:::
 
-**返回说明**
+**返回数据**
 
 | 参数 | 类型 | 说明|
 | - | - | - |
@@ -209,9 +221,21 @@ w6s.request({
 | statusCode | Number |  HTTP 的状态码 |
 
 
+
+
+
 ## 检查流程完整性
 
-检查是否关联企业，若未关联，尝试关联操作；已关联，则返回相关信息。
+检查当前用户是否具备业务流程的完整性，默认情况下，业务流程完整性是指当前用户需要具备以下调整：
+
+1. 已登录
+2. 已关联企业
+3. 有当前办事企业
+4. 拥有经办人或者以上角色权限
+
+若以上条件其中一个不具备，调用该接口会触发相关流程引导用户进行操作。
+
+
 
 **使用说明**
 
@@ -227,23 +251,27 @@ w6s.szient.checkBizIntegrity({
 });
 ```
 
-**成功返回**
 
-| 参数 | 说明 |
-| - | - | 
-| biz | 业务属性, 用来做特殊定制的场景 |
+**状态码说明**
 
-**异常返回**
+| 参数 | 说明                               |
+| :--- | ---------------------------------- |
+| 0    | 检查完整性成功                     |
+| -1   | 检查完整性失败                     |
+| -2   | 取消流程                           |
+| -4   | 没有办事企业                       |
+| -5   | 未登录                             |
+| -6   | 权限被禁用                         |
+| -7   | 雇员信息为空                       |
+| -8   | 当前不具备角色权限，已提交权限申请 |
 
-| 参数 | 说明 |
-| - | - | 
-| code | -1：失败， -2：取消， -4：没有办事企业，-5：未登录 |
-| message | 异常描述 |
 
 
-## 确定完整性完成(设置当前办事企业)
 
-关联企业（选择办事企业）流程结果回调。
+
+## 确定完整性完成(暂支持设置当前办事企业)
+
+在触发[检查流程完整性](#检查流程完整性) 进行操作时使用， 例如关联企业（选择办事企业）流程的操作的通知。
 
 **使用说明**
 
@@ -255,7 +283,7 @@ w6s.szient.checkBizIntegrity({
 ```js
 w6s.szient.okBizIntegrity({
   status: 'success',
-  biz: 'your_page_name', //见下面参数说明
+  biz: 'my-permissions', //见下面参数说明
   success: function(res) {},
   fail: function(err) {},
 });
@@ -270,12 +298,7 @@ w6s.szient.okBizIntegrity({
 | biz |  String | 业务字段，以页面名为准，如申请权限为my-permissions |
 
 
-**成功返回**
 
-| 参数 | 说明 |
-| - | - | 
-| code | 0 |
-| message | 'success' |
 
 
 ## 行为埋点
@@ -345,7 +368,7 @@ w6s.szient.watchKeyboardChanged(function(res) {
 });
 ```
 
-**成功返回**
+**返回数据**
 
 | 参数 | 说明 |
 | - | - | 
@@ -371,7 +394,7 @@ w6s.szient.getKeyboardInfo({
 });
 ```
 
-**成功返回**
+**返回数据**
 
 | 参数 | 说明 |
 | - | - | 
@@ -398,13 +421,10 @@ w6s.webview.launchMiniProgram({
 });
 ```
 
-**成功返回**
 
-| 参数 | 说明 |
-| - | - | 
-| code | 0成功，-1失败 |
-| result | 返回的数据 |
-| message | 接口状态描述 |
+
+
+
 
 
 ## 分享消息到通讯录
@@ -465,11 +485,18 @@ w6s.szient.shareMessage({
 | base64://*** | 资源文件 base64  | 
 | mediaId://*** | 资源文件 mediaId  | 
 | file://*** | 本地资源文件路径  | 
-	
 
-## 获取用户更多数据
 
-根据提供的参数，返回包括该参数以及基本数据在内的用户数据。
+
+
+
+
+
+
+
+## 获取当前用户更多数据
+
+在 [查询当前登录状态](#查询当前登录状态) 的基础上，增加更多数据的返回，包括敏感数据等。
 
 **使用说明**
 
@@ -480,49 +507,44 @@ w6s.szient.shareMessage({
 
 ```js
 w6s.szient.getLoginStatusMore({
-  privacy_data: ['mobile', 'id_card', 'face_auth_param'],
+  privacy_data: [],//非必填
   success: function(res) {},
   fail: function(err) {},
 });
 ```
 
-**请求返回数据:**
+**参数说明**
 
-```json
-{
-  "code": 0,
-  "result": {
-    "source":"APP",
-    "login_type":"face", // 暂定 “face” 或者 “captcha”
-    "user_id": "xxxx",
-    "username": "xxx",
-    "mobile":"",
-    "domain_id":"xxxxxx",
-    "biz": {
-      "source_code":"s01",
-      "login_type_code":"d01", // face 对应 d01，captcha 对应 d02
-      "id_card":"",
-      "role_level":"L4",
-      "current_org_name":"xxxxx",
-      "current_org_code":"xxxxxx",
-      "name":"xxxxxx",
-      "user_state":"",
-      "extension_id":"",
-      "face_swiping_date":"", // 刷脸时间(单位：毫秒)
-      "face_auth_param":"", // 刷脸认证参数
-      // ...
-    }
-  }
-}
+| 参数 | 类型 | 说明|
+| - | - | - |
+| privacy_data |  array | 非必填；表示需要指定获取的隐私数据，若不传，则不会返回相关数据。现支持：'mobile', 'id_card', 'face_auth_param'。数据经过加密处理，具体处理方式参照文档详细说明。 |
+
+
+
+**返回数据:**
+
+除了开发者传参关注的字段，其他字段参考以上接口[查询当前登录状态](#查询当前登录状态)
+
+
+> 隐私数据经过加密处理：AES(aesKey, rawData)
+>
+> AES算法为 AES-128-ECB
+>
+> aesKey 为 user_id, device_id, domain_id 按ASCII 码从小到大的自然排序拼接后进行md5处理
+
+
+
+**处理样例**:
+
+```
+user_id = "f2622e27c98c41eebd415ab9396ac1e0"
+
+device_id = "ZJG0ODJIYTG3NTNLZJAXNA=="
+
+domain_id = "szient"
+
+rawData = "13481005172"
+
+encryptedData = "Okvx0kBT7OHMDRjeD16QfQ=="
 ```
 
-> 加密的数据均使用`AES(AES128,cbc)`加密，key 使用 md5 加密之后的`user_id+device_id+domain_id`(按照自然顺序拼接)。
-
-**请求参数`privacy_data`说明：**
-
-| 传值   | 说明 | 
-| -------- | ------- | 
-| mobile | 获取加密之后的手机号数据  | 
-| id_card | 获取加密之后的身份证数据  | 
-| face_auth_param | 获取加密之后的刷脸认证参数 | 
-	

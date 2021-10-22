@@ -3,7 +3,8 @@
 ### 20211019-v1.0.7
 
 - `feat`w6s.szient.shareMessage 分享消息到通讯录
-- `feat`w6s.szient.getLoginStatusMore 获取用户更多数据
+- `feat`w6s.szient.getLoginStatusMore 获取当前用户数据
+- `refactor`w6s.szient.getLoginStatus 去除敏感数据
 
 
 ### 20210906-v1.0.3
@@ -16,7 +17,7 @@
 
 ### 20210817-v1.0.1
 
-- `feat`OkBizIntegrityParams 接口新增属性
+- `feat`okBizIntegrity 接口新增属性
 
 ### 20210807-v1.0.0
 
