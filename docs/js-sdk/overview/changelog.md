@@ -1,5 +1,13 @@
 # 更新日志
 
+### 20211207-v1.0.8
+
+- `feat`w6s.szient.bizFaceAuth  二次验证-人脸识别
+
+  
+
+
+
 ### 20211019-v1.0.7
 
 - `feat`w6s.szient.shareMessage 分享消息到通讯录
