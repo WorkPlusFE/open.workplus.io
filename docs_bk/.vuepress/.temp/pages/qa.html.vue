@@ -1,0 +1,23 @@
+<template><h1 id="常见问题" tabindex="-1"><a class="header-anchor" href="#常见问题" aria-hidden="true">#</a> 常见问题</h1>
+<h2 id="轻应用" tabindex="-1"><a class="header-anchor" href="#轻应用" aria-hidden="true">#</a> 轻应用</h2>
+<h3 id="考勤定位偏差大" tabindex="-1"><a class="header-anchor" href="#考勤定位偏差大" aria-hidden="true">#</a> 考勤定位偏差大</h3>
+<p>WorkPlus 定位功能，使用的是<code>高德地图SDK</code>，并且默认使用精准定位，一般需要 2-3s 的定位时间。</p>
+<p>在定位出现偏差时：</p>
+<ol>
+<li>请确保手机移动设备已经开启 GPS 功能；</li>
+<li>尽可能在链接 Wi-FI 后进行定位。</li>
+</ol>
+<p>如果定位偏差还是无法得以调整，可以尝试打开高德地图 APP 或其他地图软件，查看定位是否正常。</p>
+<p>如果发现高德地图 APP 本身定位存在异常，可以在高德地图开放平台发起工单，要求进行修复（需要提供资料）。</p>
+<div class="custom-container tip"><p class="custom-container-title">切换定位 SDK</p>
+<p>从<code>WorkPlus v4.10.0</code>版本开始，加入了切换定位服务商功能，目前支持切换到<code>高德地图</code>或<code>百度地图</code>，如果你使用该版本或更高的版本，可以在<code>设置-通用-定位校准</code>中进行设置，并且可以测试当前定位信息是否准确。</p>
+</div>
+<h2 id="js-sdk" tabindex="-1"><a class="header-anchor" href="#js-sdk" aria-hidden="true">#</a> JS-SDK</h2>
+<h3 id="回调使用-alert-输出结果没反应" tabindex="-1"><a class="header-anchor" href="#回调使用-alert-输出结果没反应" aria-hidden="true">#</a> 回调使用 alert 输出结果没反应</h3>
+<p>部分接口是会弹出原生选择界面，例如选择组织架构人员。选择人员后，在点击确认时，会关闭这个页面，此时回调方法马上执行 alert，由于 UiWebView 的 bug，会导致 CPU 飙高，出现页面卡死的情况。</p>
+<p>而 WkWebView 不存在该问题。</p>
+<p>所以，尽可能不要使用 alert 来检验接口返回值，可以使用 <a href="/light-app/vconsole.html" target="_blank" rel="noopener noreferrer">VConsole<OutboundLink/></a> 等调试工具。</p>
+<h3 id="可以多次注入-cordovajs-吗" tabindex="-1"><a class="header-anchor" href="#可以多次注入-cordovajs-吗" aria-hidden="true">#</a> 可以多次注入 cordovajs 吗？</h3>
+<p>不可以。</p>
+<p>如果你是使用原始 Cordova API，请确保一个 webview 只注入一次。如果使用 js-sdk，则无需考虑该问题，因为 sdk 内部会自动处理。</p>
+</template>

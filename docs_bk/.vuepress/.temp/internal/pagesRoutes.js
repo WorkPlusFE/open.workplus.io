@@ -1,0 +1,98 @@
+import { Vuepress } from '@vuepress/client/lib/components/Vuepress'
+
+const routeItems = [
+  ["v-8daa1a0e","/","",["/index.html","/README.md"]],
+  ["v-6be4efb0","/qa.html","常见问题",["/qa","/qa.md"]],
+  ["v-744497ce","/api/","概述",["/api/index.html","/api/README.md"]],
+  ["v-5169fc23","/api/auth.html","单点登录",["/api/auth","/api/auth.md"]],
+  ["v-7ff08aa6","/api/callback.html","开发者接口回调",["/api/callback","/api/callback.md"]],
+  ["v-9e3fa59c","/api/errorCode.html","全局错误码",["/api/errorCode","/api/errorCode.md"]],
+  ["v-8b34aec2","/api/getStart.html","接入流程",["/api/getStart","/api/getStart.md"]],
+  ["v-e44a97ac","/api/response.html","全局返回值",["/api/response","/api/response.md"]],
+  ["v-365de61f","/api/users.html","用户",["/api/users","/api/users.md"]],
+  ["v-7e427784","/light-app/","创建应用",["/light-app/index.html","/light-app/README.md"]],
+  ["v-7b4ac60b","/light-app/isv.html","ISV 应用",["/light-app/isv","/light-app/isv.md"]],
+  ["v-29348470","/light-app/message.html","应用消息通知",["/light-app/message","/light-app/message.md"]],
+  ["v-1d6e9832","/light-app/notify.html","应用红点",["/light-app/notify","/light-app/notify.md"]],
+  ["v-68f8b281","/light-app/noun.html","名词解析",["/light-app/noun","/light-app/noun.md"]],
+  ["v-0937c014","/light-app/offline.html","离线应用",["/light-app/offline","/light-app/offline.md"]],
+  ["v-7e249a68","/light-app/sso.html","单点登录",["/light-app/sso","/light-app/sso.md"]],
+  ["v-09a20f6e","/light-app/theme.html","应用主题",["/light-app/theme","/light-app/theme.md"]],
+  ["v-f4e21b90","/light-app/workbench.html","工作台",["/light-app/workbench","/light-app/workbench.md"]],
+  ["v-936853b6","/dev-tools/","高科前端开发工具",["/dev-tools/index.html","/dev-tools/README.md"]],
+  ["v-52c25b6a","/dev-tools/debug.html","安卓真机调试",["/dev-tools/debug","/dev-tools/debug.md"]],
+  ["v-3d922753","/dev-tools/vconsole.html","vConsole",["/dev-tools/vconsole","/dev-tools/vconsole.md"]],
+  ["v-94fdabbc","/design-specification/","概述",["/design-specification/index.html","/design-specification/README.md"]],
+  ["v-4b94e77e","/design-specification/basic-principles.html","基本原则",["/design-specification/basic-principles","/design-specification/basic-principles.md"]],
+  ["v-e1914072","/design-specification/case.html","客户案例",["/design-specification/case","/design-specification/case.md"]],
+  ["v-65d66a6f","/design-specification/download.html","素材资源下载",["/design-specification/download","/design-specification/download.md"]],
+  ["v-51fd67ca","/design-specification/resource-size.html","资源尺寸",["/design-specification/resource-size","/design-specification/resource-size.md"]],
+  ["v-3ac92981","/design-specification/visual-specification.html","视觉规范",["/design-specification/visual-specification","/design-specification/visual-specification.md"]],
+  ["v-18473820","/js-sdk/","概述",["/js-sdk/index.html","/js-sdk/README.md"]],
+  ["v-b5fde910","/js-sdk/app.html","应用",["/js-sdk/app","/js-sdk/app.md"]],
+  ["v-35e19811","/js-sdk/auth.html","认证",["/js-sdk/auth","/js-sdk/auth.md"]],
+  ["v-adf08e4e","/js-sdk/contact.html","联系人",["/js-sdk/contact","/js-sdk/contact.md"]],
+  ["v-390c1c23","/js-sdk/device.html","设备",["/js-sdk/device","/js-sdk/device.md"]],
+  ["v-c9cd3246","/js-sdk/email.html","邮箱",["/js-sdk/email","/js-sdk/email.md"]],
+  ["v-2f02044b","/js-sdk/eventListener.html","页面事件绑定",["/js-sdk/eventListener","/js-sdk/eventListener.md"]],
+  ["v-df4d7686","/js-sdk/file.html","文件",["/js-sdk/file","/js-sdk/file.md"]],
+  ["v-48d13b68","/js-sdk/header.html","网页头部",["/js-sdk/header","/js-sdk/header.md"]],
+  ["v-12fe6f04","/js-sdk/image.html","图片",["/js-sdk/image","/js-sdk/image.md"]],
+  ["v-251f2624","/js-sdk/location.html","地理位置",["/js-sdk/location","/js-sdk/location.md"]],
+  ["v-5bb31b8b","/js-sdk/network.html","网络",["/js-sdk/network","/js-sdk/network.md"]],
+  ["v-8c3ac2a4","/js-sdk/notification.html","信息反馈组件",["/js-sdk/notification","/js-sdk/notification.md"]],
+  ["v-9dde5d5e","/js-sdk/pay.html","支付",["/js-sdk/pay","/js-sdk/pay.md"]],
+  ["v-33f4f423","/js-sdk/session.html","聊天",["/js-sdk/session","/js-sdk/session.md"]],
+  ["v-96980118","/js-sdk/shared.html","通用",["/js-sdk/shared","/js-sdk/shared.md"]],
+  ["v-db4b4944","/js-sdk/storage.html","存储",["/js-sdk/storage","/js-sdk/storage.md"]],
+  ["v-19ea3064","/js-sdk/user.html","用户",["/js-sdk/user","/js-sdk/user.md"]],
+  ["v-55f4bec0","/js-sdk/webview.html","网页",["/js-sdk/webview","/js-sdk/webview.md"]],
+  ["v-0da5cafc","/api/app/","应用",["/api/app/index.html","/api/app/README.md"]],
+  ["v-e79c8442","/api/app/mbox.html","应用消息",["/api/app/mbox","/api/app/mbox.md"]],
+  ["v-0915d1fe","/api/app/scope.html","应用范围",["/api/app/scope","/api/app/scope.md"]],
+  ["v-50721f23","/api/app/template.html","模板消息",["/api/app/template","/api/app/template.md"]],
+  ["v-d00e8d1c","/api/medias/","媒体",["/api/medias/index.html","/api/medias/README.md"]],
+  ["v-ef810ffa","/api/medias/query.html","媒体查询",["/api/medias/query","/api/medias/query.md"]],
+  ["v-36413b4d","/api/medias/translator.html","媒体转换",["/api/medias/translator","/api/medias/translator.md"]],
+  ["v-57260268","/api/medias/vfs.html","媒体操作",["/api/medias/vfs","/api/medias/vfs.md"]],
+  ["v-303e51dd","/api/organizations/","组织架构",["/api/organizations/index.html","/api/organizations/README.md"]],
+  ["v-5225b42e","/api/organizations/employee.html","雇员",["/api/organizations/employee","/api/organizations/employee.md"]],
+  ["v-04166552","/api/organizations/org.html","组织",["/api/organizations/org","/api/organizations/org.md"]],
+  ["v-9d585042","/design-specification/visual-norms/component.html","常用控件",["/design-specification/visual-norms/component","/design-specification/visual-norms/component.md"]],
+  ["v-1b092962","/design-specification/visual-norms/dark-mode.html","暗黑模式",["/design-specification/visual-norms/dark-mode","/design-specification/visual-norms/dark-mode.md"]],
+  ["v-f70dd628","/design-specification/visual-norms/layout.html","页面布局",["/design-specification/visual-norms/layout","/design-specification/visual-norms/layout.md"]],
+  ["v-71027216","/design-specification/visual-norms/response.html","页面状态",["/design-specification/visual-norms/response","/design-specification/visual-norms/response.md"]],
+  ["v-2728912b","/design-specification/visual-norms/style.html","全局样式",["/design-specification/visual-norms/style","/design-specification/visual-norms/style.md"]],
+  ["v-0f8be98a","/js-sdk/overview/auth.html","API 鉴权",["/js-sdk/overview/auth","/js-sdk/overview/auth.md"]],
+  ["v-b6763a0a","/js-sdk/overview/changelog.html","更新日志",["/js-sdk/overview/changelog","/js-sdk/overview/changelog.md"]],
+  ["v-5eca5040","/js-sdk/overview/demo.html","例子及资源",["/js-sdk/overview/demo","/js-sdk/overview/demo.md"]],
+  ["v-ebb04406","/js-sdk/overview/origin.html","自定义方法",["/js-sdk/overview/origin","/js-sdk/overview/origin.md"]],
+  ["v-1f47b89b","/js-sdk/overview/urlScheme.html","跳转协议",["/js-sdk/overview/urlScheme","/js-sdk/overview/urlScheme.md"]],
+  ["v-6c42a20e","/js-sdk/overview/usage.html","快速开始",["/js-sdk/overview/usage","/js-sdk/overview/usage.md"]],
+  ["v-3706649a","/404.html","",["/404"]],
+]
+
+export const pagesRoutes = routeItems.reduce(
+  (result, [name, path, title, redirects]) => {
+    result.push(
+      {
+        name,
+        path,
+        component: Vuepress,
+        meta: { title },
+      },
+      ...redirects.map((item) => ({
+        path: item,
+        redirect: path,
+      }))
+    )
+    return result
+  },
+  [
+    {
+      name: "404",
+      path: "/:catchAll(.*)",
+      component: Vuepress,
+    }
+  ]
+)
