@@ -1,4 +1,5 @@
 import path from 'path';
+import sdkPkg from '@w6s/sdk/package.json';
 import { defineUserConfig } from '@vuepress/cli';
 import type { DefaultThemeOptions } from '@vuepress/theme-default';
 import type { WebpackConfiguration } from '@vuepress/bundler-webpack';
