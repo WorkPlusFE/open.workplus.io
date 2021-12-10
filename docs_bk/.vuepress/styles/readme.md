@@ -1,1 +1,0 @@
-<!-- https://v2.vuepress.vuejs.org/zh/reference/plugin/palette.html#palette -->

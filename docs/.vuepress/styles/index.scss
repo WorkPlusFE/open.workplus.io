@@ -1,3 +1,40 @@
-:root {
-  scroll-behavior: smooth;
+table {
+  border-collapse: collapse;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  table-layout: auto;
+  display: table;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+
+  th {
+    background: #F6F7F9;
+    border: 0;
+    padding: 0.9em 1em;
+  }
+
+  tr {
+    border-top: 0;
+    border-bottom: 1px solid #DEE0E3;
+  }
+
+  td {
+    background: #ffffff;
+    font-size: 14px;
+    border: 0;
+    padding: 0.9em 1em;
+  }
+  
+  tr:last-child {
+    border: 0;
+  }
+
+  thead tr {
+    border: 0;
+  }
+
+  img {
+    width: 40px;
+  }
 }
