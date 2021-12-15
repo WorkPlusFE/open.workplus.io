@@ -1,4 +1,4 @@
-# 接入流程
+# Token 申请
 
 WorkPlus 平台作为企业移动应用的统一入口，提供了用户身份集成，应用接入等基础能力接口。第三方应用主动调用接口时，需带上AccessToken 参数。AccessToken 参数由 DomainId，OrgId，AppKey，AppSecret 获取。
 

@@ -15,7 +15,7 @@
 
 ## 前置工作
 
-同步接口需要使用`应用 access_token`，所以需要提前在管理后台上创建用于同步人员的应用。获取应用 Token 的方法，请查阅 [接入流程-获取 AccessToken](/api/getStart.html#获取-accesstoken)。
+同步接口需要使用`应用 access_token`，所以需要提前在管理后台上创建用于同步人员的应用。获取应用 Token 的方法，请查阅 [Token 申请-获取 AccessToken](/api/getStart.html#获取-accesstoken)。
 
 ## 组织
 
