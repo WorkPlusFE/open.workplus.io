@@ -4,6 +4,7 @@ import { theme } from './theme';
 import { lightApp } from './lightApp';
 import { jsSDK } from './jsSdk';
 import { more } from './more';
+import { qa } from './qa';
 
 export const navbar = [
   lightApp,
@@ -11,9 +12,6 @@ export const navbar = [
   jsSDK,
   theme,
   devTools,
-  {
-    text: '常见问题',
-    link: '/qa.md',
-  },
+  qa,
   more,
 ];

@@ -18,6 +18,7 @@ export const serverApi = {
         { text: '组织架构', link: '/api/organizations/employee'},
         { text: '媒体', link: '/api/medias/query'},
         { text: '应用', link: '/api/app/mbox'},
+        '/api/sync',
       ]
     }
   ]

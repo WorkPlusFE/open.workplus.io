@@ -37,6 +37,7 @@ export const apiSideBar: SidebarConfigArray = [
           '/api/app/template',
         ]
       },
+      '/api/sync',
     ]
   }
 ];

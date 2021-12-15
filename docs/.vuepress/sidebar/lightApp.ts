@@ -2,12 +2,12 @@ import type { SidebarConfigArray } from '@vuepress/theme-default';
 
 export const lightApp: SidebarConfigArray = [
   {
-    text: '轻应用',
+    text: '应用创建',
     children: [
       '/light-app/create',
+      '/light-app/isv',
       '/light-app/nativeApp',
       '/light-app/offline',
-      '/light-app/flowTheory',
     ]
   }, {
     text: '平台接入',
