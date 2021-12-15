@@ -1,6 +1,6 @@
 # 主题定制
 
-::: warning 提示 
+::: warning 版本要求 
 该功能需要升级 WorkPlus 到`v4.10.0`或更高版本。
 :::
 
@@ -30,39 +30,35 @@ WorkPlus 主题是基于设计规范落地实践的技术方案，支撑 WorkPlu
 登录管理后台，在`客户端管理`点击`主题换肤`：
 
 <p style="text-align: left">
-  <img :src="$withBase('/theme/list-theme.png')" alt="list-theme" width="80%">
+  <img :src="$withBase('/theme/list-theme.png')" alt="list-theme" width="600">
 </p>
 
 打开页面后点击`添加主题`，即可进入创建主题界面：
 
 <p style="text-align: left">
-  <img :src="$withBase('/theme/new-theme.png')" alt="new-theme" width="80%">
+  <img :src="$withBase('/theme/new-theme.png')" alt="new-theme" width="600">
 </p>
-
-
 
 ### 主题包结构
 
-主题包以`.zip`压缩包的形式存在，具体结构以及定义如下：
+主题包以`.zip`压缩包的形式存在，具体结构以及定义如下：
 
-::: vue-code
-
+```bash
 theme
 ├── img _(**Optional**)_
 │   └──  w6s_skin_img_icon_*.png/jpg
-├── `theme.json`
+├── theme.json
 ├── dark_theme.json _(**Optional**)_
 ├── font\_\*\_regular.ttf _(**Optional**)_
 ├── font\_\*\_bold.ttf _(**Optional**)_
-├── `native_iconfont.ttf` _(**Optional**)_
-├── `native_iconfont.json` _(**Optional**)_
-├── `web_iconfont.ttf` _(**Optional**)_
-├── `web_iconfont.json`  _(**Optional**)_
-├── `w6s_skin_theme.css`
+├── native_iconfont.ttf _(**Optional**)_
+├── native_iconfont.json _(**Optional**)_
+├── web_iconfont.ttf _(**Optional**)_
+├── web_iconfont.json  _(**Optional**)_
+├── w6s_skin_theme.css
 ├── w6s_skin_dark_theme.css _(**Optional**)_
 └── w6s_skin_common_theme.css _(**Optional**)_
-
-:::
+```
 
 - `img` 
 
@@ -110,7 +106,7 @@ H5 本地对接引入的 CSS 文件；
 
 - `w6s_skin_common_theme.css` 
 
-**w6s_skin_theme.css**，**w6s_skin_dark_theme.css** 公共依赖的 CSS 文件。
+**w6s_skin_theme.css**，**w6s_skin_dark_theme.css** 公共依赖的 CSS 文件。
 
 ::: tip 提示
 以上涉及 iconfont 的数据，可通过工具或者[www.iconfont.cn](https://www.iconfont.cn/) 生成。
@@ -158,7 +154,7 @@ H5 本地对接引入的 CSS 文件；
       "watermark_text": "99E1E1E1"
     }
   },
-  "font": {  //全局字体规范，覆盖全局文本控件
+  "font": {  //全局字体规范，覆盖全局文本控件
     "regular": {
       "resource": "BMWGroup_Cond_Regular.ttf",
       "name": "BMWGroupCondensed-Regular"
@@ -182,7 +178,7 @@ H5 本地对接引入的 CSS 文件；
   "dark": { //是否支持开启暗黑模式
     "enable": true
   },
-  "theme": "hcbm", //主题名字
+  "theme": "workplus", //主题名字
   "version": 123,  //主题版本号
   "timestamp": -1 
 }
@@ -193,18 +189,18 @@ H5 本地对接引入的 CSS 文件；
 | 参数 | 说明| 备注 |
 | - | ---- |  -- |
 | color  | 按照设计规范色彩约定 | 必填 |
-| font  | 全局字体规范，覆盖全局文本控件 |  选填 |
-| iconfont  | iconfont文件映射, 我们推荐主题包按约定引入iconfont，以达到更好的展示效果跟灵活变换，具体参考[详细说明]| 选填 | 
-| dark  | 暗黑模式配置，决定是否支持开启。若开启，则会显示`深色模式`设置项，操作路径：<br/>`关于->通用->深色模式`。当该配置项打开后，会优先使用当前使用的主题包里的 `dark_theme.json`，若主题包不存在该文件，则会依次降级匹配对应的`dark_theme.json` | 选填 |
+| font  | 全局字体规范，覆盖全局文本控件 |  选填 |
+| iconfont  | iconfont文件映射, 我们推荐主题包按约定引入iconfont，以达到更好的展示效果跟灵活变换，具体参考[详细说明]| 选填 | 
+| dark  | 暗黑模式配置，决定是否支持开启。若开启，则会显示`深色模式`设置项，操作路径：<br/>`关于->通用->深色模式`。当该配置项打开后，会优先使用当前使用的主题包里的 `dark_theme.json`，若主题包不存在该文件，则会依次降级匹配对应的`dark_theme.json` | 选填 |
 | theme  | 主题包名称，例如: `新春版` | 必填 |
 | version  | 主题包版本号，每次更新时必须+1，否则会无法生效 | 必填 |
 
 ::: tip 提示
 iconfont 以及暗黑模式开启后，对应资源不存在时都会有对应的降级处理，也即按照优先级依次寻找对应需要的资源文件，优先级顺序如下：
 
-`远程定制主题包 > 远程默认主题包 -> 构建时默认主题包`
+`远程定制主题包 > 远程默认主题包 -> 构建时默认主题包`
 
-一般情况下，默认主题包的`dark_theme.json`满足多数场景。
+一般情况下，默认主题包的`dark_theme.json`满足多数场景。
 :::
 
 
@@ -219,7 +215,7 @@ WorkPlus 在 UI 一致性建设的过程中，已经陆续完成了 200+ 个 ico
 我们通过 [iconfont.cn](https://www.iconfont.cn/) 维护管理的部分 icon，如下：
 
 <p style="text-align: left">
-  <img :src="$withBase('/theme/display-iconfont.jpg')" alt="display-iconfont" width="80%">
+  <img :src="$withBase('/theme/display-iconfont.jpg')" alt="display-iconfont" width="600">
 </p>
 
 
@@ -231,20 +227,17 @@ WorkPlus 支持简单快捷的方式，让轻应用前端快速对接当前 Work
 
 `本地`引入规则如下：
 
-<CodeWrapper :qrcode="false">
+```js
+<link rel="stylesheet" href="reslocal://open.workplus.io/w6s_skin_theme.css">
+```
 
-&lt;link rel="stylesheet" href="reslocal://open.workplus.io/w6s_skin_theme.css"&gt;
-
-</CodeWrapper>
-
-WorkPlus 移动端识别到规则后，会对应返回当前主题包内的 CSS 资源给到前端，无需任何网络交互。
+WorkPlus 移动端识别到规则后，会对应返回当前主题包内的 CSS 资源给到前端，无需任何网络交互。
 
 ::: warning 注意
 目前`本地`方式在http部署的轻应用使用时，根据部署情况，在iOS 里可能会存在跨域问题，需要开发者关注处理，离线应用就不存在该问题。
 <br/>
-`在线`方式待后续提供，暂时需要开发者自行维护。
+`在线`方式待后续提供，暂时需要开发者自行维护。
 :::
-
 
 ### w6s\_skin\_theme.css
 
@@ -290,8 +283,6 @@ WorkPlus 移动端识别到规则后，会对应返回当前主题包内的 CSS 
 
 CSS 变量对应的值具体以当前使用主题为准，以上仅提供参考，具体定义严格遵守 [设计规范-视觉规范](/design-specification/visual-norms/style.md)。
 
-
-
 #### 字体
 
 ``` css
@@ -302,7 +293,6 @@ CSS 变量对应的值具体以当前使用主题为准，以上仅提供参考�
   font-weight: normal;
 }
 ```
-
 
 #### iconfont
 ``` css 
@@ -331,18 +321,14 @@ CSS 变量对应的值具体以当前使用主题为准，以上仅提供参考�
 }
 
 ...
-
-
 ```
-
-
-
 
 ### 暗黑模式
 
 前端引入 CSS 后，相关色值 CSS 变量就自然支持暗黑模式了。WorkPlus 会在进入暗黑模式后，对应把色值变量无感知修改掉。
 
 例如: 
+
 <div style="display: flex">
   <div style="display: flex; ">
       <div style="background:#F5F5F5;width: 30px; height: 30px; "></div>
@@ -356,15 +342,13 @@ CSS 变量对应的值具体以当前使用主题为准，以上仅提供参考�
 </div>
 
 
-
 <br/><br/>
 对于不需要暗黑模式的轻应用，可以增加`dark=disabled`来禁止掉，如下：
 
-<CodeWrapper :qrcode="false">
 
-&lt;link rel="stylesheet" href="reslocal://open.workplus.io/w6s\_skin\_theme.css?dark=disabled"&gt;
-
-</CodeWrapper>
+```js
+<link rel="stylesheet" href="reslocal://open.workplus.io/w6s_skin_theme.css?dark=disabled">
+```
 
 
 支持参数:
