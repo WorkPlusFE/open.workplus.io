@@ -13,6 +13,7 @@ export const apiSideBar: SidebarConfigArray = [
     text: '接口列表',
     children: [
       '/api/auth',
+      '/api/sync',
       '/api/users',
       {
         text: '组织架构',
@@ -37,7 +38,6 @@ export const apiSideBar: SidebarConfigArray = [
           '/api/app/template',
         ]
       },
-      '/api/sync',
     ]
   }
 ];

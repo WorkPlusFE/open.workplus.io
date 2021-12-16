@@ -10,18 +10,19 @@ export const theme: SidebarConfigArray = [
     children: [
       '/design-specification/introduce',
       '/design-specification/basic-principles',
-      {
-        text: '视觉规范',
-        children: [
-          '/design-specification/visual-norms/style',
-          '/design-specification/visual-norms/component',
-          '/design-specification/visual-norms/layout',
-          '/design-specification/visual-norms/response',
-        ]
-      },
-      '/design-specification/resource-size',
-      '/design-specification/download',
-      '/design-specification/case',
+      '/design-specification/visual-norms/style',
+      // {
+      //   text: '视觉规范',
+      //   children: [
+      //     '/design-specification/visual-norms/style',
+      //     '/design-specification/visual-norms/component',
+      //     '/design-specification/visual-norms/layout',
+      //     '/design-specification/visual-norms/response',
+      //   ]
+      // },
+      // '/design-specification/resource-size',
+      // '/design-specification/download',
+      // '/design-specification/case',
     ]
   },
 ];

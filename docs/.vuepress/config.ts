@@ -1,8 +1,7 @@
-import path from 'path';
-import sdkPkg from '@w6s/sdk/package.json';
+import { path } from '@vuepress/utils';
 import { defineUserConfig } from '@vuepress/cli';
 import type { DefaultThemeOptions } from '@vuepress/theme-default';
-import type { WebpackConfiguration } from '@vuepress/bundler-webpack';
+import type { WebpackConfiguration, VueLoaderOptions } from '@vuepress/bundler-webpack';
 import { sidebar } from './sidebar';
 import { navbar } from './navbar';
 
@@ -32,6 +31,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         sidebar,
       },
     },
+    sidebarDepth: 2,
     
     docsRepo: 'WorkPlusFE/open.workplus.io',
     docsDir: 'docs',
@@ -74,12 +74,13 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
     ],
   ],
+  
   bundlerConfig: {
     configureWebpack(config: WebpackConfiguration) {
       return config.module.rules.push({
         test: /\.mjs$/i,
         resolve: { byDependency: { esm: { fullySpecified: false } } }
       });
-    }
+    },
   }
 });

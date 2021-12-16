@@ -13,8 +13,9 @@
 **一、主色** 
 
 <ColorCardGroup>
-<ColorCard name="Primary" color="#007AFF" summary="主题色" />
+  <ColorCard name="Primary" color="#007AFF" summary="主题色" />
 </ColorCardGroup>
+
 
 **二、辅助色** 
 
@@ -125,9 +126,6 @@
 --block-space: 8px;
 --block-space-interval: 16px;
 ```
-
-## 图标
-
 
 ## 圆角
 

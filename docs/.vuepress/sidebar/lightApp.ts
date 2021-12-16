@@ -13,10 +13,11 @@ export const lightApp: SidebarConfigArray = [
     text: '平台接入',
     children: [
       '/light-app/noun',
+      '/light-app/sync',
       '/light-app/sso',
       '/light-app/message',
       '/light-app/notify',
-      '/light-app/workbench'
+      '/light-app/workbench',
     ]
   }
 ];
