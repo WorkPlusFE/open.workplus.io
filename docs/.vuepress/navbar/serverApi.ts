@@ -13,8 +13,8 @@ export const serverApi = {
     {
       text: '接口列表',
       children: [
-        '/api/auth',
         '/api/sync',
+        '/api/auth',
         '/api/users',
         { text: '组织架构', link: '/api/organizations/employee'},
         { text: '媒体', link: '/api/medias/query'},

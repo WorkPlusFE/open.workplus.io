@@ -12,8 +12,8 @@ export const apiSideBar: SidebarConfigArray = [
   }, {
     text: '接口列表',
     children: [
-      '/api/auth',
       '/api/sync',
+      '/api/auth',
       '/api/users',
       {
         text: '组织架构',
