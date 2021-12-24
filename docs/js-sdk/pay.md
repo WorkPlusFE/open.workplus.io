@@ -14,7 +14,6 @@ WorkPlus 应用已默认集成`微信支付SDK`，但相关`app_id`信息需要�
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper fn="pay.wxPay" :qrcode="false">
 
 ```js
 w6s.pay.wxPay({
@@ -24,7 +23,6 @@ w6s.pay.wxPay({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 

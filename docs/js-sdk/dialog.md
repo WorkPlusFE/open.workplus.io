@@ -14,7 +14,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="dialog.showModal">
 
 ```js
 w6s.dialog.showModal({
@@ -27,7 +26,6 @@ w6s.dialog.showModal({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 
 **参数说明**
@@ -57,7 +55,6 @@ w6s.dialog.showModal({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="dialog.showActionSheet">
 
 ```js
 w6s.dialog.showActionSheet({
@@ -66,7 +63,6 @@ w6s.dialog.showActionSheet({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 
 **参数说明**
@@ -92,7 +88,6 @@ w6s.dialog.showActionSheet({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="dialog.showToast">
 
 ```js
 w6s.dialog.showToast({
@@ -100,7 +95,6 @@ w6s.dialog.showToast({
   duration: 5000, // 毫秒数
 });
 ```
-</CodeWrapper>
 
 
 **参数说明**
@@ -121,7 +115,6 @@ w6s.dialog.showToast({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper :qrcode="false">
 
 ```js
 // 显示 Loading
@@ -133,7 +126,6 @@ w6s.dialog.showLoading({
 // 隐藏 Loading
 w6s.dialog.hideLoading();
 ```
-</CodeWrapper>
 
 
 **参数说明**

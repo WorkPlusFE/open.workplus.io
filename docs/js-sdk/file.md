@@ -16,7 +16,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="file.chooseFiles">
 
 ```js
 w6s.file.chooseFiles({
@@ -31,7 +30,6 @@ w6s.file.chooseFiles({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -61,7 +59,6 @@ w6s.file.chooseFiles({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="file/openFileDetail">
 
 ```js
 // 该方法没有回调
@@ -73,7 +70,6 @@ w6s.file.openFileDetail({
   isImage: true,
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -99,7 +95,6 @@ w6s.file.openFileDetail({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="file.readFile">
 
 ```js
 // 该方法没有回调
@@ -107,7 +102,6 @@ w6s.file.readFile({
   path: '文件地址'
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -125,7 +119,6 @@ w6s.file.readFile({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="file.isFileExist">
 
 ```js
 w6s.file.isFileExist({
@@ -134,7 +127,6 @@ w6s.file.isFileExist({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -157,7 +149,6 @@ w6s.file.isFileExist({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper :qrcode="false" fn="file.download">
 
 ```js
 w6s.file.download({
@@ -171,7 +162,6 @@ w6s.file.download({
   fail: function(res) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -202,7 +192,6 @@ w6s.file.download({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper :qrcode="false" fn="file.upload">
 
 ```js
 w6s.file.upload({
@@ -221,7 +210,6 @@ w6s.file.upload({
   },
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -243,7 +231,6 @@ w6s.file.upload({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="file.getFilePath">
 
 ```js
 w6s.file.getFilePath({
@@ -253,7 +240,6 @@ w6s.file.getFilePath({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 

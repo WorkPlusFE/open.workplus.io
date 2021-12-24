@@ -9,7 +9,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="device.getIpAddress">
 
 ```js
 w6s.device.getIpAddress({
@@ -17,7 +16,6 @@ w6s.device.getIpAddress({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 
@@ -35,7 +33,6 @@ w6s.device.getIpAddress({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="device.getDeviceInfo">
 
 ```js
 w6s.device.getDeviceInfo({
@@ -43,7 +40,6 @@ w6s.device.getDeviceInfo({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 
@@ -68,7 +64,6 @@ w6s.device.getDeviceInfo({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="device.getPedometerData">
 
 ```js
 w6s.device.getPedometerData({
@@ -76,7 +71,6 @@ w6s.device.getPedometerData({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 
@@ -99,7 +93,6 @@ w6s.device.getPedometerData({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="device.getAppInfo">
 
 ```js
 w6s.device.getAppInfo({
@@ -107,7 +100,6 @@ w6s.device.getAppInfo({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 

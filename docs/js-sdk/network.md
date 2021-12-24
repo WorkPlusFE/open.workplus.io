@@ -10,7 +10,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="network.getWifiInfo">
 
 ```js
 w6s.network.getWifiInfo({
@@ -18,7 +17,6 @@ w6s.network.getWifiInfo({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 

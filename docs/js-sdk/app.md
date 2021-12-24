@@ -10,7 +10,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="app.route">
 
 ```js
 w6s.app.route({
@@ -19,7 +18,6 @@ w6s.app.route({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -38,7 +36,6 @@ w6s.app.route({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="app.showAppChatViewById" :qrcode="false">
 
 ```js
 w6s.app.showAppChatViewById({
@@ -48,7 +45,6 @@ w6s.app.showAppChatViewById({
   sessionType : 'service'
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -72,12 +68,10 @@ w6s.app.showAppChatViewById({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="app.searchInApp">
 
 ```js
 w6s.app.searchInApp();
 ```
-</CodeWrapper>
 
 
 ## 打开App列表页面
@@ -90,14 +84,12 @@ w6s.app.searchInApp();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="app.showAppListById">
 
 ```js
 w6s.app.showAppListById({
   orgId: '37a2ef9f-8683-4369-ae7b-121cea149d05',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 

@@ -53,3 +53,24 @@ getSignature()
 ```js
 w6s.execSync(service, action, args);
 ```
+
+
+
+## 接口检测
+
+因版本及一些特殊定制原因，某些接口可能并不存在，可以通过`w6s.checkApi`检测。
+
+```js
+w6s.checkApi({
+  /** 插件名称 */
+  service: 'auth',
+  /** 插件方法 */
+  method: 'getTicket',
+  success(res) {},
+  fail(err) {},
+});
+```
+
+::: warning 需使用原始 Cordova 接口的定义参数
+JS-SDK 会优化一些接口的方法和属性名，目前暂不支持内部转换成原始的 Cordova 接口的参数及属性。你可以查看[原始 Cordova 接口文档](https://open.workplus.io/cordova/)进行参数设置。
+:::

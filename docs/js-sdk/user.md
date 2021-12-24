@@ -11,7 +11,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="user.getCurrentUserInfo">
 
 ```js
 w6s.user.getCurrentUserInfo({
@@ -20,7 +19,6 @@ w6s.user.getCurrentUserInfo({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -38,7 +36,6 @@ w6s.user.getCurrentUserInfo({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="user.getCurrentEmployeeInfo">
 
 ```js
 w6s.user.getCurrentEmployeeInfo({
@@ -47,7 +44,6 @@ w6s.user.getCurrentEmployeeInfo({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -69,7 +65,6 @@ w6s.user.getCurrentEmployeeInfo({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="user.getUserInfoByUserId" :qrcode="false">
 
 ```js
 w6s.user.getUserInfoByUserId({
@@ -77,7 +72,6 @@ w6s.user.getUserInfoByUserId({
   domainId: '用户的domainId',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -96,14 +90,12 @@ w6s.user.getUserInfoByUserId({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="user.showUserInfoByUsername" :qrcode="false">
 
 ```js
 w6s.user.showUserInfoByUsername({
   username: '用户的username',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 

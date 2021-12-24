@@ -19,10 +19,7 @@
 
 **JS-SDK 输出文件：**
 
-<CodeWrapper :qrcode="false">
-https://open.workplus.io/static/js-sdk/sdk.{{$themeConfig.version}}.js
-
-</CodeWrapper>
+<!-- https://open.workplus.io/static/js-sdk/sdk.{{$themeConfig.version}}.js -->
 
 [JS-SDK GitHub 下载地址](https://github.com/WorkPlusFE/js-sdk/releases)。
 
@@ -34,19 +31,15 @@ https://open.workplus.io/static/js-sdk/sdk.{{$themeConfig.version}}.js
 
 * android.cordova.min.js
 
-<CodeWrapper :qrcode="false">
-https://open.workplus.io/static/android.cordova.min.js
+<!-- https://open.workplus.io/static/android.cordova.min.js -->
 
-</CodeWrapper>
 
 <a href="https://open.workplus.io/static/android.cordova.min.js" download="android.cordova.min.js" target="_blank">下载 android.cordova.min.js</a>
 
 * ios.cordova.min.js
 
-<CodeWrapper :qrcode="false">
-https://open.workplus.io/static/ios.cordova.min.js
+<!-- https://open.workplus.io/static/ios.cordova.min.js -->
 
-</CodeWrapper>
 
 <a href="https://open.workplus.io/static/ios.cordova.min.js" download="ios.cordova.min.js" target="_blank">下载 ios.cordova.min.js</a>
 

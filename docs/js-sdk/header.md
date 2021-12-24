@@ -16,12 +16,10 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="header/setTitle">
 
 ```js
 w6s.header.setTitle('test title');
 ```
-</CodeWrapper>
 
 ::: tip 初始标题 
 打开一个页面，标题通常默认取自 html 页面上的 title 标签的内容，如果希望初始不显示任何标题内容，可以将 title 内容设置如下：
@@ -43,14 +41,12 @@ w6s.header.setTitle('test title');
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="header.leftButton">
 
 ```js
 w6s.header.leftButton(
   method: 'goBack',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -72,12 +68,10 @@ w6s.header.leftButton(
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="header.clearLeftButton">
 
 ```js
 w6s.header.clearLeftButton();
 ```
-</CodeWrapper>
 
 ## 锁定网页顶部栏
 
@@ -89,7 +83,6 @@ w6s.header.clearLeftButton();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="header.openWebView">
 
 ```js
 // 锁定
@@ -98,7 +91,6 @@ w6s.header.navigation.lock();
 // 解锁
 w6s.header.navigation.unlock();
 ```
-</CodeWrapper>
 
 ## 设置右侧按钮动作
 
@@ -152,7 +144,6 @@ w6s.header.navigation.unlock();
 
 调用方法，每个按钮为一个数组:
 
-<CodeWrapper fn="header.rightButtons">
 
 ```js
 w6s.header.rightButtons({
@@ -168,7 +159,6 @@ w6s.header.rightButtons({
   ],
 });
 ```
-</CodeWrapper>
 
 如上，定义了两个右键按钮，第一个为更多，它是一个下拉式按钮，用户点击时，会出现 aaa、bbb 两个选项， 用户点击 aaa 时,会调用页面的 aaa 方法，点击 bbb 时，用调用 bbb 方法。
 
@@ -228,12 +218,10 @@ w6s.header.rightButtons({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="header.clearRightButtons">
 
 ```js
 w6s.header.clearRightButtons();
 ```
-</CodeWrapper>
 
 
 ## 设置左侧的按钮和关闭
@@ -246,7 +234,6 @@ w6s.header.clearRightButtons();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="header.visibleLeftButton">
 
 ```js
 w6s.header.visibleLeftButton({
@@ -254,7 +241,6 @@ w6s.header.visibleLeftButton({
   showClose: false,
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -284,7 +270,6 @@ w6s.header.visibleLeftButton({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="header.showSearchBar">
 
 ```js
 w6s.header.showSearchBar({
@@ -294,7 +279,6 @@ w6s.header.showSearchBar({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -338,9 +322,7 @@ w6s.header.showSearchBar({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="header.hideSearchBar" :qrcode="false">
 
 ```js
 w6s.header.hideSearchBar();
 ```
-</CodeWrapper>

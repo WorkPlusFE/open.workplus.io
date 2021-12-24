@@ -10,7 +10,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="webview.openWebView">
 
 ```js
 w6s.webview.openWebView({
@@ -21,7 +20,6 @@ w6s.webview.openWebView({
   displayMode: 'FULL_SCREEN'
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -43,12 +41,10 @@ w6s.webview.openWebView({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="webview.exit">
 
 ```js
 w6s.webview.exit();
 ```
-</CodeWrapper>
 
 ## 弹出分享对话框
 
@@ -60,7 +56,6 @@ w6s.webview.exit();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="webview.share">
 
 ```js
 w6s.webview.share({
@@ -77,7 +72,6 @@ w6s.webview.share({
   },
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -108,7 +102,6 @@ w6s.webview.share({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="webview/changeOrientation">
 
 ```js
 w6s.webview.changeOrientation({
@@ -116,7 +109,6 @@ w6s.webview.changeOrientation({
   lock: true,
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -137,7 +129,6 @@ w6s.webview.changeOrientation({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="webview/waterMask">
 
 ```js
 w6s.webview.addWaterMask({
@@ -148,7 +139,6 @@ w6s.webview.addWaterMask({
   fontSize: 16,
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -170,13 +160,10 @@ w6s.webview.addWaterMask({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="webview.removeWaterMask" :qrcode="false">
 
 ```js
 w6s.webview.removeWaterMask();
 ```
-</CodeWrapper>
-
 
 ## 注册摇一摇监听
 
@@ -188,12 +175,10 @@ w6s.webview.removeWaterMask();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="webview/shake">
 
 ```js
 w6s.webview.registerShakeListener();
 ```
-</CodeWrapper>
 
 前端需要实现`onWorkplusShake()`方法, 在该处执行自己的业务, 摇一摇后将在该方法回调。
 
@@ -212,13 +197,10 @@ w6s.webview.registerShakeListener();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="webview/shake">
 
 ```js
 w6s.webview.unregisterShakeListener();
 ```
-</CodeWrapper>
-
 
 ## 微信分享(会话/朋友圈)
 
@@ -230,7 +212,6 @@ w6s.webview.unregisterShakeListener();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="webview.wxShare" :qrcode="false">
 
 ```js
 w6s.webview.wxShare({
@@ -243,7 +224,6 @@ w6s.webview.wxShare({
   data: { 'url': 'https://workplus.io' }
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 

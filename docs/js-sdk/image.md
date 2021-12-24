@@ -9,7 +9,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper fn="image.takePicture">
 
 ```js
 w6s.image.takePicture({
@@ -18,7 +17,6 @@ w6s.image.takePicture({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -45,7 +43,6 @@ w6s.image.takePicture({
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper fn="image.chooseImages">
 
 ```js
 w6s.image.chooseImages({
@@ -61,7 +58,6 @@ w6s.image.chooseImages({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -93,13 +89,11 @@ w6s.image.chooseImages({
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper fn="image.cleanCompressImage">
 
 ```js
 // 该方法没有返回
 w6s.image.cleanCompressImage();
 ```
-</CodeWrapper>
 
 ## 图片预览
 传入图片地址进行图片预览，支持传入 position 表示从第几张开始预览。
@@ -110,7 +104,6 @@ w6s.image.cleanCompressImage();
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper fn="image.showImages">
 
 ```js
 // 该方法没有回调
@@ -120,7 +113,6 @@ w6s.image.showImages({
   position: 0,
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -141,7 +133,6 @@ w6s.image.showImages({
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper custom-link="image/saveImages">
 
 ```js
 // 该方法没有回调
@@ -151,7 +142,6 @@ w6s.image.saveImages({
   imageData: 'base64数据',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -176,7 +166,6 @@ w6s.image.saveImages({
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper custom-link="image/actionForLongPressImage">
 
 ```js
 // 该方法没有回调
@@ -184,7 +173,6 @@ w6s.image.actionForLongPressImage({
   imageData: 'base64数据',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -236,7 +224,6 @@ html2canvas(document.getElementById('body'))
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="image/base64">
 
 ```js
 w6s.image.toBase64({
@@ -245,7 +232,6 @@ w6s.image.toBase64({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -270,7 +256,6 @@ w6s.image.toBase64({
 | -------- | ------- | ---- |
 | 支持情况 | 支持    | 支持 |
 
-<CodeWrapper custom-link="image/takePhotoAndAddWaterMark">
 
 ```js
 w6s.image.takePhotoAndAddWaterMark({
@@ -284,7 +269,6 @@ w6s.image.takePhotoAndAddWaterMark({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 

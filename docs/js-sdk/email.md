@@ -10,7 +10,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="email.writeEmail">
 
 ```js
 w6s.email.writeEmail({
@@ -19,7 +18,6 @@ w6s.email.writeEmail({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -37,10 +35,8 @@ w6s.email.writeEmail({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="email.openEmail">
 
 ```js
 // 该方法没有回调
 w6s.email.openEmail();
 ```
-</CodeWrapper>

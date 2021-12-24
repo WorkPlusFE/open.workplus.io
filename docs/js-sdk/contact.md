@@ -14,7 +14,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="contact.getSingleContact">
 
 ```js
 w6s.contact.getSingleContact({
@@ -24,7 +23,6 @@ w6s.contact.getSingleContact({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -43,7 +41,6 @@ w6s.contact.getSingleContact({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="contact.getContacts">
 
 ```js
 w6s.contact.getContacts({
@@ -54,7 +51,6 @@ w6s.contact.getContacts({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -74,7 +70,6 @@ w6s.contact.getContacts({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="contact.getEmployeesFromCurrentOrg">
 
 ```js
 w6s.contact.getEmployeesFromCurrentOrg({
@@ -85,7 +80,6 @@ w6s.contact.getEmployeesFromCurrentOrg({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -106,7 +100,6 @@ w6s.contact.getEmployeesFromCurrentOrg({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="contact.selectContacts">
 
 ```js
 w6s.contact.selectContacts({
@@ -118,7 +111,6 @@ w6s.contact.selectContacts({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -151,7 +143,6 @@ w6s.contact.selectContacts({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="contact.getMobileContacts">
 
 ```js
 w6s.contact.getMobileContacts(
@@ -159,7 +150,6 @@ w6s.contact.getMobileContacts(
   fail: function(err) {},
 );
 ```
-</CodeWrapper>
 
 返回的数据会以英文字母拆分：
 

@@ -10,7 +10,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="session.showUserChatViewByUser" :qrcode="false">
 
 ```js
 w6s.session.showUserChatViewByUser({
@@ -18,7 +17,6 @@ w6s.session.showUserChatViewByUser({
   domainId: '用户的domainId',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -39,14 +37,12 @@ w6s.session.showUserChatViewByUser({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="session.openDiscussionById" :qrcode="false">
 
 ```js
 w6s.session.openDiscussionById({
   discussionId: '0629aadxx3fb0bd6',
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 
@@ -65,12 +61,10 @@ w6s.session.openDiscussionById({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="session.createDiscussionChat">
 
 ```js
 w6s.session.createDiscussionChat();
 ```
-</CodeWrapper>
 
 
 ## 打开群组选人界面
@@ -83,7 +77,6 @@ w6s.session.createDiscussionChat();
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="session.selectDiscussionMembers" :qrcode="false">
 
 ```js
 w6s.session.selectDiscussionMembers({
@@ -93,7 +86,6 @@ w6s.session.selectDiscussionMembers({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **参数说明**
 

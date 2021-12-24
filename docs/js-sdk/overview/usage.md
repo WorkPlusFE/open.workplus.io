@@ -4,40 +4,37 @@
 
 ## 引入及使用
 
-**一、基于`npm`包的方式引入：**
+**基于`npm`包的方式引入：**
 
 1、使用`npm`或`yarn`安装模块：
 
 ```sh
-npm install @w6s/sdk --save
+npm install szient-js-sdk --save
 
 # 使用 yarn 
-yarn add @w6s/sdk
+yarn add szient-js-sdk
 ```
 
 2、安装成功后，使用`es module`或`commonjs`模块规范引入，支持全量及按模块引入：
 
 ```js
 // 全量引入
-import * as w6s from '@w6s/sdk';
+import * as w6s from 'szient-js-sdk';
 
 // 按模块引入
-import auth from '@w6s/sdk/auth';
+import auth from 'szient-js-sdk/auth';
 ```
 
-3、引入模块后，需先调用初始化方法`init`：
+3、引入模块后，可以通过调用初始化方法`init`来修改默认配置：
 
 ```js
 w6s.init({ debug: true });
 ```
 
-`init`方法所支持的配置项，请看下方[配置说明](./usage.html#配置)。
+`init`方法并不是必须的。所有配置项，请看下方[配置说明](./usage.html#配置)。
 
-::: tip 注意!!
-只有在 init 方法被调用后，sdk 的其他方法才可正常执行，如果是按模块引入，可以单独引入`init`方法进行初始化。
-:::
 
-4、sdk 初始化后，将可调用各模块方法，所有接口均支持`promise`及`callback`的调用方式：
+4、SDK 就绪后，将可调用各模块方法，所有接口均支持`promise`及`callback`的调用方式：
 
 ```js
 // Promise
@@ -54,22 +51,11 @@ w6s.auth.getUserTicket({
 });
 ```
 
-**二、`script`标签引入：**
+## JS-API 鉴权
 
-<CodeWrapper :qrcode="false">
+为了保证 JS-SDK 的调用者是可信任的，同时对当前页面可用的 API 进行安全限制，防止恶意网页通过 JS-API 随意获取用户私密信息，对用户财产造成损失。因此在部分 JS-API 在被调用前，需要通过接口进行鉴权，只有鉴权成功的情况下，JS-API 的调用才会正常生效。
 
-&lt;script src="https://open.workplus.io/static/js-sdk/sdk.{{$themeConfig.version}}.js"&gt;&lt;/script&gt;
-
-</CodeWrapper>
-
-引入后，会在全局暴露`w6s`对象，初始化后，将可调用各模块接口。
-
-
-::: warning 关于 JS-SDK 资源
-基于 WorkPlus 部分客户网络环境的特殊性，推荐自行部署`js-sdk`的相关资源，以供自家平台轻应用访问。
-
-相关资源说明，请查看[此处](/js-sdk/overview/demo.html#资源文件)。
-:::
+更多 JS-API 鉴权的信息，请查看[鉴权流程](/js-sdk/overview/auth.md)。
 
 ## 配合 Vue 使用
 
@@ -79,7 +65,7 @@ w6s.auth.getUserTicket({
 
 ```js
 import Vue from 'vue';
-import * as w6s from '@w6s/sdk';
+import * as w6s from 'szient-js-sdk';
 
 // 初始化 sdk，同时会在 Vue 原型链上挂载 $w6s 对象
 Vue.use(w6s, {
@@ -128,15 +114,6 @@ w6s.init({
   // 是否开启调试模式
   debug: true,
   
-  // 配置 cordovajs 不同平台的访问地址
-  cordovajs: {
-    iOS: 'https://xxx',
-    android: 'https://xxx',
-  },
-
-  // 若为true， 将强制以 http 的方式注入 cordovajs
-  useHttp: false,
-
   // 接口超时时间，单位毫秒
   timeout: 5000,
 
@@ -153,20 +130,6 @@ w6s.init({
 **debug**
 
 默认为 false。开启后，将会在控制台打印调用接口的相关信息。
-
-**cordovajs**
-
-用于设置 iOS 及 Android 两端的 cordovajs 的加载地址，相关资源说明，请查看[此处](/js-sdk/overview/demo.html#资源文件)。
-
-在 js-sdk 内部，会根据具体的环境来决定使用`applocal://`还是`http(s)://`的方式注入 cordovajs。
-
-::: tip 为什么要设置 cordovajs
-过去，我们通过`applocal://`的特定协议来加载本地的 cordovajs，但某些情况可能会导致失败或移动端无法监听到加载请求，从而应用无法正常使用，例如在 iframe 中加载应用。而使用 http 的加载方式，即可避免这些问题，只是会额外增加了资源的请求。
-:::
-
-**useHttp**
-
-默认为 false。如设置为 true，即强制使用 http 的方式加载 cordovajs，若未设置，将会给出警告。
 
 **timeout**
  

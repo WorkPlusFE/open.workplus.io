@@ -12,7 +12,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 不支持 |
 
-<CodeWrapper :qrcode="false" fn="event.bindBackButtonEvent">
 
 ```js
 // 单个 WebView 中只需要绑定一次
@@ -20,8 +19,6 @@ w6s.event.bindBackButtonEvent(() => {
   // 此处处理返回的逻辑
 });
 ```
-
-</CodeWrapper>
 
 ::: tip 关于返回
 在 WebView 中，物理返回按钮会以标准的浏览器访问记录进行页面退回，但是往往在开发单页面应用(SPA)时，返回事件可能会让整个应用退出，此时可以通过绑定物理返回按钮事件，正确地处理页面切换。
@@ -37,15 +34,12 @@ w6s.event.bindBackButtonEvent(() => {
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper :qrcode="false" fn="event.bindPauseEvent">
 
 ```js
 w6s.event.bindPauseEvent(() => {
   // 此处执行特定逻辑
 });
 ```
-
-</CodeWrapper>
 
 ## 页面返回
 
@@ -57,12 +51,8 @@ w6s.event.bindPauseEvent(() => {
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper :qrcode="false" fn="event.bindResumeEvent">
-
 ```js
 w6s.event.bindResumeEvent(() => {
   // 此处执行特定逻辑
 });
 ```
-
-</CodeWrapper>

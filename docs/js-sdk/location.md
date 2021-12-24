@@ -10,7 +10,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="location.getLocation">
 
 ```js
 w6s.location.getLocation({
@@ -18,7 +17,6 @@ w6s.location.getLocation({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 

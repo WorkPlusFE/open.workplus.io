@@ -9,7 +9,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="auth.getUserTicket">
 
 ```js
 w6s.auth.getUserTicket({
@@ -17,7 +16,6 @@ w6s.auth.getUserTicket({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 
@@ -34,7 +32,6 @@ w6s.auth.getUserTicket({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="auth.biometric">
 
 ```js
 w6s.auth.biometric({
@@ -42,7 +39,6 @@ w6s.auth.biometric({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 

@@ -10,7 +10,6 @@
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="util.scanner">
 
 ```js
 w6s.util.scanner({
@@ -18,7 +17,6 @@ w6s.util.scanner({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 
 ## 语音转文本
@@ -31,7 +29,6 @@ w6s.util.scanner({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper fn="util.voiceToText">
 
 ```js
 w6s.util.voiceToText({
@@ -39,7 +36,6 @@ w6s.util.voiceToText({
   fail: function(err) {},
 });
 ```
-</CodeWrapper>
 
 **返回数据**
 
@@ -58,11 +54,9 @@ w6s.util.voiceToText({
 | -------- | ------- | ---- |
 | 支持情况 | 支持  | 支持 |
 
-<CodeWrapper custom-link="util/copyText">
 
 ```js
 w6s.util.copyText('open.workplus.io');
 ```
-</CodeWrapper>
 
 > 该方法没有回调，若要提示复制成功信息，在方法执行后提示即可。
