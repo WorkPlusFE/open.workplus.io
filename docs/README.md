@@ -1,68 +1,44 @@
 ---
 home: true
-title: Home
+title: WorkPlus 开放平台
 heroImage: /home.png
 heroText: WorkPlus 开放平台
 tagline: 助力业务系统快速移动化
-actions:
-  - text: Get Started
-    link: /guide/getting-started.html
-    type: primary
-  - text: Introduction
-    link: /guide/
-    type: secondary
-features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-  - title: Themes
-    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
-  - title: Plugins
-    details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site. 
-  - title: Bundlers
-    details: Both Webpack and Vite are supported. Choose the one you like!
 footer: ©2015-2021 深圳恒拓高科信息技术有限公司 版权所有  |  粤ICP备15040561号
 ---
 
-### As Easy as 1, 2, 3
+## 快速开始
 
-<CodeGroup>
-  <CodeGroupItem title="YARN" active>
+home page
 
-```bash
-# install in your project
-yarn add -D vuepress@next
+- 创建应用
+  - H5 轻应用开发
+  - 单点登录
+  - 应用消息数字红点
+- 客户端定制
+  - 配置工作台
+  - 主题定制
+- 账号同步
 
-# create a markdown file
-echo '# Hello VuePress' > README.md
 
-# start writing
-yarn vuepress dev
 
-# build to static files
-yarn vuepress build
-```
+navbar
 
-  </CodeGroupItem>
+- 首页
+- 应用开发
+  - 应用创建
+  - 服务端
+  - 客户端
+  - 常见问题
 
-  <CodeGroupItem title="NPM">
-  
-```bash
-# install in your project
-npm install -D vuepress@next
+- 客户端定制
+  - 工作台定制
+  - 主题定制
 
-# create a markdown file
-echo '# Hello VuePress' > README.md
+- 开发调试
+  - 脚手架
+  - h5 调试
 
-# start writing
-npx vuepress dev
+- 了解更多
 
-# build to static files
-npx vuepress build
-```
-
-  </CodeGroupItem>
-</CodeGroup>
+- 后台入口
