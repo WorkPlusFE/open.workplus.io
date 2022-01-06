@@ -1,0 +1,36 @@
+{
+  "hash": "4f934877",
+  "browserHash": "5e445a69",
+  "optimized": {
+    "element-plus": {
+      "file": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/docs/.vuepress/.cache/element-plus.js",
+      "src": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/node_modules/element-plus/es/index.mjs",
+      "needsInterop": false
+    },
+    "vue": {
+      "file": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/docs/.vuepress/.cache/vue.js",
+      "src": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "file": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/docs/.vuepress/.cache/vue-router.js",
+      "src": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "file": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/docs/.vuepress/.cache/@vueuse_core.js",
+      "src": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/node_modules/@vueuse/core/index.mjs",
+      "needsInterop": false
+    },
+    "nprogress": {
+      "file": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/docs/.vuepress/.cache/nprogress.js",
+      "src": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/node_modules/nprogress/nprogress.js",
+      "needsInterop": true
+    },
+    "@vuepress/shared": {
+      "file": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/docs/.vuepress/.cache/@vuepress_shared.js",
+      "src": "/Users/Holowaychuk/foreverht/hejx/workplus-fe/open.workplus.io/node_modules/@vuepress/shared/lib/esm/index.js",
+      "needsInterop": false
+    }
+  }
+}

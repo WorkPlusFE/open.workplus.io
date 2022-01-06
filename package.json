@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "npm update -S @w6s/sdk && vuepress build docs && ./addBaiduTongJi.sh"
+    "build": "npm update -S @w6s/sdk && vuepress build docs && ./addBaiduTongJi.sh",
+    "export": "vuepress export docs"
   },
   "repository": "https://github.com/WorkPlusFE/open.workplus.io.git",
   "author": "hejianxian <531601727@qq.com>",
@@ -17,9 +18,15 @@
     "@w6s/vuepress-code-wrapper": "^1.1.4",
     "babel-runtime": "^6.26.0",
     "core-js": "^2",
+    "easy-pdf-merge": "^0.2.6",
     "element-ui": "^2.14.1",
     "latest-version": "^5.1.0",
     "moment": "^2.29.1",
-    "vuepress": "^1.7.1"
+    "vuepress": "1.0.0-alpha.44",
+    "vuepress-plugin-export-pdf-pro": "^1.0.2"
+  },
+  "devDependencies": {
+    "@snowdog/vuepress-plugin-pdf-export": "^1.1.0",
+    "vuepress-plugin-export": "^0.2.0"
   }
 }

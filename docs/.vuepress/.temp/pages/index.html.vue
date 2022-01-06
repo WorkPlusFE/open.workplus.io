@@ -1,0 +1,54 @@
+<template><h2 id="快速开始" tabindex="-1"><a class="header-anchor" href="#快速开始" aria-hidden="true">#</a> 快速开始</h2>
+<p>home page</p>
+<ul>
+<li>创建应用
+<ul>
+<li>H5 轻应用开发</li>
+<li>单点登录</li>
+<li>应用消息数字红点</li>
+</ul>
+</li>
+<li>客户端定制
+<ul>
+<li>配置工作台</li>
+<li>主题定制</li>
+</ul>
+</li>
+<li>账号同步</li>
+</ul>
+<p>navbar</p>
+<ul>
+<li>
+<p>首页</p>
+</li>
+<li>
+<p>应用开发</p>
+<ul>
+<li>应用创建</li>
+<li>服务端</li>
+<li>客户端</li>
+<li>常见问题</li>
+</ul>
+</li>
+<li>
+<p>客户端定制</p>
+<ul>
+<li>工作台定制</li>
+<li>主题定制</li>
+</ul>
+</li>
+<li>
+<p>开发调试</p>
+<ul>
+<li>脚手架</li>
+<li>h5 调试</li>
+</ul>
+</li>
+<li>
+<p>了解更多</p>
+</li>
+<li>
+<p>后台入口</p>
+</li>
+</ul>
+</template>
