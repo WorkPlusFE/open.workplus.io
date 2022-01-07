@@ -1,7 +1,7 @@
 import { path } from '@vuepress/utils';
 import { defineUserConfig } from '@vuepress/cli';
 import type { DefaultThemeOptions } from '@vuepress/theme-default';
-import type { WebpackConfiguration, VueLoaderOptions } from '@vuepress/bundler-webpack';
+import type { WebpackConfiguration } from '@vuepress/bundler-webpack';
 import { sidebar } from './sidebar';
 import { navbar } from './navbar';
 
@@ -81,6 +81,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         test: /\.mjs$/i,
         resolve: { byDependency: { esm: { fullySpecified: false } } }
       });
-    },
+    }
   }
 });

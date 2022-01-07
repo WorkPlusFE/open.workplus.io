@@ -38,3 +38,27 @@ table {
     width: 40px;
   }
 }
+
+
+.no-sidebar .theme-default-content:not(.custom) {
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.page {
+  padding-bottom: 0;
+}
+
+.page-meta {
+  display: none;
+}
+
+a {
+  text-decoration: none !important;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
