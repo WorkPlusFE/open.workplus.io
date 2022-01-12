@@ -11,7 +11,6 @@ const jsSDKBar = [
         '/js-sdk/overview/urlScheme',
         // '/js-sdk/overview/demo',
         '/js-sdk/overview/origin',
-        '/js-sdk/overview/changelog',
     ]
     },
     {
