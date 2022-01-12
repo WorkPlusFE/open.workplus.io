@@ -96,19 +96,20 @@ export default {
       }],
       others: [{
         title: '项目脚手架',
-        link: '/design-specification/theme.html',
-        type: '开发',
+        link: '/dev-tools/scaffold.html',
         content: 'WorkPlus 前端团队提供基于 Vue3.0 的项目开发脚手架，深度集成平台能力，助你快速开发。'
       }, {
         title: '应用调试',
-        link: '/light-app/workbench.html',
-        type: '开发',
-        content: '可以通过简单设置开启安卓客户端的真机调试，快速定位问题。'
+        link: '/dev-tools/debug.html',
+        content: '可以通过简单设置开启安卓客户端的真机调试，也可启动全局 VConsole 插件，快速调试定位问题。'
       }, {
         title: '设计规范',
-        link: '/design-specification/theme.html#使用主题',
-        type: '设计',
-        content: '基于多年企业服务实践，大量企业场景，我们拟定了属于 WorkPlus 的设计规范，以指导设计或开发出体验自然，视觉友好一致的应用程序。。'
+        link: '/design-specification/basic-principles.html',
+        content: '基于多年企业服务实践，大量企业场景，我们拟定了一份设计规范，以指导设计或开发出体验自然，视觉友好一致的应用程序。'
+      }, {
+        title: '同步程序',
+        link: '/light-app/sync.html',
+        content: '支持 LDAP、API、Excel 导入等方式，通过定时任务读取企业组织人员数据及状态，并全量或增量地导入到 WorkPlus 平台中。'
       }],
     }
   }

@@ -10,9 +10,14 @@ export const theme = {
     {
       text: '设计规范',
       children: [
-        '/design-specification/introduce',
         '/design-specification/basic-principles',
         '/design-specification/visual-norms/style',
+      ]
+    },
+    {
+      text: '设计资源',
+      children: [
+        '/design-specification/resource-size',
       ]
     },
   ]

@@ -1,4 +1,4 @@
-# 快速开始
+# 安装
 
 `JS-SDK`支持`script`标签及以`模块`的形式引入；初始化时，可以设置日志输出、数据模拟等配置。
 
@@ -139,7 +139,7 @@ w6s.init({
 
 **mock**
 
-开启 js-sdk 接口的数据模拟功能，该开关可通过`process.env.NODE_ENV`环境变量来控制。
+开启 js-sdk 接口的数据模拟功能，该开关可通过**process<i>.</i>env<i>.</i>NODE_ENV**环境变量来控制。
 
 **mockData**
 

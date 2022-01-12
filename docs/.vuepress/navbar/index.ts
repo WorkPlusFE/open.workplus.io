@@ -7,6 +7,10 @@ import { more } from './more';
 import { qa } from './qa';
 
 export const navbar = [
+  {
+    text: '首页',
+    link: '/'
+  },
   lightApp,
   serverApi,
   jsSDK,

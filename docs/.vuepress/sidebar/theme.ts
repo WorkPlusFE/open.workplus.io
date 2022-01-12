@@ -8,21 +8,14 @@ export const theme: SidebarConfigArray = [
   {
     text: '设计规范',
     children: [
-      '/design-specification/introduce',
       '/design-specification/basic-principles',
       '/design-specification/visual-norms/style',
-      // {
-      //   text: '视觉规范',
-      //   children: [
-      //     '/design-specification/visual-norms/style',
-      //     '/design-specification/visual-norms/component',
-      //     '/design-specification/visual-norms/layout',
-      //     '/design-specification/visual-norms/response',
-      //   ]
-      // },
-      // '/design-specification/resource-size',
-      // '/design-specification/download',
-      // '/design-specification/case',
+    ]
+  },
+  {
+    text: '设计资源',
+    children: [
+      '/design-specification/resource-size',
     ]
   },
 ];
