@@ -1,5 +1,20 @@
 # 更新日志
 
+### 20211207-v1.0.8
+
+- `feat`w6s.szient.bizFaceAuth  二次验证-人脸识别
+
+  
+
+
+
+### 20211019-v1.0.7
+
+- `feat`w6s.szient.shareMessage 分享消息到通讯录
+- `feat`w6s.szient.getLoginStatusMore 获取当前用户数据
+- `refactor`w6s.szient.getLoginStatus 去除敏感数据
+
+
 ### 20210906-v1.0.3
 
 - `feat`w6s.webview.launchMiniProgram 增加调起小程序接口
@@ -10,7 +25,7 @@
 
 ### 20210817-v1.0.1
 
-- `feat`OkBizIntegrityParams 接口新增属性
+- `feat`okBizIntegrity 接口新增属性
 
 ### 20210807-v1.0.0
 
