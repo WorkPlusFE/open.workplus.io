@@ -21,6 +21,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   },
   themeConfig: {
     logo: '/logo.png',
+    darkMode: false,
     locales: {
       '/': {
         selectLanguageName: '简体中文',
