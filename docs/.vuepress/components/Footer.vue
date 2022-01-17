@@ -6,7 +6,7 @@
         <span class="footer__link-separator">·</span>
         <a class="footer__link-item" href="https://lite.workplus.io">WorkPlus Lite</a>
         <span class="footer__link-separator">·</span>
-        <a class="footer__link-item" href="https://kunlun.workplus.io">KunLun 中间件平台</a>
+        <a class="footer__link-item" href="http://openkunlun.io/">KunLun 中间件平台</a>
         </div>
       <div>
         ©2015-2022 深圳恒拓高科信息技术有限公司 版权所有</div>

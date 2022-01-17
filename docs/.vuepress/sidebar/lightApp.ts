@@ -15,6 +15,7 @@ export const lightApp: SidebarConfigArray = [
       '/light-app/noun',
       '/light-app/sync',
       '/light-app/sso',
+      '/light-app/urlScheme',
       '/light-app/message',
       '/light-app/notify',
       '/light-app/workbench',
