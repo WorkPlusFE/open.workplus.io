@@ -21,6 +21,8 @@ export const jsSDK: SidebarConfigArray = [
       '/js-sdk/contact',
       '/js-sdk/webview',
       '/js-sdk/header',
+      '/js-sdk/dialog',
+      '/js-sdk/video',
       '/js-sdk/session',
       '/js-sdk/device',
       '/js-sdk/app',
@@ -29,6 +31,7 @@ export const jsSDK: SidebarConfigArray = [
       '/js-sdk/email',
       '/js-sdk/pay',
       '/js-sdk/eventListener',
+      '/js-sdk/storage',
       '/js-sdk/shared',
     ]
   }

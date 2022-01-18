@@ -5,7 +5,7 @@
 请使用 WorkPlus 扫一扫，查看在线 Demo：
 
 <p class="w6s-image">
-  <img :src="$withBase('/js-sdk/sdk-demo-qrcode.png')" alt="sdk demo" width="220px" />
+  <img :src="$withBase('/js-sdk/sdk-demo-qrcode.png')" alt="sdk demo" width="200" />
 </p>
 
 ## 演示代码

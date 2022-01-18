@@ -9,20 +9,20 @@
 1、使用`npm`或`yarn`安装模块：
 
 ```sh
-npm install szient-js-sdk --save
+npm install @w6s/sdk --save
 
 # 使用 yarn 
-yarn add szient-js-sdk
+yarn add @w6s/sdk
 ```
 
 2、安装成功后，使用`es module`或`commonjs`模块规范引入，支持全量及按模块引入：
 
 ```js
 // 全量引入
-import * as w6s from 'szient-js-sdk';
+import * as w6s from '@w6s/sdk';
 
 // 按模块引入
-import auth from 'szient-js-sdk/auth';
+import auth from '@w6s/sdk/auth';
 ```
 
 3、引入模块后，可以通过调用初始化方法`init`来修改默认配置：
@@ -65,7 +65,7 @@ w6s.auth.getUserTicket({
 
 ```js
 import Vue from 'vue';
-import * as w6s from 'szient-js-sdk';
+import * as w6s from '@w6s/sdk';
 
 // 初始化 sdk，同时会在 Vue 原型链上挂载 $w6s 对象
 Vue.use(w6s, {
@@ -113,6 +113,9 @@ export default {
 w6s.init({
   // 是否开启调试模式
   debug: true,
+
+  // 是否开启鉴权模式
+  auth: false,
   
   // 接口超时时间，单位毫秒
   timeout: 5000,
@@ -130,6 +133,10 @@ w6s.init({
 **debug**
 
 默认为 false。开启后，将会在控制台打印调用接口的相关信息。
+
+**auth**
+
+默认为 false。开启后，初始化逻辑会有所不同，同时鉴权能力需要客户端及后端参与，一旦开启，所有接口均需要成功鉴权后才可使用（除鉴权接口本身）。
 
 **timeout**
  

@@ -241,3 +241,6 @@ w6s.webview.wxShare({
 
 * type 为`webpage`时，url 字段为分享的链接；
 * type 为`image`时，image 为分享的图片链接或者是 base64。
+
+## （wip）下拉刷新
+

@@ -46,7 +46,7 @@ export default defineUserConfig<DefaultThemeOptions>({
 
     contributors: false,
 
-    smoothScroll: false,
+    smoothScroll: true,
   },
   plugins: [
     [

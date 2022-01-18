@@ -28,3 +28,5 @@ w6s.network.getWifiInfo({
 ::: warning 提示
 同一个路由设备，`bssid`可能会有多个不同的值。
 :::
+
+## （wip）原生 AJAX
