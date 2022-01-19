@@ -9,13 +9,18 @@
         <a class="footer__link-item" href="http://openkunlun.io/">KunLun 中间件平台</a>
         </div>
       <div>
-        ©2015-2022 深圳恒拓高科信息技术有限公司 版权所有</div>
+        ©2015-{{year}} 深圳恒拓高科信息技术有限公司 版权所有</div>
       </div>
     </footer>
 </template>
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      year: new Date().getFullYear()
+    }
+  }
 }
 </script>
 <style lang="scss">

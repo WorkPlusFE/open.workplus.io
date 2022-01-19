@@ -1,11 +1,11 @@
 import { path } from '@vuepress/utils';
 import { defineUserConfig } from '@vuepress/cli';
 import type { DefaultThemeOptions } from '@vuepress/theme-default';
-import type { WebpackConfiguration } from '@vuepress/bundler-webpack';
 import { sidebar } from './sidebar';
 import { navbar } from './navbar';
 
 export default defineUserConfig<DefaultThemeOptions>({
+  base: '/v4/next/',
   lang: 'zh-CN',
   locales: {
     '/': {
@@ -77,7 +77,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   ],
   
   bundlerConfig: {
-    configureWebpack(config: WebpackConfiguration) {
+    configureWebpack(config) {
       return config.module.rules.push({
         test: /\.mjs$/i,
         resolve: { byDependency: { esm: { fullySpecified: false } } }
