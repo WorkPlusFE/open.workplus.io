@@ -71,3 +71,11 @@ a {
   outline: none;
   cursor: pointer;
 }
+
+.DocSearch-Button {
+  border-radius: 4px !important;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}

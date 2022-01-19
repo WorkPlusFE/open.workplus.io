@@ -242,5 +242,67 @@ w6s.webview.wxShare({
 * type 为`webpage`时，url 字段为分享的链接；
 * type 为`image`时，image 为分享的图片链接或者是 base64。
 
-## （wip）下拉刷新
+## 下拉刷新
+
+页面下拉刷新功能，需要由一系列的接口组合而成，并且该功能是针对当前 WebView 起效。在开发轻应用时要特别注意，特别是单页面应用，在页面切换时，需要考虑是否清空下拉刷新功能。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | `v4.11.6+`  | `v4.11.6+` |
+
+### 开启
+
+当页面需要下拉刷新功能时，先通过下方接口，启动“下拉刷新”能力。
+
+```js
+sdk.webview.configPullRefresh({
+  enable: true,
+  mode: 'default',
+  success: () => {},
+  fail: () => {},
+});
+```
+
+**参数说明**
+
+| 参数 | 类型 | 说明|
+| - | - | - |
+| enable | Boolean | 下拉刷新功能的开关 |
+| mode | String | 下拉的模式，目前仅支持 “default” 的默认类型 |
+
+### 监听下拉
+
+用户下拉屏幕的动作，需要通过下面的方法进行监听。例如一下新闻列表页面，用户下拉页面头部后，该接口的回调就会被触发，此时开发者可以通过调用接口更新新闻列表，成功后手动结束刷新。
+
+```js
+sdk.webview.onPullRefresh({
+  success: () => {
+    console.log('加载中...);
+    setTimeout(() => {
+      // 调用下方“完成刷新”接口
+    }, 3000);
+  },
+  fail: () => {
+    console.log('fail');
+  },
+});
+```
+
+### 完成刷新
+
+调用该接口后，刷新动作会马上完成，动画会停止并收起。
+
+```js
+sdk.webview.endPullRefresh();
+```
+
+### 停止
+
+当页面不需要刷新功能时，需要调用下方接口进行停止。如果需要再次开启，请调用上方的“开启”接口。
+
+```js
+sdk.webview.configPullRefresh({ enable: false, mode: 'default' });
+```
 

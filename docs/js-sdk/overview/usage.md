@@ -28,10 +28,10 @@ import auth from '@w6s/sdk/auth';
 3、引入模块后，可以通过调用初始化方法`init`来修改默认配置：
 
 ```js
-w6s.init({ debug: true });
+w6s.init({ debug: true, auth: false });
 ```
 
-`init`方法并不是必须的。所有配置项，请看下方[配置说明](./usage.html#配置)。
+所有配置项，请看下方[配置说明](./usage.html#配置)。
 
 
 4、SDK 就绪后，将可调用各模块方法，所有接口均支持`promise`及`callback`的调用方式：
@@ -50,6 +50,18 @@ w6s.auth.getUserTicket({
   fail(err) {},
 });
 ```
+
+二、`script`标签引入：
+
+```html
+<script src="https://open.workplus.io/static/js-sdk/sdk.1.0.js"></script>
+```
+
+引入后，会在全局暴露`w6s`对象，初始化后，将可调用各模块接口。
+
+::: warning 关于 JS-SDK 资源
+基于 WorkPlus 部分客户网络环境的特殊性，推荐自行部署js-sdk的相关资源，以供自家平台轻应用访问。
+:::
 
 ## JS-API 鉴权
 
