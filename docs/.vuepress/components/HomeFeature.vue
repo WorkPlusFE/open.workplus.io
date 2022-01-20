@@ -65,54 +65,54 @@ export default {
       apps: [{
         title: '单点登录',
         link: 'light-app/sso.html',
-        image: 'home/1-sso.png',
+        image: '/home/1-sso.png',
         content: '通过 WorkPlus 开放接口，可以以应用身份对用户进行 Ticket 校验，实现单点登录。'
       }, {
         title: 'JS-SDK',
         link: 'js-sdk/',
-        image: 'home/1-js-sdk.png',
+        image: '/home/1-js-sdk.png',
         content: 'WorkPlus 移动端 WebView 提供强大的原生能力，通过 JS-SDK 可以轻松在 H5 应用中调用原生能力，例如拍照、二维码识别等。'
       }, {
         title: '消息推送',
         link: 'light-app/message.html',
-        image: 'home/1-message.png',
+        image: '/home/1-message.png',
         content: '通过平台能力，可以对某个应用的使用者推送不同类型的消息，它的表现跟 IM 聊天类似，会产生一个应用会话，并且可以打开阅读所有消息。'
       }, ],
       clients: [{
         title: '主题定制',
         link: 'design-specification/theme.html',
-        image: 'home/2-theme.png',
+        image: '/home/2-theme.png',
         content: '除基本的明亮及暗黑模式外，WorkPlus 平台支持更多的主题定制及切换，满足不同的企业文化及应用场景。'
       }, {
         title: '工作台',
         link: 'light-app/workbench.html',
-        image: 'home/2-workbench.png',
+        image: '/home/2-workbench.png',
         content: '可根据不同人员的需求来定义工作台卡片，通过卡片组合的方式来打造个性化的工作台，真正实现“千人千面”。'
       }, {
         title: '轻应用主题',
         link: 'design-specification/theme.html#快速开始',
-        image: 'home/2-app-theme.png',
+        image: '/home/2-app-theme.png',
         content: '除客户端的主题可以定制外，轻应用也可以通过引入客户端本地主题样式文件，实现全局样式一致。'
       }],
       others: [{
         title: '同步程序',
         link: 'light-app/sync.html',
-        icon: 'home/3-sync.png',
+        icon: '/home/3-sync.png',
         content: '支持 LDAP、API、Excel 导入等方式，通过定时任务读取企业组织人员数据及状态，并全量或增量地导入到 WorkPlus 平台中。'
       }, {
         title: '应用调试',
         link: 'dev-tools/debug.html',
-        icon: 'home/3-debug.png',
+        icon: '/home/3-debug.png',
         content: '可以通过简单设置开启安卓客户端的真机调试，也可启动全局 VConsole 插件，快速调试定位问题。'
       }, {
         title: '项目脚手架',
         link: 'dev-tools/scaffold.html',
-        icon: 'home/3-project.png',
+        icon: '/home/3-project.png',
         content: 'WorkPlus 前端团队提供基于 Vue3.0 的项目开发脚手架，深度集成平台能力，助你快速开发。'
       }, {
         title: '设计规范',
         link: 'design-specification/basic-principles.html',
-        icon: 'home/3-design.png',
+        icon: '/home/3-design.png',
         content: '基于多年企业服务实践，大量企业场景，我们拟定了一份设计规范，以指导设计或开发出体验自然，视觉友好一致的应用程序。'
       }],
     }
