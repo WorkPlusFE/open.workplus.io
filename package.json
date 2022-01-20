@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "npm update -S @w6s/sdk && vuepress build docs && ./addBaiduTongJi.sh"
+    "build": "vuepress build docs && ./addBaiduTongJi.sh"
   },
   "repository": "https://github.com/WorkPlusFE/open.workplus.io.git",
   "author": "hejianxian <531601727@qq.com>",
