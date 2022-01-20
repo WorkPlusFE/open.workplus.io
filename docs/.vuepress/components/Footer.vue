@@ -29,13 +29,13 @@ export default {
   text-align: center;
   padding: 20px;
   font-size: 16px;
-  background: #f5f6f7;
+  background: var(--c-bg);
   margin-top: 20px;
   &__links {
     margin-bottom: 1rem;
   }
   &__link-item {
-    color: #606770;
+    color: var(--c-text);
     line-height: 2;
     font-weight: normal;
   }

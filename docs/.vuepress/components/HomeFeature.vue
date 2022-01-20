@@ -160,7 +160,7 @@ export default {
   font-weight: 600;
   margin-top: 32px;
   margin-bottom: 24px;
-  color: #373c43;
+  color: var(--c-text);
 }
 .guide-list {
   position: relative;
@@ -176,15 +176,15 @@ export default {
     height: 355px;
     margin: 0 36px 36px 0;
     border-radius: 10px;
-    border: 1px solid #eff0f1;
-    color: #1f2329;
+    border: 1px solid var(--c-border);
+    color: var(--c-text);
     overflow: hidden;
     box-sizing: border-box;
     user-select: none;
     &__logo {
       position: relative;
       height: 200px;
-      color: #ffffff;
+      color: var(--c-text);
       overflow: hidden;
       background-repeat: no-repeat;
       background-size: 100% auto;
@@ -198,10 +198,10 @@ export default {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: #1f2329;
+      color: var(--c-text);
     }
     &__extra {
-      color: #51565d;
+      color: var(--c-text);
       margin-right: 8px;
       flex: 0 0 auto;
       position: relative;
@@ -242,7 +242,7 @@ export default {
     border: solid 1px transparent;
     border-radius: 10px;
     overflow: hidden;
-    color: #1f2329;
+    color: var(--c-text);
     box-sizing: border-box;
     &__logo {
       position: relative;
@@ -273,7 +273,7 @@ export default {
       position: relative;
       font-size: 15px;
       line-height: 26px;
-      color: #646a73;
+      color: var(--c-text);
     }
     &:nth-child(2n) {
       margin-right: 0;

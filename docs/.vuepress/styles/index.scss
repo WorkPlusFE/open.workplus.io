@@ -79,3 +79,39 @@ a {
 .sidebar::-webkit-scrollbar {
   width: 5px;
 }
+
+
+// pad
+@media all and (max-width: 720px) {
+  .w6s-home__header > div,
+  .w6s-home__guide
+   {
+    padding: 0 20px;
+  }
+
+  .w6s-home__header > div {
+    text-align: center;
+  }
+
+  .guide-list .guide-item,
+  .resource-list .resource-item {
+    flex-basis: 100% !important;
+  }
+
+  .resource-item__logo {
+    display: none;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__link-separator {
+    display: none;
+  }
+}
+
+.dark .w6s-home__header {
+  filter: grayscale(80%);
+}
