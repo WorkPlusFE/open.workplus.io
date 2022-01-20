@@ -1,4 +1,4 @@
-<p><img src="https://open.workplus.io/v4/home.png" title="WorkPlus 开放平台" width="50%"></p>
+<p><img src="https://open.workplus.io/v4/home.png" title="WorkPlus 开放平台" width="50%" /></p>
 
 # 高科开放平台
 

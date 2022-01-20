@@ -223,7 +223,6 @@ POST /v1/templates/{templateId}?access_token={access_token}&app_id={app_id}&sour
 
 **请求参数：**
 
-::: v-pre
 | 字段| 类型 | 是否必填|说明|
 |---|---|---|---|
 | access_token | String | Y | 访问令牌 |
@@ -235,8 +234,7 @@ POST /v1/templates/{templateId}?access_token={access_token}&app_id={app_id}&sour
 | actions | String | N | 模板动作,name为显示名称,value为点击动作,格式请参考样例 |
 | contents | String | N | 模板内容,格式请参考样例 |
 | contents.align | String | N | 对其方式:left/right/center |
-| contents.content | String | N | 变量格式固定为:{{data1.DATA}} |
-:::
+| contents.content | String | N | 变量格式固定为: <span v-pre>{{data1.DATA}}</span> |
 
 **请求示例：**
 
@@ -349,7 +347,7 @@ GET /v1/templates/{templateId}?access_token={access_token}
 | actions | String | N | 模板动作,name为显示名称,value为点击动作,格式请参考样例 |
 | contents | String | N | 模板内容,格式请参考样例 |
 | contents.align | String | N | 对其方式:left/right/center |
-| contents.content | String | N | 变量格式固定为:{{data1.DATA}} |
+| contents.content | String | N | 变量格式固定为: <span v-pre>{{data1.DATA}}</span> |
 :::
 
 **请求示例：**
