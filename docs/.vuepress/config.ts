@@ -5,7 +5,7 @@ import { sidebar } from './sidebar';
 import { navbar } from './navbar';
 
 export default defineUserConfig<DefaultThemeOptions>({
-  base: '/v4/next/',
+  base: '/next/',
   lang: 'zh-CN',
   locales: {
     '/': {
