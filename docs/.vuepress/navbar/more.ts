@@ -5,5 +5,6 @@ export const more = {
     { text: 'WorkPlus Lite（开源版）', link: 'https://lite.workplus.io/' },
     { text: '昆仑中间件平台', link: 'http://openkunlun.io/' },
     { text: 'Cordova 原始文档', link: 'https://open.workplus.io/cordova/' },
+    { text: '返回 旧版本', link: 'https://open.workplus.io/v4/' },
   ]
 };
