@@ -330,7 +330,7 @@ http://xxxx.html?custom_height=300&custom_scale=0.5&open_with_out=true
 如：
 
 ```js
-http://data.com?usernmae={{username}}
+http://data.com?username={{username}}
 // 会被替换成：
 http://data.com?usename=foo
 ```
