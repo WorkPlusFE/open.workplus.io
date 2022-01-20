@@ -17,7 +17,7 @@ pipeline {
         stage("Bootstrap && Build") {
             agent {
                 docker {
-                    image 'node:14.18.2-alpine3.12' 
+                    image 'node:12.22.9-alpine3.15' 
                     args '-e HOME=/tmp -e NPM_CONFIG_PREFIX=/tmp/.npm'
                     reuseNode true
                 }
