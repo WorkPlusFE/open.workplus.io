@@ -60,13 +60,8 @@ export default defineUserConfig<DefaultThemeOptions>({
       },
     ],
     [
-      '@vuepress/docsearch',
+      '@vuepress/plugin-search',
       {
-        apiKey: '1e1e188d5cc1f18ca6648322f3716333',
-        indexName: 'workplus',
-        searchParameters: {
-          facetFilters: ['tags:v2'],
-        },
         locales: {
           '/': {
             placeholder: '搜索文档',

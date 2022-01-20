@@ -514,7 +514,7 @@
     markdown-it "^12.3.2"
     markdown-it-container "^3.0.0"
 
-"@vuepress/plugin-docsearch@^2.0.0-beta.27":
+"@vuepress/plugin-docsearch@^2.0.0-beta.33":
   version "2.0.0-beta.33"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-docsearch/download/@vuepress/plugin-docsearch-2.0.0-beta.33.tgz#ba84fa99f0181c691aed8271c1aab955b8509471"
   integrity sha512-CFr+w+ftduNVMA8ccuCP7dMtXXwZ/PN71KwFoxJ3M0AHoMrqxE22Iq6i4CWw+0NwW2HLJO9GZzLxMjUbNqJv+A==
@@ -573,7 +573,7 @@
     vue "^3.2.26"
     vue-router "^4.0.12"
 
-"@vuepress/plugin-palette@2.0.0-beta.33", "@vuepress/plugin-palette@^2.0.0-beta.27":
+"@vuepress/plugin-palette@2.0.0-beta.33", "@vuepress/plugin-palette@^2.0.0-beta.33":
   version "2.0.0-beta.33"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-palette/download/@vuepress/plugin-palette-2.0.0-beta.33.tgz#9700bc576267ed71e5703c61829c61b80534b1fc"
   integrity sha512-6E7t5jQL6Iv00zjDTuUwPQMKRdZT9mRjtF60uPuKksRic9HASCrWJfnUWtS9QOC/He+ZyWb/ls0qKFFwrcjG6g==
@@ -590,7 +590,7 @@
     "@vuepress/core" "2.0.0-beta.33"
     prismjs "^1.26.0"
 
-"@vuepress/plugin-register-components@^2.0.0-beta.27":
+"@vuepress/plugin-register-components@^2.0.0-beta.33":
   version "2.0.0-beta.33"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-register-components/download/@vuepress/plugin-register-components-2.0.0-beta.33.tgz#7fb549eda174f012bae774d03393fc4cd098423b"
   integrity sha512-A9awQIB4nnALDIQUAeECSqBzAK7Pf/iXbOs5knFUqPkp+95049y3gJHK5l4uTt8YT0rbdc+wGkqq5n8lWJapqA==
@@ -599,7 +599,20 @@
     "@vuepress/utils" "2.0.0-beta.33"
     chokidar "^3.5.2"
 
-"@vuepress/plugin-theme-data@2.0.0-beta.33", "@vuepress/plugin-theme-data@^2.0.0-beta.27":
+"@vuepress/plugin-search@^2.0.0-beta.33":
+  version "2.0.0-beta.33"
+  resolved "https://registry.npmmirror.com/@vuepress/plugin-search/download/@vuepress/plugin-search-2.0.0-beta.33.tgz#15f76e8befd8dffeaef0c8507e4b770534958a06"
+  integrity sha512-FgNKDlqOIppA4oujLLM/7KztOk+BWQ4YuWg0w4CrjMUynGD/hyBmWB31X0qVHBQIblmElRsS2OOQJrgIh4xVSA==
+  dependencies:
+    "@vuepress/client" "2.0.0-beta.33"
+    "@vuepress/core" "2.0.0-beta.33"
+    "@vuepress/shared" "2.0.0-beta.33"
+    "@vuepress/utils" "2.0.0-beta.33"
+    chokidar "^3.5.2"
+    vue "^3.2.26"
+    vue-router "^4.0.12"
+
+"@vuepress/plugin-theme-data@2.0.0-beta.33", "@vuepress/plugin-theme-data@^2.0.0-beta.33":
   version "2.0.0-beta.33"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-theme-data/download/@vuepress/plugin-theme-data-2.0.0-beta.33.tgz#71d2af5cfe1e12ad6eab8dee428fb2304ba0cf29"
   integrity sha512-kgWcGJFo7d2TTYQKzmfkti15+s/6BIxIdIMAW2E3D5KtBeKIfeq84+6/yrtgJCyc72us78RDwMBAOYOosei2mg==
@@ -2084,7 +2097,7 @@ vuepress-vite@2.0.0-beta.33:
     "@vuepress/core" "2.0.0-beta.33"
     "@vuepress/theme-default" "2.0.0-beta.33"
 
-vuepress@^2.0.0-beta.27:
+vuepress@^2.0.0-beta.33:
   version "2.0.0-beta.33"
   resolved "https://registry.npmmirror.com/vuepress/download/vuepress-2.0.0-beta.33.tgz#a7e0268da48d06c135d97936a8ddc234f43355ba"
   integrity sha512-u5UiVKqTirtXtMJq+OFMBasRPE4aIJl1kbqTF9XsHeIXJ6FyGEpXAJF9e5IgT2RtloYPRmQQbbKTd+gykaE4zA==
