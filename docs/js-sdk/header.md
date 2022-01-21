@@ -260,7 +260,18 @@ w6s.header.visibleLeftButton({
 <meta name="_navigation_color" content="#194c7b" />
 ```
 
-## 显示搜索栏 <badge type="success" text="v4.10.0+" />
+
+## 获取顶部状态栏高度
+
+可以通过`userAgent`获取顶部状态栏的高度，APP 会在窗口的 userAgent 中加入`statusBar/xx`的属性。
+
+```
+Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 workplus/4.11.6 statusBar/44 en
+```
+
+这属性常用于处理全面屏的顶部高度。
+
+## 显示搜索栏 
 
 让原生头部变成一个搜索框。
 
@@ -268,7 +279,7 @@ w6s.header.visibleLeftButton({
 
 | 客户端   | Android | iOS  |
 | -------- | ------- | ---- |
-| 支持情况 | 支持  | 支持 |
+| 支持情况 | `v4.10.0+`   | `v4.10.0+`  |
 
 
 ```js
@@ -310,7 +321,7 @@ w6s.header.showSearchBar({
 
 注意，在输入搜索内容有变化时，回调会马上被触发，此时执行搜索，应做好 **防抖** 处理。
 
-## 隐藏搜索栏 <badge type="success" text="v4.10.0+" />
+## 隐藏搜索栏
 
 针对`显示搜索栏`接口，用于隐藏搜索栏。
 
@@ -320,7 +331,7 @@ w6s.header.showSearchBar({
 
 | 客户端   | Android | iOS  |
 | -------- | ------- | ---- |
-| 支持情况 | 支持  | 支持 |
+| 支持情况 | `v4.10.0+`  | `v4.10.0+` |
 
 
 ```js
