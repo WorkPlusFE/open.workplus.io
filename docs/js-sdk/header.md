@@ -263,13 +263,13 @@ w6s.header.visibleLeftButton({
 
 ## 获取顶部状态栏高度
 
-可以通过`userAgent`获取顶部状态栏的高度，APP 会在窗口的 userAgent 中加入`statusBar/xx`的属性。
+可以通过`navigator.userAgent`获取顶部状态栏的高度，APP 会在窗口的 userAgent 中加入`statusBar/xx`的属性，如下：
 
-```
-Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 workplus/4.11.6 statusBar/44 en
-```
 
-这属性常用于处理全面屏的顶部高度。
+> Mozilla/5.0 (iPhone; CPU iPhone OS 15_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 workplus/4.11.6 **statusBar/44** en
+
+
+该属性常用于处理全面屏或刘海屏的顶部高度适配，特别是在开发[沉浸式](/light-app/create.html#沉浸式)页面时。
 
 ## 显示搜索栏 
 
