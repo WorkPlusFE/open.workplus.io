@@ -30,7 +30,7 @@
   </el-col>
   <el-col :span="6">
     <div class="grid-content bg-purple">
-      <img :src="$withBase('/design-specification/Controllability.png')" alt="Controllability" width="90" />
+      <img :src="$withBase('/design-specification/controllability.png')" alt="Controllability" width="90" />
       <p><strong>可控</strong></p>
     </div>
   </el-col>
