@@ -7,11 +7,14 @@
         <a class="footer__link-item" href="https://lite.workplus.io">WorkPlus Lite</a>
         <span class="footer__link-separator">·</span>
         <a class="footer__link-item" href="https://openkunlun.io/">KunLun 中间件平台</a>
-        </div>
-      <div>
-        ©2015-{{year}} 深圳恒拓高科信息技术有限公司 版权所有</div>
       </div>
-    </footer>
+    <div>
+      ©2015-{{year}} 深圳恒拓高科信息技术有限公司 版权所有</div>
+    </div>
+    <div class="disbale-icon">
+      <img class="we-artwork__image" src="https://open.workplus.io/logo.jpg"  alt="logo"/>
+    </div>
+  </footer>
 </template>
 <script>
 export default {
@@ -42,5 +45,10 @@ export default {
   &__link-separator {
     margin: 0 10px;
   }
+}
+
+.disbale-icon {
+  width: 0;
+  height: 0;
 }
 </style>
