@@ -2,11 +2,11 @@
   <footer class="footer text--center">
     <div class="container container--fluid">
       <div class="footer__links">
-        <a class="footer__link-item" href="https://workplus.io">公司官网</a>
+        <a class="footer__link-item" target="_blank" href="https://workplus.io">公司官网</a>
         <span class="footer__link-separator">·</span>
-        <a class="footer__link-item" href="https://lite.workplus.io">WorkPlus Lite</a>
+        <a class="footer__link-item" target="_blank" href="https://lite.workplus.io">WorkPlus Lite</a>
         <span class="footer__link-separator">·</span>
-        <a class="footer__link-item" href="https://openkunlun.io/">KunLun 中间件平台</a>
+        <a class="footer__link-item" target="_blank" href="https://openkunlun.io/">KunLun 中间件平台</a>
       </div>
     <div>
       ©2015-{{year}} 深圳恒拓高科信息技术有限公司 版权所有</div>
