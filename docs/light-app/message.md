@@ -70,12 +70,20 @@ const options = {
   body_type: 'ARTICLE', 
   body: {
     ...,
-    display_mode: 'FULL_SCREEN'
+    articles:[{
+      ...,
+      display_mode: 'FULL_SCREEN'
+    }, { 
+      ...,
+      display_mode: 'FULL_SCREEN'
+    }]
   }
 };
 ```
 
-> 仅在推送图文消息（即 body_type: 'ARTICLE'）时支持。
+::: warning 仅支持图文消息
+仅在推送图文消息（即 body_type: 'ARTICLE'）时支持，并且`display_mode`需要独立设置到`article`里。
+:::
 
 **打开会话：**
 
