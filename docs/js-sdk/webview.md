@@ -17,7 +17,8 @@ w6s.webview.openWebView({
   title: 'Test',
   useAndroidWebview: true,
   useSystemWebview: true,
-  displayMode: 'FULL_SCREEN'
+  displayMode: 'FULL_SCREEN',
+  orientation: 1,
 });
 ```
 
@@ -30,6 +31,7 @@ w6s.webview.openWebView({
 | useAndroidWebview | Boolean | 是否使用 android 原生 webview 打开, 否则使用 workplus 订制的 webview |
 | useSystemWebview | Boolean | 等同于 useAndroidWebview，只是该参数能用于ios以及android平台 |
 | displayMode | String | 全屏打开 webview(即不包含原生标题栏)，默认非全屏 |
+| orientation | number | 横竖屏设置，1 表示竖屏 2表示横屏，默认是追随手机设置 |
 
 ## 退出
 

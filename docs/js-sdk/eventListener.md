@@ -18,6 +18,9 @@
 w6s.event.bindBackButtonEvent(() => {
   // 此处处理返回的逻辑
 });
+
+// 解除绑定
+w6s.event.unbindBackButtonEvent();
 ```
 
 ::: tip 关于返回
