@@ -24,6 +24,10 @@ pipeline {
             }
             steps {
                 sh 'npm config set registry https://registry.npm.taobao.org'
+                sh 'npm --version'
+                sh 'rm -rf node_modules'
+                sh 'rm -rf yarn.lock'
+                sh 'npm cache verify'
                 sh 'npm install'
                 sh 'npm run build'
             }
