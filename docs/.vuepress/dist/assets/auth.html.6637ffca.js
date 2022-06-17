@@ -1,0 +1,1 @@
+const t={key:"v-5169fc23",path:"/api/auth.html",title:"Ticket \u9A8C\u8BC1",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1639562365e3},filePathRelative:"api/auth.md"};export{t as data};

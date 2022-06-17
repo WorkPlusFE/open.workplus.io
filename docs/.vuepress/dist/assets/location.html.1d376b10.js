@@ -1,0 +1,1 @@
+const t={key:"v-251f2624",path:"/js-sdk/location.html",title:"\u5730\u7406\u4F4D\u7F6E",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u83B7\u53D6\u5B9A\u4F4D\u4FE1\u606F",slug:"\u83B7\u53D6\u5B9A\u4F4D\u4FE1\u606F",children:[]}],git:{updatedTime:1640332186e3},filePathRelative:"js-sdk/location.md"};export{t as data};

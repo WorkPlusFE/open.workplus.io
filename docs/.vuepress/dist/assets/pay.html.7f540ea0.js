@@ -1,0 +1,1 @@
+const e={key:"v-9dde5d5e",path:"/js-sdk/pay.html",title:"\u652F\u4ED8",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u5FAE\u4FE1\u652F\u4ED8",slug:"\u5FAE\u4FE1\u652F\u4ED8",children:[]}],git:{updatedTime:1640332186e3},filePathRelative:"js-sdk/pay.md"};export{e as data};

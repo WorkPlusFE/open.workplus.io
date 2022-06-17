@@ -1,0 +1,1 @@
+const e={key:"v-4b94e77e",path:"/design-specification/basic-principles.html",title:"\u57FA\u672C\u539F\u5219",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1643090753e3},filePathRelative:"design-specification/basic-principles.md"};export{e as data};

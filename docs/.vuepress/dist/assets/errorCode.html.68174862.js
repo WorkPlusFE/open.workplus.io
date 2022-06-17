@@ -1,0 +1,1 @@
+const e={key:"v-9e3fa59c",path:"/api/errorCode.html",title:"\u5168\u5C40\u9519\u8BEF\u7801",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:163912782e4},filePathRelative:"api/errorCode.md"};export{e as data};
