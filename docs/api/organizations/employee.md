@@ -212,7 +212,7 @@ POST http://{host}:{port}/v1/admin/organizations/{code}/employees?access_token={
 | Position.chief | Boolean | N | 是否首要 |
 | Position.source_type | String | N | 职位分组 |
 | properties | Seq[Property] | N | 雇员扩展字段 |
-| Property.data_schema_id | Long | Y | 扩展ID |
+| Property.data_schema_id | String | Y | 扩展ID,在管理后台获取 |
 | Property.values | Seq[String] | Y | 扩展内容 |
 
 **请求示例：**
@@ -437,7 +437,7 @@ POST http://{host}:{port}/v1/admin/organizations/{code}/employees/{employeeId}?a
 | Position.chief | Boolean | N | 是否首要 |
 | Position.source_type | String | N | 职位分组 |
 | properties | Seq[Property] | N | 雇员扩展字段 |
-| Property.data_schema_id | Long | Y | 扩展ID |
+| Property.data_schema_id | String | Y | 扩展ID,在管理后台获取 |
 | Property.values | Seq[String] | Y | 扩展内容 |
 
 **请求示例：**
@@ -654,7 +654,7 @@ POST http://{host}:{port}/v1/admin/organizations/{code}/import-employees?access_
 
 **请求参数：**
 
-> 雇员字段与新增接口一致。
+> 导入等于批量新增雇员，以数据形式提交，数据里面的雇员字段与新增接口一致。
 
 | 字段 | 类型 | 是否必填 | 说明 |
 | - | - | - | - |
@@ -663,7 +663,6 @@ POST http://{host}:{port}/v1/admin/organizations/{code}/import-employees?access_
 | ops | String | N | 默认新增/更新,为REMOVE为删除雇员 |
 
 **请求示例：**
-
 ```json
 [
   {
@@ -675,8 +674,14 @@ POST http://{host}:{port}/v1/admin/organizations/{code}/import-employees?access_
     "email": "xxx@qq.com", 
     "positions": [
       {
-        "jobTitle": "测试", 
+        "job_title": "测试", 
         "org_path": "AAA/BBB/CCC"
+      }
+    ],
+    "properties": [
+      {
+        "data_schema_id": "custom_telephone",
+        "values": ["136xxxxxxxx"]
       }
     ]
   }
