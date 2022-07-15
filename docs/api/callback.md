@@ -15,7 +15,7 @@ POST http://XXXXXX?signature={signature}&timestamp={timestamp}&nonce={nonce}
 **请求参数：**
 
 | 字段	| 类型	| 是否必填	| 说明 |
-| -	| -	| -	| - |
+|---|---|---|---|
 | http://XXXXXX	| String| 	Y	| 回调地址 |
 | signature	| String	| Y	| 签名,明文模式下,用message计算签名,其余情况用encrypt计算 |
 | timestamp	| String	| Y	| 时间戳 |
@@ -70,11 +70,20 @@ Map 的 JSON，推荐返回格式如下:
 
 ```json
 {
-  "to_user_name": "abbd71f0-e213-481d-81f1-fcd143230e46", 
-  "from_user_name": "a86e83a26be44eb59806901cc8be5d5c", 
-  "create_time": 1487642989572, 
-  "msg_type": "text", 
-  "content": "test message"
+    "msg_time": 1657853904532,
+    "from_domain": "workplus",
+    "from_user": "61e9fea875a24bfeb0fe2838e488d20f",
+    "msg_type": "text",
+    "msg_body":
+    {
+        "content": "123456"
+    },
+    "to_user_name": "测试回调APP",
+    "create_time": 1657853904532,
+    "to_user": "89bfb884fbd835790edc78033096204a3caa123a",
+    "to_domain": "workplus",
+    "from_user_name": "开发人员",
+    "content": "123456"
 }
 ```
 
@@ -82,11 +91,24 @@ Map 的 JSON，推荐返回格式如下:
 
 ```json
 {
-  "to_user_name": "abbd71f0-e213-481d-81f1-fcd143230e46", 
-  "from_user_name": "a86e83a26be44eb59806901cc8be5d5c", 
-  "create_time": 1487643037326, 
-  "msg_type": "voice", 
-  "media_id": "Z3JvdXAxL00wMC8wMC8wMy9yQkFCRzFpcm9aeUFIbUZ1QUFBSXhqbVlpQXczNzkudG1w"
+    "msg_time": 1657854149450,
+    "from_domain": "workplus",
+    "from_user": "61e9fea875a24bfeb0fe2838e488d20f",
+    "msg_type": "voice",
+    "media_domain": "workplus",
+    "msg_body":
+    {
+        "duration": 2,
+        "media_id": "2894603e9e61422e8ea1ba26dc415b55",
+        "media_domain": "workplus"
+    },
+    "to_user_name": "测试回调APP",
+    "from_user_name": "开发人员",
+    "media_id": "2894603e9e61422e8ea1ba26dc415b55",
+    "create_time": 1657854149450,
+    "to_domain": "workplus",
+    "to_user": "89bfb884fbd835790edc78033096204a3caa123a",
+    "duration": 2
 }
 ```
 
@@ -94,11 +116,26 @@ Map 的 JSON，推荐返回格式如下:
 
 ```json
 {
-  "to_user_name": "abbd71f0-e213-481d-81f1-fcd143230e46", 
-  "from_user_name": "a86e83a26be44eb59806901cc8be5d5c", 
-  "create_time": 1487643081302, 
-  "msg_type": "file", 
-  "media_id": "Z3JvdXAxL00wMC8wMC8wMy9yQkFCRjFpcm92ZUFia0ZhQUFlc25sSGZMRVE5NTYuanBn"
+    "size": 691882,
+    "from_domain": "workplus",
+    "from_user": "61e9fea875a24bfeb0fe2838e488d20f",
+    "msg_type": "file",
+    "media_domain": "workplus",
+    "msg_body":
+    {
+        "name": "IMG_1933.HEIC",
+        "size": 691882,
+        "media_id": "eca2a97ac2a547e8bc61884ead91fd8c",
+        "media_domain": "workplus"
+    },
+    "to_user_name": "测试回调APP",
+    "from_user_name": "开发人员",
+    "media_id": "eca2a97ac2a547e8bc61884ead91fd8c",
+    "create_time": 1657854209226,
+    "to_user": "89bfb884fbd835790edc78033096204a3caa123a",
+    "to_domain": "workplus",
+    "name": "IMG_1933.HEIC",
+    "msg_time": 1657854209226
 }
 ```
 
@@ -106,35 +143,64 @@ Map 的 JSON，推荐返回格式如下:
 
 ```json
 {
-  "to_user_name": "abbd71f0-e213-481d-81f1-fcd143230e46", 
-  "from_user_name": "a86e83a26be44eb59806901cc8be5d5c", 
-  "create_time": 1487643104435, 
-  "msg_type": "image", 
-  "media_id": "Z3JvdXAxL00wMC8wMC8wMy9yQkFCRzFpcm9kLUFWUG9PQUFDNlJGRW0wWWM5MTEuanBn"
-}
+        "msg_time": 1657854250227,
+        "from_domain": "workplus",
+        "from_user": "61e9fea875a24bfeb0fe2838e488d20f",
+        "msg_type": "image",
+        "height": 1280,
+        "media_domain": "workplus",
+        "msg_body":
+        {
+            "is_gif": false,
+            "height": 1280,
+            "media_domain": "workplus",
+            "media_id": "f2627421b3e54f64a2b973aa55270c90",
+            "width": 959,
+            "size": 116755,
+            "thumbnail_id": "d18c73017c944152b35fd3ad4288cab2"
+        },
+        "to_user_name": "测试回调APP",
+        "from_user_name": "开发人员",
+        "media_id": "f2627421b3e54f64a2b973aa55270c90",
+        "width": 959,
+        "create_time": 1657854250227,
+        "to_user": "89bfb884fbd835790edc78033096204a3caa123a",
+        "to_domain": "workplus",
+        "is_gif": false,
+        "size": 116755,
+        "thumbnail_id": "d18c73017c944152b35fd3ad4288cab2"
+    }
 ```
 
 视频消息：
 
 ```json
 {
-  "to_user_name": "abbd71f0-e213-481d-81f1-fcd143230e46", 
-  "from_user_name": "a86e83a26be44eb59806901cc8be5d5c", 
-  "create_time": 1487643141486, 
-  "msg_type": "video", 
-  "media_id": "Z3JvdXAxL00wMC8wMC8wMy9yQkFCRjFpcm96T0FTT2d6QUFGbTkyYVppemc1NzMubXA0"
-}
-```
-
-订阅事件：
-
-```json
-{
-  "to_user_name": "abbd71f0-e213-481d-81f1-fcd143230e46", 
-  "from_user_name": "a86e83a26be44eb59806901cc8be5d5c", 
-  "create_time": 1487643267580, 
-  "msg_type": "event", 
-  "event": "SUBSCRIBE", 
-  "event_key": "subscribe"
-}
+        "msg_time": 1657854325463,
+        "size": 563948,
+        "from_domain": "workplus",
+        "from_user": "61e9fea875a24bfeb0fe2838e488d20f",
+        "msg_type": "video",
+        "height": 0,
+        "media_domain": "workplus",
+        "msg_body":
+        {
+            "duration": 2,
+            "size": 563948,
+            "height": 0,
+            "media_domain": "workplus",
+            "content": "base64",
+            "media_id": "4028ec49c54142d8a18f35bea3196c2d",
+            "width": 0
+        },
+        "to_user_name": "测试回调APP",
+        "media_id": "4028ec49c54142d8a18f35bea3196c2d",
+        "width": 0,
+        "create_time": 1657854325463,
+        "to_domain": "workplus",
+        "to_user": "89bfb884fbd835790edc78033096204a3caa123a",
+        "duration": 2,
+        "from_user_name": "开发人员",
+        "content": "base64"    
+    }
 ```
