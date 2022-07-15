@@ -30,7 +30,7 @@
 调用 URL 规则：
 
 ```js
-${URL}&tenantId={tenantId}&username={username}&ticket={ticket}
+${URL}&tenantId={{tenantId}}&username={{username}}&ticket={{ticket}}
 ```
 
 参数说明：
@@ -42,7 +42,7 @@ ${URL}&tenantId={tenantId}&username={username}&ticket={ticket}
 | username | String | 当前用户帐号，由移动端自动填充|
 | ticket | String | 给轻应用做单点登陆所用，由移动端自动填充 |
 
-[应用访问地址的参数](/light-app/create.html#启动地址)，在这里同样适用。
+[应用访问地址的参数](/light-app/create.html#启动地址)，在这里同样适用，约定参数均需要使用双花括号括着。
 
 返回格式规则：
 

@@ -1,1 +1,0 @@
-const a={key:"v-7ff08aa6",path:"/api/callback.html",title:"\u5F00\u53D1\u8005\u63A5\u53E3\u56DE\u8C03",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u6D88\u606F\u56DE\u8C03",slug:"\u6D88\u606F\u56DE\u8C03",children:[]}],git:{updatedTime:163912782e4},filePathRelative:"api/callback.md"};export{a as data};
