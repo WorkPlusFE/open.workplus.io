@@ -14,11 +14,7 @@
 ```js
 w6s.webview.openWebView({
   url: 'http://网页地址',
-  title: 'Test',
-  useAndroidWebview: true,
-  useSystemWebview: true,
-  displayMode: 'FULL_SCREEN',
-  orientation: 1,
+  title: 'Test'
 });
 ```
 
