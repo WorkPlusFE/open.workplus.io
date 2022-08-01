@@ -227,7 +227,7 @@ html2canvas(document.getElementById('body'))
 
 ```js
 w6s.image.toBase64({
-  filePath: 'file://图片本地地址',
+  filePath: '图片本地地址',
   success: function(res) {},
   fail: function(err) {},
 });
@@ -242,7 +242,7 @@ w6s.image.toBase64({
 **返回数据**
 
 | 参数 | 说明 |
-| - | - | - |
+| -  | - |
 | target._result | 在返回数据的 target 属性中，可以找到 key 值为 _result 的 base64 内容  | 
 
 
