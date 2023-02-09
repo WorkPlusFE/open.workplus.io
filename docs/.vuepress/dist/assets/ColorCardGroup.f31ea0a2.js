@@ -1,1 +1,0 @@
-import{o as r,c as e,h as a}from"./app.534aeccb.js";import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";const t={name:"ColorCardGroup"},c={class:"w6s-color-card-group el-row"};function p(o,_,l,n,d,u){return r(),e("div",c,[a(o.$slots,"default")])}var m=s(t,[["render",p]]);export{m as default};
