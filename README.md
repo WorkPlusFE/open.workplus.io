@@ -24,4 +24,4 @@ WorkPlus 开放平台，助力业务系统快速移动化。
 
 MIT
 
-最终解析权归[恒拓高科](https://workplus.io)所有！
+最终解析权归[恒拓高科](https://www.workplus.io)所有！

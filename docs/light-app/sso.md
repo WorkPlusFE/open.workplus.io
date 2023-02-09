@@ -60,6 +60,6 @@ http://test-app.workplus.io?ticket=ticket&user_id=xxx&domain_id=xx
 应用的启动地址，请尽可能遵照标准来设置。例如常见的单页面应用会使用`#hash`的方式做前端路由，但是`井号`在链接访问上是没有意义的，我们建议链接的属性，应该是先`search(query)`再`hash`，如：
 
 ```html
-https://workplus.io?key1=val1&key2=val2#hash
+https://www.workplus.io?key1=val1&key2=val2#hash
 ```
 :::

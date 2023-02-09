@@ -2,7 +2,7 @@
   <footer class="footer text--center">
     <div class="container container--fluid">
       <div class="footer__links">
-        <a class="footer__link-item" target="_blank" href="https://workplus.io">公司官网</a>
+        <a class="footer__link-item" target="_blank" href="https://www.workplus.io">公司官网</a>
         <span class="footer__link-separator">·</span>
         <a class="footer__link-item" target="_blank" href="https://lite.workplus.io">WorkPlus Lite</a>
         <span class="footer__link-separator">·</span>

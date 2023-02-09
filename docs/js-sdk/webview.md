@@ -219,7 +219,7 @@ w6s.webview.wxShare({
   description: '这是概要',
   thumb: 'base64://xxxxx==',
   scene: 0,
-  data: { 'url': 'https://workplus.io' }
+  data: { 'url': 'https://www.workplus.io' }
 });
 ```
 
