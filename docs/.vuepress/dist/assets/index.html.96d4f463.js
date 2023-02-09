@@ -1,1 +1,0 @@
-import{r as e,o as n,c,a as o,F as a}from"./app.5f7d3d71.js";import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";const _={};function m(p,l){const r=e("HomeFeature"),t=e("Footer");return n(),c(a,null,[o(r),o(t)],64)}var u=s(_,[["render",m]]);export{u as default};
