@@ -57,7 +57,7 @@ w6s.auth.getUserTicket({
 <!-- 文档上的 sdk 地址更新可能会滞后 -->
 <!-- 具体请以 https://www.npmjs.com/package/@w6s/sdk 地址上的最新版本为准 -->
 <!-- 可以通过替换版本号(sdk.{版本号}.js），访问对应的版本 -->
-<script src="https://open.workplus.io/static/js-sdk/sdk.2.0.0-beta.10.js"></script>
+<script src="https://open.workplus.io/static/js-sdk/sdk.2.0.0-beta.11.js"></script>
 ```
 
 引入后，会在全局暴露`w6s`对象，初始化后，将可调用各模块接口。
