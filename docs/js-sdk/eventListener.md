@@ -2,6 +2,40 @@
 
 `JS-SDK`提供方法用于绑定设备的一些场景操作事件，例如安卓设备特有的物理返回按钮（或虚拟按钮），绑定后，可以在回调方法内处理特定的逻辑。
 
+## 事件监听 <Badge text="推荐使用" />
+
+一旦调用该接口，将会监控页面上的`pause(页面离开)`、`resume（页面可见）`和`back（安卓的物理返回事件，iOS为页面右滑）`事件，可以通过返回数据里的`action`来区分事件类型。
+
+注意，该方法调用后，返回功能将会被重置，需要开发者自行实现返回逻辑。此外，该方法不支持取消绑定。
+
+**使用说明**
+
+| 客户端   | Android | iOS  |
+| -------- | ------- | ---- |
+| 支持情况 | 支持  | 支持 |
+
+
+```js
+w6s.event.bindMessageChannel((result: any) => {
+  /** 返回的事件类型 */
+  // action: 'pause' | 'resume' | 'back';
+  switch (result.action) {
+    case 'pause':
+      alert('页面离开');
+      break;
+    case 'resume':
+      alert('页面返回');
+      break;
+    case 'back':
+      alert('触发了物理返回事件');
+      break;
+    default:
+      break;
+  }
+});
+```
+
+
 ## 安卓物理返回按钮
 
 绑定安卓设备的物理返回按钮，绑定后，原始返回动作将无效。
