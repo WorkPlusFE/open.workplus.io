@@ -35,7 +35,7 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 | body.file_status | int | N | 文件状态,0为正常 |
 | body.name | String | N | 名称 |
 | body.articles.summary | String | N | 文章摘要 |
-| body.articles.cover_url | String | N | 封面URL |
+| body.articles.cover_url | String | N | 封面URL 或 封面媒体Id |
 | body.articles.cover_enabled | boolean | N | 是否显示封面,true/false |
 | body.articles.create_time | long | N | 创建时间 |
 | body.articles.title | String | N | 文章标题 |
@@ -138,9 +138,8 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
     "articles": [
       {
         "summary": "", 
-        "cover_url": "", 
         "show_cover": false, 
-        "cover_media_id": "Z3JvdXAxL00wMC8wMC8zQi9yQkFCR1ZkVlFwYUFicjJ3QUFQa2NkSHlFM280MDMuanBn", 
+        "cover_url": "Z3JvdXAxL00wMC8wMC8zQi9yQkFCR1ZkVlFwYUFicjJ3QUFQa2NkSHlFM280MDMuanBn", 
         "create_time": 1465205632846, 
         "author": "凯里",  
         "title": "云南丽江", 
