@@ -8,8 +8,8 @@
         <span class="footer__link-separator">·</span>
         <a class="footer__link-item" target="_blank" href="https://openkunlun.io/">KunLun 中间件平台</a>
       </div>
-    <div>
-      ©2015-{{year}} 深圳恒拓高科信息技术有限公司 版权所有</div>
+    <a class="footer_copyright" href="https://beian.miit.gov.cn" target="_blank" rel="nofollow" title="深圳恒拓高科信息技术有限公司 版权所有">
+      ©2015-{{year}} 深圳恒拓高科信息技术有限公司 版权所有 | 粤ICP备15040561号</a>
     </div>
     <div class="disbale-icon">
       <img class="we-artwork__image" src="https://open.workplus.io/logo.jpg"  alt="logo"/>
@@ -44,6 +44,12 @@ export default {
   }
   &__link-separator {
     margin: 0 10px;
+  }
+
+  a.footer_copyright {
+    color: var(--c-text-lighter);
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 
