@@ -57,6 +57,13 @@ POST http://{host}:{port}/v1/admin/organizations/{org_code}/import-orgs?access_t
 
 ```
 
+**响应参数：**
+
+| 字段      | 类型                | 是否必填 | 说明                                         |
+| --------- | ------------------- | -------- | -------------------------------------------- |
+| successes | Map[String, String] | Y        | 导入成功组织，key为组织路径，value为组织id   |
+| failures  | Map[String, String] | Y        | 导入成功组织，key为组织路径，value为错误信息 |
+
 **响应示例：**
 
 ```json
@@ -73,6 +80,8 @@ POST http://{host}:{port}/v1/admin/organizations/{org_code}/import-orgs?access_t
   }
 }
 ```
+
+:::
 
 ### 组织删除
 
@@ -112,6 +121,8 @@ DELETE http://{host}:{port}/v1/admin/organizations/{org_code}/{id}?access_token=
 | ---------------- | ---------------- |
 | 208507           | 组织下已存在雇员 |
 | 208502           | 没有对应的组织   |
+
+:::
 
 ### 组织架构列表 
 

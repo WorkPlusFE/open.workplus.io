@@ -415,7 +415,7 @@ GET http://{host}:{port}/v1/admin/organizations/{code}/serial/{serialNo}?access_
 ## 新增机构信息
 
 ```js
-POST http://{host}:{port}/v1/admin/organizations?access_token={access_token}
+POST http://{host}:{port}/v1/admin/organizations/{org_code}?access_token={access_token}
 ```
 
 **请求头部：**
@@ -428,19 +428,18 @@ POST http://{host}:{port}/v1/admin/organizations?access_token={access_token}
 
 | 字段 | 类型 | 是否必填 | 说明 |
 | - | - | - | - |
-| access_token | String | Y | 访问token |
-| org_code | String | Y | 组织标识 |
-| type | String | Y | 节点类型,DEPT或者CORP |
-| parent_path | String | N | 父节点path |
-| parent_id | String | N | 父节点ID,与parent_path不能同时为空 |
-| name | String | Y | 节点名称 |
-| logo | String | N | logo媒体ID |
-| tel | String | N | 电话 |
-| contact | String | N | 联系人 |
-| sn | String | N | 节点编号 |
-| serial_no | String | N | 第三方序列号,唯一 |
-| sort_order | Integer | N | 排序号 |
-
+| access_token | String  | Y        | 访问token                          |
+| org_code     | String  | Y        | 组织标识                           |
+| type         | String  | Y        | 节点类型,DEPT或者CORP              |
+| parent_path  | String  | N        | 父节点path                         |
+| parent_id    | String  | N        | 父节点ID,与parent_path不能同时为空 |
+| name         | String  | Y        | 节点名称                           |
+| logo         | String  | N        | logo媒体ID                         |
+| tel          | String  | N        | 电话                               |
+| contact      | String  | N        | 联系人                             |
+| sn           | String  | N        | 节点编号                           |
+| serial_no    | String  | N        | 第三方序列号,唯一                  |
+| sort_order   | Integer | N        | 排序号                             |
 
 **请求示例：**
 
@@ -598,6 +597,13 @@ POST http://{host}:{port}/v1/admin/organizations/{org_code}/import-orgs?access_t
   }
 ]
 ```
+
+**响应参数：**
+
+| 字段      | 类型                | 是否必填 | 说明                                         |
+| --------- | ------------------- | -------- | -------------------------------------------- |
+| successes | Map[String, String] | Y        | 导入成功组织，key为组织路径，value为组织id   |
+| failures  | Map[String, String] | Y        | 导入成功组织，key为组织路径，value为错误信息 |
 
 **响应示例：**
 
