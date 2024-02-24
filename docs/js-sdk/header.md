@@ -185,15 +185,15 @@ w6s.header.rightButtons({
 
 | 图标编号 | 图标  | 图标编号 |  图标 |
 |--------|-----------| --------|-----------|
-| 0 | <img :src="$withBase('/header/ICON_1.png')" alt="icon1" width="40px">  | 1 | <img :src="$withBase('/header/ICON_2.png')" alt="icon2" width="40px">  |
-| 2 | <img :src="$withBase('/header/ICON_3.png')" alt="icon3" width="40px">  | 3 | <img :src="$withBase('/header/ICON_4.png')" alt="icon4" width="40px">  |
-| 4 | <img :src="$withBase('/header/ICON_5.png')" alt="icon5" width="40px">  | 5 | <img :src="$withBase('/header/ICON_6.png')" alt="icon6" width="40px">  |
-| 6 | <img :src="$withBase('/header/ICON_7.png')" alt="icon7" width="40px">  | 7 | <img :src="$withBase('/header/ICON_8.png')" alt="icon8" width="40px">  |
-| 8 | <img :src="$withBase('/header/ICON_9.png')" alt="icon9" width="40px">  | 9 | <img :src="$withBase('/header/ICON_10.png')" alt="icon10" width="40px">  |
-| 10 | <img :src="$withBase('/header/ICON_11.png')" alt="icon11" width="40px">  | 11 | <img :src="$withBase('/header/ICON_12.png')" alt="icon12" width="40px">  |
-| 12 | <img :src="$withBase('/header/ICON_13.png')" alt="icon13" width="40px">  | 13 | <img :src="$withBase('/header/ICON_14.png')" alt="icon14" width="40px">  |
-| 14 | <img :src="$withBase('/header/ICON_15.png')" alt="icon15" width="40px">  | 15 | <img :src="$withBase('/header/ICON_16.png')" alt="icon16" width="40px">  |
-| 16 | <img :src="$withBase('/header/ICON_17.png')" alt="icon17" width="40px">  | |
+| 0 | <img src='/header/ICON_1.png' alt="icon1" width="40px">  | 1 | <img src='/header/ICON_2.png' alt="icon2" width="40px">  |
+| 2 | <img src='/header/ICON_3.png' alt="icon3" width="40px">  | 3 | <img src='/header/ICON_4.png' alt="icon4" width="40px">  |
+| 4 | <img src='/header/ICON_5.png' alt="icon5" width="40px">  | 5 | <img src='/header/ICON_6.png' alt="icon6" width="40px">  |
+| 6 | <img src='/header/ICON_7.png' alt="icon7" width="40px">  | 7 | <img src='/header/ICON_8.png' alt="icon8" width="40px">  |
+| 8 | <img src='/header/ICON_9.png' alt="icon9" width="40px">  | 9 | <img src='/header/ICON_10.png' alt="icon10" width="40px">  |
+| 10 | <img src='/header/ICON_11.png' alt="icon11" width="40px">  | 11 | <img src='/header/ICON_12.png' alt="icon12" width="40px">  |
+| 12 | <img src='/header/ICON_13.png' alt="icon13" width="40px">  | 13 | <img src='/header/ICON_14.png' alt="icon14" width="40px">  |
+| 14 | <img src='/header/ICON_15.png' alt="icon15" width="40px">  | 15 | <img src='/header/ICON_16.png' alt="icon16" width="40px">  |
+| 16 | <img src='/header/ICON_17.png' alt="icon17" width="40px">  | |
 
 以上图片均为白色，透明背景（为显示效果做了灰色背景处理）。
 
@@ -206,7 +206,7 @@ w6s.header.rightButtons({
 }
 ```
 
-如上述定义，表示将使用`图标编号为2`的图标，也就是 <img :src="$withBase('/header/ICON_3.png')" alt="icon3" width="40px"> 
+如上述定义，表示将使用`图标编号为2`的图标，也就是 <img src='/header/ICON_3.png' alt="icon3" width="40px"> 
 
 ## 清除右侧按钮
 

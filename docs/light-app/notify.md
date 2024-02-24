@@ -7,17 +7,13 @@
 
 ## 什么是应用红点数字
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/reddot.png')" alt="应用红点" width="400" />
-</p>
+![应用红点](/app/reddot.png =400x)
 
 如上图中的`流程大师`应用右上角的红点数字，当前支持显示红点、数字及图标。除了默认的“应用中心”栏目，在[工作台](/light-app/workbench.md)上的应用同样支持。通过约定好链接的方式，在管理后台上架应用时可以指定红点请求的地址。
 
 在添加“应用入口”时，可以根据实际需求添加“红点数字提醒源”，如下图：
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/notify-setting.png')" alt="应用红点设置" width="600" />
-</p>
+![应用红点设置](/app/notify-setting.png)
 
 ## 显示规则
 

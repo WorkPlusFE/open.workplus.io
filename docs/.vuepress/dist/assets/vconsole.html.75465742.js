@@ -1,1 +1,0 @@
-const e={key:"v-3d922753",path:"/dev-tools/vconsole.html",title:"vConsole",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u5B89\u88C5\u4F7F\u7528",slug:"\u5B89\u88C5\u4F7F\u7528",children:[]}],git:{updatedTime:163912782e4},filePathRelative:"dev-tools/vconsole.md"};export{e as data};

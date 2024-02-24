@@ -1,1 +1,0 @@
-const e={key:"v-db4b4944",path:"/js-sdk/storage.html",title:"\u5B58\u50A8",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u5B58\u6570\u636E",slug:"\u5B58\u6570\u636E",children:[]},{level:2,title:"\u53D6\u6570\u636E",slug:"\u53D6\u6570\u636E",children:[]}],git:{updatedTime:1642501036e3},filePathRelative:"js-sdk/storage.md"};export{e as data};

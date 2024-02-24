@@ -81,8 +81,6 @@ POST http://{host}:{port}/v1/admin/organizations/{org_code}/import-orgs?access_t
 }
 ```
 
-:::
-
 ### 组织删除
 
 ```js
@@ -122,7 +120,6 @@ DELETE http://{host}:{port}/v1/admin/organizations/{org_code}/{id}?access_token=
 | 208507           | 组织下已存在雇员 |
 | 208502           | 没有对应的组织   |
 
-:::
 
 ### 组织架构列表 
 

@@ -1,3 +1,8 @@
+<script setup>
+import ColorCardGroup from '../../components/ColorCardGroup.vue'
+import ColorCard from '../../components/ColorCard.vue'
+</script>
+
 # 全局样式
 
 ## 颜色

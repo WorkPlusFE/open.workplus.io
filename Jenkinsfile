@@ -16,7 +16,7 @@ pipeline {
 
         stage("Deploy") {
             steps {
-                sh 'rsync --delete -avz -e ssh ${WORKSPACE}/docs/.vuepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/next/'
+                sh 'rsync --delete -avz -e ssh ${WORKSPACE}/docs/.vitepress/dist/* root@106.13.212.147:/data/workplus/websites/open.workplus.io/next/'
             }
         }
     }

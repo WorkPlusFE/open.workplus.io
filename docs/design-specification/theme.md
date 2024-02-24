@@ -29,15 +29,11 @@ WorkPlus 主题是基于设计规范落地实践的技术方案，支撑 WorkPlu
 
 登录管理后台，在`客户端管理`点击`主题换肤`：
 
-<p style="text-align: left">
-  <img :src="$withBase('/theme/list-theme.png')" alt="list-theme" width="600">
-</p>
+![list-theme](/theme/list-theme.png)
 
 打开页面后点击`添加主题`，即可进入创建主题界面：
 
-<p style="text-align: left">
-  <img :src="$withBase('/theme/new-theme.png')" alt="new-theme" width="600">
-</p>
+![new-theme](/theme/new-theme.png)
 
 ### 主题包结构
 
@@ -214,10 +210,7 @@ WorkPlus 在 UI 一致性建设的过程中，已经陆续完成了 200+ 个 ico
 
 我们通过 [iconfont.cn](https://www.iconfont.cn/) 维护管理的部分 icon，如下：
 
-<p style="text-align: left">
-  <img :src="$withBase('/theme/display-iconfont.jpg')" alt="display-iconfont" width="600">
-</p>
-
+![display-iconfont](/theme/display-iconfont.jpg)
 
 ## 使用主题
 

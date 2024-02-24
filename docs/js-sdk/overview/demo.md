@@ -4,9 +4,7 @@
 
 请使用 WorkPlus 扫一扫，查看在线 Demo：
 
-<p class="w6s-image">
-  <img :src="$withBase('/js-sdk/sdk-demo-qrcode.png')" alt="sdk demo" width="200" />
-</p>
+![sdk demo](/js-sdk/sdk-demo-qrcode.png =200x)
 
 ::: warning 在线 Demo 访问问题
 基于无法获取不同环境 SDK 鉴权所需的参数，所以上面提供的在线 Demo 仅支持未开启鉴权模式的 APP 扫码预览。

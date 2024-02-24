@@ -8,7 +8,7 @@
 
 ## 什么是工作台
 
-<img :src="$withBase('/app/workbench-2.webp')" alt="工作台" width="400" />
+![工作台](/app/workbench-2.webp =400x)
 
 “工作台”是 WokrPlus 移动平台上的一个比较重要的 Tab 栏目，通过卡片组合的方式来打造个性化的工作台。可根据不同人员的需求来定义工作台卡片，然后将卡片搭建成不同的工作台配置进行下发，实现“千人千面”。同时，在移动端上可对工作台进行管理和定制，并且支持离线 H5 卡片，应用红点提醒等。
 
@@ -46,7 +46,7 @@
 
 ### 1、搜索卡片
 
-<img :src="$withBase('/widget/SEARCH.png')" alt="搜索卡片" width="400">
+![搜索卡片](/widget/SEARCH.png =400x)
 
 搜索卡片无第三方业务数据。
 
@@ -56,7 +56,7 @@
 
 ### 2、Banner卡片
 
-<img :src="$withBase('/widget/BANNER.png')" alt="Banner卡片" width="400">
+![Banner卡片](/widget/BANNER.png =400x)
 
 Banner卡片无第三方业务数据。
 
@@ -66,7 +66,7 @@ Banner卡片无第三方业务数据。
 
 ### 3、常用应用卡片
 
-<img :src="$withBase('/widget/SHORTCUT.png')" alt="常用应用卡片" width="400">
+![常用应用卡片](/widget/SHORTCUT.png =400x)
 
 常用应用卡片无第三方业务数据。
 
@@ -76,13 +76,9 @@ Banner卡片无第三方业务数据。
 
 ### 4、快捷方式入口卡片
 
-<p>
-  <img :src="$withBase('/widget/SHORTCUT_1.png')" alt="快捷方式入口卡片1" width="400">
-</p>
+![快捷方式入口卡片1](/widget/SHORTCUT_1.png =400x)
 
-<p>
-  <img :src="$withBase('/widget/SHORTCUT_2_1.png')" alt="快捷方式入口卡片2" width="400">
-</p>
+![快捷方式入口卡片2](/widget/SHORTCUT_2_1.png =400x)
 
 该卡片有两种风格。
 
@@ -149,13 +145,9 @@ Banner卡片无第三方业务数据。
 
 ### 5、列表卡片
 
-<p>
-  <img :src="$withBase('/widget/LIST_1.png')" alt="列表卡片1" width="400">
-</p>
+![列表卡片1](/widget/LIST_1.png =400x)
 
-<p>
-  <img :src="$withBase('/widget/LIST_2.png')" alt="列表卡片2" width="400">
-</p>
+![列表卡片2](/widget/LIST_2.png =400x)
 
 该卡片有两种风格。
 
@@ -210,12 +202,14 @@ Banner卡片无第三方业务数据。
 
 ### 6、新闻卡片
 
-<img :src="$withBase('/widget/NEWS_1.png')" alt="新闻卡片1" width="400">
+![新闻卡片1](/widget/NEWS_1.png =400x)
 
 ::: details 查看其他三种
-<img :src="$withBase('/widget/NEWS_2.png')" alt="新闻卡片2" width="400">
-<img :src="$withBase('/widget/NEWS_3.png')" alt="新闻卡片3" width="400">
-<img :src="$withBase('/widget/NEWS_4.png')" alt="新闻卡片4" width="400">
+![新闻卡片2](/widget/NEWS_2.png =400x)
+
+![新闻卡片3](/widget/NEWS_3.png =400x)
+
+![新闻卡片4](/widget/NEWS_4.png =400x)
 :::
 
 该卡片有四种风格。
@@ -272,7 +266,7 @@ Banner卡片无第三方业务数据。
 
 ### 7、分类卡片
 
-<img :src="$withBase('/widget/CATEGORY_1.png')" alt="分类卡片" width="400">
+![分类卡片](/widget/CATEGORY_1.png =400x)
 
 > 分类卡片适用于组合多个列表数据
 

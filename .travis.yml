@@ -3,7 +3,7 @@ cache:
   directories:
     - "$HOME/.yarn-cache"
 language: node_js
-node_js: 10
+node_js: 18
 branches:
   only:
     - main
@@ -12,4 +12,4 @@ os:
 install:
   - yarn
 script:
-  - yarn build
+  - yarn docs:build

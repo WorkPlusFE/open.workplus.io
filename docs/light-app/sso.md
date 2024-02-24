@@ -24,9 +24,7 @@
 
 ## 单点登录流程
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/sso.png')" alt="单点登录流程解析" />
-</p>
+![单点登录流程解析](/app/sso.png)
 
 ## 获取客户端用户信息
 

@@ -1,7 +1,0 @@
----
-home: true
----
-
-<HomeFeature />
-
-<Footer />

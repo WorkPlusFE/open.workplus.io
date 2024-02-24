@@ -10,9 +10,7 @@ JS-SDK 默认**不开启**鉴权模式，请根据实际客户端要求进行开
 
 域管理后台颁发和维护，请联系相关负责人获取。
 
-<p class="w6s-image">
-  <img :src="$withBase('/js-sdk/auth.png')" alt="添加鉴权的key/secret" width="600">
-</p>
+![添加鉴权的key/secret](/js-sdk/auth.png)
 
 ## 步骤二：计算签名
 

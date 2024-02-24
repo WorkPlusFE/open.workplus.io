@@ -11,9 +11,7 @@
 
 ### 安卓
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/native-app.png')" alt="上架原生应用" width="600">
-</p>
+![上架原生应用](/app/native-app.png)
 
 如上图，选择“安卓”平台后，直接上传 APK 安装包即可。上传完毕后会⾃动填⼊相应安装包的包名地址到“启动地址”处，然后填写其他必要信息后，就完成了最简单的安卓应用上架。
 
@@ -21,9 +19,7 @@
 
 ### iOS
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/native-ios.png')" alt="上架原生应用（iOS）" width="600">
-</p>
+![上架原生应用（iOS）](/app/native-ios.png)
 
 如上图，相比“安卓”平台，下载方式会有所不同：
 
@@ -34,9 +30,7 @@
 
 ### 系统应用
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/native-system.png')" alt="上架原生应用（system）" width="600">
-</p>
+![上架原生应用（system）](/app/native-system.png)
 
 目前平台内置的系统应用包括：`日历`、`邮箱`及`官方邮箱`。其中，`官方邮箱`为 WorkPlus 平台内置的邮箱功能。
 

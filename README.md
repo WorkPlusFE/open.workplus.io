@@ -6,8 +6,6 @@ WorkPlus 开放平台，助力业务系统快速移动化。
 
 [https://open.workplus.io](https://open.workplus.io) 
 
-[![Build Status](https://travis-ci.org/WorkPlusFE/open.workplus.io.svg?branch=main)](https://travis-ci.org/WorkPlusFE/open.workplus.io)
-
 * **多种对接方式**
 
   企业服务号快速部署，HTML5 轻应用无缝适配，原生应用跳转，第三方业务系统对接，丰富的公共、私有应用商店。

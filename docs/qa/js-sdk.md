@@ -9,7 +9,7 @@ sidebar: auto
 
 而 WkWebView 不存在该问题。
 
-所以，尽可能不要使用 alert 来检验接口返回值，可以使用 [VConsole](/light-app/vconsole.html) 等调试工具。
+所以，尽可能不要使用 alert 来检验接口返回值，可以使用 [VConsole](/dev-tools/vconsole.html) 等调试工具。
 
 ## 可以多次注入 cordovajs 吗？
 

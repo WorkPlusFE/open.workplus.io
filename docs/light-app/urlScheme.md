@@ -1,4 +1,4 @@
-# 跳转协议 <Badge type="success" text="v3.18.0+" />
+# 跳转协议
 
 ::: tip 阅读本文，你将了解：
 * 可通过 url scheme 打开应用某些功能或某个指定的轻应用；

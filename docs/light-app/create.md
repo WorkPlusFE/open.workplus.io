@@ -13,9 +13,7 @@
 
 如下图，带红星的字段表示必填，如果没有`应用分类`，点击`创建分类`进行创建即可。
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/base1.png')" alt="基本信息" width="600">
-</p>
+![基本信息](/app/base1.png)
 
 ## 应用类型
 
@@ -28,9 +26,7 @@ H5 网页应用，也是 WorkPlus 移动平台上主要的应用类型，可通�
 
 类似微信的“公众号”，属于应用的一种类型。创建该类型的应用，需要单独访问服务号“应用后台”进行配置，例如设置“关键字自动回复”，自定义“服务号菜单”等。
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/serverNo.png')" alt="服务号" width="600">
-</p>
+![服务号](/app/serverNo.png)
 
 ### 原生应用
 
@@ -42,9 +38,7 @@ H5 网页应用，也是 WorkPlus 移动平台上主要的应用类型，可通�
 
 如下图，创建应用时，需要直接填写“应用主入口”的信息，包括“名称”、“图标”和“启动地址”等。
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/base2.png')" alt="启动地址" width="600">
-</p>
+![启动地址](/app/base2.png)
 
 目前提供3个平台的设置，包括`苹果`、`安卓`及`PC客户端`，其中`苹果`和`安卓`的设置是一样，而`PC客户端`的相对少一些。以下是各字段的各端支持说明：
 
@@ -118,9 +112,7 @@ https://test-app.workplus.io?v=1.2.0
 
 点击“移动端更多设置”，即可展开该设置页面。相关设置主要提供移动端 WebView 头部自定义的能力。
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/mobile-more.png')" alt="移动端设置" width="600">
-</p>
+![移动端设置](/app/mobile-more.png)
 
 ### 应用参数设置
 
@@ -148,25 +140,19 @@ https://test-app.workplus.io?v=1.2.0
 
 通常开发轻应用，都需要设定`普通用户`及`管理员`的角色，通过平台提供的应用相关**API接口**，即可获取到应用对应的角色人员。
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/base3.png')" alt="使用范围" width="600">
-</p>
+![使用范围](/app/base3.png)
 
 ## 创建应用入口
 
 应用入口又名快捷入口，一个应用可以创建多个快捷入口，相关设置跟上面提到的`基本信息`及`启动地址`一致。
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/base4.png')" alt="创建应用入口" width="600" />
-</p>
+![创建应用入口](/app/base4.png)
 
 ## 消息模版
 
 模版消息是一种特殊的消息类型，可以在管理后台进行可视化编辑，保存成功后，可以获得对应的`模板ID`。
 
-<p class="w6s-image">
-  <img :src="$withBase('/app/base5.png')" alt="消息模版" width="600" />
-</p>
+![消息模版](/app/base5.png)
 
 可以根据实际需求，设定不同的模版消息，具体使用方式，请查看[模板消息](/api/app/template.md)。
 

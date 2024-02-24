@@ -14,21 +14,15 @@
 
 2. 在 APP 中打开`http://debugx5.qq.com`页面，或扫描下方二维码；
 
-<p style="text-align: left">
-  <img :src="$withBase('/debug/x5debug-qrcode.png')" alt="5debug-qrcode" width="180">
-</p>
+![5debug-qrcode](/debug/x5debug-qrcode.png =180x)
 
 
 3. 在打开的页面中，选择`信息`分类（如下图-1）；
 4. 找到`TBS settings`，选中`是否打开 TBS 内核 Inspector 调试功能`；
 5. 选中后，应用会弹出警告提示，点击`确定`即可。
 
-<p style="text-align: left">
-  <img :src="$withBase('/debug/dev-x5.png')" alt="图1" width="250">
-  <p style="text-align: left">
-    <i>图-1</i>
-  </p>
-</p>
+![图-1](/debug/dev-x5.png =250x)
+<i>图-1</i>
 
 ## 调试
 
@@ -37,21 +31,13 @@
 3. 打开 Chrome 浏览器，在地址栏中输入`chrome://inspect/#devices`；
 4. 如果调试模式开启成功，可以在页面看到打开应用的相关信息；
 
-<p style="text-align: left">
-  <img :src="$withBase('/debug/dev-inspect.png')" alt="图2" width="400">
-  <p style="text-align: left">
-    <i>图-2</i>
-  </p>
-</p>
+![图-2](/debug/dev-inspect.png =400x)
+<i>图-2</i>
 
 5. 点击应用信息下方的`inspect`，将会自动打开 Chrome 的调试页面，该页面首次打开较慢，如果出现白屏或者404错误的，请尝试切换到更好的网络或使用翻墙工具。
 
-<p style="text-align: left">
-  <img :src="$withBase('/debug/dev-debug.png')" alt="图3" width="400">
-  <p style="text-align: left">
-    <i>图-3</i>
-  </p>
-</p>
+![图-3](/debug/dev-debug.png =400x)
+<i>图-3</i>
 
 ::: tip 提示
 首次打开该页面，出现白屏或者404的概率很高，条件允许的情况下，尽可能使用更(翻)好(墙)的网络！

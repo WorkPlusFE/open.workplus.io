@@ -1,1 +1,0 @@
-const t={key:"v-7b4ac60b",path:"/light-app/isv.html",title:"\u6DFB\u52A0 ISV \u5E94\u7528",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1639534144e3},filePathRelative:"light-app/isv.md"};export{t as data};

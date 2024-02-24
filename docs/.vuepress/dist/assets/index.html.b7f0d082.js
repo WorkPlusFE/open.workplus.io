@@ -1,1 +1,0 @@
-const a={key:"v-0da5cafc",path:"/api/app/",title:"\u5E94\u7528",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:163912782e4},filePathRelative:"api/app/README.md"};export{a as data};

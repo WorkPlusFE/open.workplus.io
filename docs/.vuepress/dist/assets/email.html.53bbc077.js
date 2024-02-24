@@ -1,1 +1,0 @@
-const e={key:"v-c9cd3246",path:"/js-sdk/email.html",title:"\u90AE\u7BB1",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u5199\u90AE\u4EF6",slug:"\u5199\u90AE\u4EF6",children:[]},{level:2,title:"\u6253\u5F00\u90AE\u7BB1",slug:"\u6253\u5F00\u90AE\u7BB1",children:[]}],git:{updatedTime:1640332186e3},filePathRelative:"js-sdk/email.md"};export{e as data};

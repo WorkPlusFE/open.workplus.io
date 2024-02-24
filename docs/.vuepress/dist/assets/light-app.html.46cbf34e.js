@@ -1,1 +1,0 @@
-const t={key:"v-39af2b96",path:"/qa/light-app.html",title:"\u8F7B\u5E94\u7528",lang:"zh-CN",frontmatter:{sidebar:"auto"},excerpt:"",headers:[{level:2,title:"\u8003\u52E4\u5B9A\u4F4D\u504F\u5DEE\u5927",slug:"\u8003\u52E4\u5B9A\u4F4D\u504F\u5DEE\u5927",children:[]}],git:{updatedTime:1639534144e3},filePathRelative:"qa/light-app.md"};export{t as data};
