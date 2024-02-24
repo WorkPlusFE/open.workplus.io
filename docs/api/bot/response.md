@@ -85,7 +85,7 @@ POST: /v1/bots/messages/{message_id}?access_token={access_token}
 
 ![bot-in-out](/bot/bot-in-out.png =260x)
 
-如上图两条消息，分别代表机器人入群，退群后业务方响应的消息。
+如上图两条消息，分别代表机器人入群、退群后业务方响应的消息。
 
 业务方可以用如下接口响应订阅回调：
 
