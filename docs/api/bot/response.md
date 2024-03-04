@@ -107,6 +107,7 @@ POST: /v1/bots/subscribe-message?access_token={access_token}
 ```Json
 {
   "conversation_id": "849e9766b94e00ce8736ff561edba9a297a09a1a3e36ff0e0814c0eb7de35f946eb3765aeaa8e55366afdacf4e51a6e592fd944acf48f61404e9e9ac45b7927d",
+  "subscribe_id": "订阅id",
   "type": "rich_text",
   "user_ids":
   [
@@ -191,6 +192,7 @@ POST: /v1/bots/subscribe-message?access_token={access_token}
 | 字段 | 类型 | 是否必填 | 说明 |
 | - | - | - | - |
 | conversation_id | String | Y | 会话是指用户与用户、用户与群组、用户与应用(机器人)的对话交流过程；<br/> 每个会话都有唯一的会话 ID[conversation_id]，WorkPlus 回调  Url 时，会把会话 ID 传给业务方。
+| subscribe_id | String | N | 订阅id，当调用[订阅接口](#响应订阅回调)时必填；<br/>WorkPlus 回调 Url 时，会把会话 ID 传给业务方。
 | type | String | Y | 消息类型：text/image/voice/video/file/template/rich_text
 | body | String | Y | 消息体，参考[body参数说明](#body参数说明)
 | usernames | Array | N | 如果有值，则会发给会话的指定成员，<br/> - 群聊：会发给指定群成员<br/> - 单聊：可以发给单聊任何一方<br/><br/>如果没值，则发给会话所有人
