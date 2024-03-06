@@ -3,7 +3,7 @@
 ## 图片查看
 
 ```
-GET /v1/medias/images/{fileId}?access_token={access_token}&domain_id={domain_id}&type=获取文件方式(ID/DIGEST,默认ID)&width=图片剪裁的宽度&heigh=图片剪裁的高度&rotate=图片旋转角度(默认0.0)&quality=图片压缩率(0~1,默认1)&default_thumbnail=是否缩略图(默认false)
+GET /v1/medias/images/{mediaId}?access_token={access_token}&domain_id={domain_id}&type=获取文件方式(ID/DIGEST,默认ID)&width=图片剪裁的宽度&heigh=图片剪裁的高度&rotate=图片旋转角度(默认0.0)&quality=图片压缩率(0~1,默认1)&default_thumbnail=是否缩略图(默认false)
 ```
 
 **请求参数：**
@@ -12,7 +12,7 @@ GET /v1/medias/images/{fileId}?access_token={access_token}&domain_id={domain_id}
 |---|---|---|---|
 | access_token | String | Y | 访问令牌 |
 | domain_id | String | Y | 域标识 |
-| fileId | String | Y | 图片标识 |
+| mediaId | String | Y | 图片标识 |
 
 **请求示例：**
 
@@ -37,7 +37,7 @@ Content-Type: image/jpeg
 ## 文件下载
 
 ```js
-GET /v1/medias/{fileId}?access_token={access_token}&domain_id={domain_id}&type=获取文件方式(ID/DIGEST,默认ID)
+GET /v1/medias/{mediaId}?access_token={access_token}&domain_id={domain_id}&type=获取文件方式(ID/DIGEST,默认ID)
 ```
 **请求头部：**
 
@@ -51,7 +51,7 @@ GET /v1/medias/{fileId}?access_token={access_token}&domain_id={domain_id}&type=�
 |---|---|---|---|
 | access_token | String | Y | 访问令牌 |
 | domain_id | String | Y | 域标识 |
-| fileId | String | Y | 文件标识 |
+| mediaId | String | Y | 文件标识 |
 | type | String | N | 获取文件方式(ID/DIGEST,默认ID) |
 
 **请求示例：**
@@ -72,7 +72,7 @@ Content-Type: image/jpeg
 ## 获取文件信息
 
 ```js
-GET /v1/medias/{fileId}/info?access_token={access_token}&type=获取文件方式(ID/DIGEST,默认ID)
+GET /v1/medias/{mediaId}/info?access_token={access_token}&type=获取文件方式(ID/DIGEST,默认ID)
 ```
 
 **请求头部：**
@@ -86,7 +86,7 @@ GET /v1/medias/{fileId}/info?access_token={access_token}&type=获取文件方式
 | 字段| 类型 | 是否必填|说明|
 |---|---|---|---|
 |access_token|String|Y|访问令牌|
-| fileId |String|Y|文件标识|
+| mediaId |String|Y|文件标识|
 | type |String|N|获取文件方式(ID/DIGEST,默认ID)|
 
 **请求示例：**
