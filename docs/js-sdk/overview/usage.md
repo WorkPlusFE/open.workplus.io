@@ -1,6 +1,6 @@
 # 安装
 
-`JS-SDK`支持`script`标签及以`模块`的形式引入；初始化时，可以设置日志输出、数据模拟等配置。
+`JS-SDK`支持以`script`标签及`模块`的形式引入；初始化时，可对日志输出、数据模拟等进行配置。
 
 ## 引入及使用
 
@@ -57,7 +57,7 @@ w6s.auth.getUserTicket({
 <!-- 文档上的 sdk 地址更新可能会滞后 -->
 <!-- 具体请以 https://www.npmjs.com/package/@w6s/sdk 地址上的最新版本为准 -->
 <!-- 可以通过替换版本号(sdk.{版本号}.js），访问对应的版本 -->
-<script src="https://open.workplus.io/static/js-sdk/sdk.2.0.0-beta.12.js"></script>
+<script src="https://open.workplus.io/static/js-sdk/sdk.2.0.2.js"></script>
 ```
 
 引入后，会在全局暴露`w6s`对象，初始化后，将可调用各模块接口。
@@ -74,19 +74,18 @@ w6s.auth.getUserTicket({
 
 ## 配合 Vue 使用
 
+js-sdk 兼容 Vue 3.0 及 2.0 版本，使用方式大致一样，下面以 3 版本为例。
+
 **一、`npm` 模式：**
 
-基于 @vue/cli 创建的项目，可以通过`Vue.use(w6s, initOptions)`的方式初始化 sdk。
+基于 vite 创建的项目，可以通过`app.use(w6s, initOptions)`的方式初始化 sdk。
 
 ```js
-import Vue from 'vue';
+import { createApp } from 'vue' Vue from 'vue';
 import * as w6s from '@w6s/sdk';
 
-// 初始化 sdk，同时会在 Vue 原型链上挂载 $w6s 对象
-Vue.use(w6s, {
-  debug: true,
-  timeout: 10 * 1000,
-});
+const app = createApp(App)
+app.use(w6s, { debug: true, timeout: 10 * 1000 })
 ```
 
 接下来，可以在 Vue 组件内，直接访问`this.$w6s`对象，以调用 sdk 方法。
@@ -104,19 +103,21 @@ export default {
 除此之外，sdk 还支持以 script 标签引入的方式，结合 vue 进行使用，如下：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
 <!-- 以实际sdk访问地址为准 -->
-<script src="./sdk.js"></script>
+<script src="./sdk.2.0.2.js"></script>
 <script>
-  const app = new Vue({
-    el: '#app',
-    mounted() {
-      // 必须主动调用初始化方法
-      this.$w6s.init();
-      this.$w6s.device.getDeviceInfo()
-        .then((res) => {});
-    },
-  });
+ const App = {
+      data() {
+        return {
+          message: 'Hello Vue!!'
+        }
+      },
+      mounted() {
+        this.$w6s.header.setTitle('JS-SDK VueJS Demo');
+      }
+}
+Vue.createApp(App).use(window.w6s, { debug: true, timeout: 10 * 1000 }).mount('#app')
 </script>
 ```
 
