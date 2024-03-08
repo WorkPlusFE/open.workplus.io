@@ -12,7 +12,7 @@ GET /v1/medias/images/{media_id}?access_token={access_token}&domain_id={domain_i
 |---|---|---|---|
 | access_token | String | Y | 访问令牌 |
 | domain_id | String | Y | 域标识 |
-| media_id | String | Y | 图片标识 |
+| media_id | String | Y | 图片媒体id |
 
 **请求示例：**
 
@@ -51,7 +51,7 @@ GET /v1/medias/{media_id}?access_token={access_token}&domain_id={domain_id}&type
 |---|---|---|---|
 | access_token | String | Y | 访问令牌 |
 | domain_id | String | Y | 域标识 |
-| media_id | String | Y | 文件标识 |
+| media_id | String | Y | 文件媒体id |
 | type | String | N | 获取文件方式(ID/DIGEST,默认ID) |
 
 **请求示例：**
@@ -86,7 +86,7 @@ GET /v1/medias/{media_id}/info?access_token={access_token}&type=获取文件方�
 | 字段| 类型 | 是否必填|说明|
 |---|---|---|---|
 |access_token|String|Y|访问令牌|
-| media_id |String|Y|文件标识|
+| media_id |String|Y|文件媒体id|
 | type |String|N|获取文件方式(ID/DIGEST,默认ID)|
 
 **请求示例：**
