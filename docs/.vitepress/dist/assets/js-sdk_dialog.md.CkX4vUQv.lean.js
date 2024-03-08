@@ -1,1 +1,0 @@
-import{_ as s,c as t,o as i,a5 as a}from"./chunks/framework.BSSyk2BU.js";const c=JSON.parse('{"title":"弹框","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/dialog.md","filePath":"js-sdk/dialog.md"}'),h={name:"js-sdk/dialog.md"},n=a("",50),l=[n];function d(e,p,k,r,E,o){return i(),t("div",null,l)}const y=s(h,[["render",d]]);export{c as __pageData,y as default};

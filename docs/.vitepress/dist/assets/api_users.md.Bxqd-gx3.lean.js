@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as t}from"./chunks/framework.B_L4sjTh.js";const o=JSON.parse('{"title":"用户","description":"","frontmatter":{},"headers":[],"relativePath":"api/users.md","filePath":"api/users.md"}'),h={name:"api/users.md"},n=t("",39),k=[n];function p(l,e,E,d,r,g){return a(),i("div",null,k)}const F=s(h,[["render",p]]);export{o as __pageData,F as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as t,a5 as a}from"./chunks/framework.B_L4sjTh.js";const c=JSON.parse('{"title":"文件","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/file.md","filePath":"js-sdk/file.md"}'),n={name:"js-sdk/file.md"},h=a("",62),l=[h];function e(p,d,k,r,E,o){return t(),i("div",null,l)}const y=s(n,[["render",e]]);export{c as __pageData,y as default};
