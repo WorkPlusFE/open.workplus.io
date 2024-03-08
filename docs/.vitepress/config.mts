@@ -183,6 +183,7 @@ function sidebarApi() {
         ]},
         { text: '应用', base: '/api/app/', items: [
           { text: '应用消息', link: 'mbox' },
+          { text: '富文本消息', link: 'richText' },
           { text: '应用范围', link: 'scope' },
           { text: '模板消息', link: 'template' },
         ]},

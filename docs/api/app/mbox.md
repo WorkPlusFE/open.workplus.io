@@ -212,6 +212,10 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 ```
 </details>
 
+**富文本消息示例：**
+
+请前往[富文本消息](/api/app/richText.html)页面查看详细说明。
+
 **返回数据：**
 
 | 字段| 类型 |说明|
