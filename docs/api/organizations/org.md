@@ -498,7 +498,6 @@ POST http://{host}:{port}/v1/admin/organizations/{org_code}/{id}?access_token={a
 | sort_order | String | N | 排序号 |
 | sn | String | N | 节点编号 |
 | type | String | N | 节点类型 |
-| new_parentId | String | N | 父节点id |
 
 **请求示例：**
 

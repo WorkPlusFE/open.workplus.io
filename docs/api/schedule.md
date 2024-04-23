@@ -33,6 +33,8 @@ POST /v1/apps/schedules?access_token={access_token}
 |repeat_end_date|Long|N|日程重复结束时间戳，为空则为永不结束|
 |jump_url|String|N|跳转链接|
 |source|String|Y|数据源，声明日程数据来源，双方协商一个固定值|
+|source_id|String|Y|组织者日程id|
+|source_uid|String|Y|日程唯一id|
 
 ScheduleReminder参数说明：
 
@@ -273,5 +275,4 @@ POST /v1/apps/schedules/{schedule_id}?access_token={access_token}
     "ops": "delete"
 }
 ```
-
 
