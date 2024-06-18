@@ -82,16 +82,19 @@ https://test-app.workplus.io?ticket=demo-ticket&language=en
 | 字段名 | 说明 |
 | - | - | 
 | ticket | 用户ticket，常用于单点登录 | 
-| userId | 用户的 userId | 
-| orgId | 打开应用时，用户所在的组织id | 
-| domainId | 打开应用时，用户所在的域id |
+| user_id | 用户的 user_id | 
+| org_id | 打开应用时，用户所在的组织id | 
+| domain_id | 打开应用时，用户所在的域id |
 | language | 应用的语言类型 |
 | username | 用户的 username |  
 
 ::: tip 关于占位符
 因为`PC客户端`默认使用下划线的命名方式设置参数的`key`值，具体原因可以查看[单点登录-获取用户信息](/light-app/sso.md#pc-客户端)，为了保持一致性，请统一使用下划线的`key`值，如：
 
-`?user_id={userId}&domain_id={domainId}`。
+::: v-pre
+`?user_id={{user_id}}&domain_id={{domain_id}}`。
+
+注意，是使用双花括号`{{ your key }}`包住需要的参数占位符。
 :::
 
 除了设置占位符来获取用户信息，通常为了避免缓存，上架新版本时，可以尝试在启动地址后加入版本信息参数，如下：
