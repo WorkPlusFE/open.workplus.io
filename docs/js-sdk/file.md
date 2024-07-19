@@ -44,7 +44,7 @@ w6s.file.chooseFiles({
 **返回数据**
 
 | 参数 | 说明 |
-| - | - | 
+| - | - |
 | filePath | 文件在本机的路径  |
 | mediaId | 该文件在媒体中心的 mediaId  |
 | name | 文件名字 |
@@ -137,7 +137,7 @@ w6s.file.isFileExist({
 **返回数据**
 
 | 参数 | 说明 |
-| - | - | 
+| - | - |
 | exist | Boolean, 表示文件是否存在  |
 
 ## 文件下载
@@ -194,7 +194,14 @@ w6s.file.download({
 
 
 ```js
-w6s.file.upload({
+// 1、创建上传文件参数对象
+const fileUploadOptions = new window.FileUploadOptions()
+fileUploadOptions.fileKey = 'file'
+fileUploadOptions.mimeType = "text/plain"
+// 2、创建文件上传对象
+const fileIns = new w6s.file.upload(fileUploadOptions)
+// 3、调用上传
+fileIns.upload({ 
   fileURL: '文件本地地址',
   server: '上传媒体的服务器地址',
   trustAllHosts: false,
@@ -207,11 +214,20 @@ w6s.file.upload({
   progress: function(loaded, total) {
     // loaded：已经上传的，tottal：文件总大小
     // 可在此处处理文件上传的进度计算
-  },
-});
+  }
+})
 ```
 
-**参数说明**
+**FileUploadOptions参数说明**
+
+| 参数     | 类型   | 说明                                         |
+| -------- | ------ | -------------------------------------------- |
+| fileKey  | string | 表单元素的名称。默认为file                   |
+| mimeType | string | 要上传的数据的 mime 类型。默认为image/jpeg。 |
+
+具体接口参数说明，请查看[官方文档](https://cordova.apache.org/docs/en/6.x/reference/cordova-plugin-file-transfer/index.html#upload)。
+
+**上传options参数说明**
 
 | 参数 | 类型 | 说明|
 | - | - | - |
