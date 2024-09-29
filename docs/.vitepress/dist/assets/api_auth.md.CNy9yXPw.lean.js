@@ -1,0 +1,1 @@
+import{_ as t,c as s,o as i,a5 as a}from"./chunks/framework.BPJJowRx.js";const g=JSON.parse('{"title":"Ticket 验证","description":"","frontmatter":{},"headers":[],"relativePath":"api/auth.md","filePath":"api/auth.md"}'),n={name:"api/auth.md"},h=a("",12),e=[h];function d(k,p,l,r,o,E){return i(),s("div",null,e)}const y=t(n,[["render",d]]);export{g as __pageData,y as default};

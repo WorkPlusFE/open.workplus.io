@@ -1,0 +1,1 @@
+import{_ as s,c as t,o as i,a5 as a}from"./chunks/framework.BPJJowRx.js";const g=JSON.parse('{"title":"设备","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/device.md","filePath":"js-sdk/device.md"}'),h={name:"js-sdk/device.md"},n=a("",30),d=[n];function e(p,l,r,k,E,o){return i(),t("div",null,d)}const y=s(h,[["render",e]]);export{g as __pageData,y as default};

@@ -1,1 +1,0 @@
-import{_ as t,c as s,o as i,a5 as a}from"./chunks/framework.B_L4sjTh.js";const g=JSON.parse('{"title":"视频","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/video.md","filePath":"js-sdk/video.md"}'),n={name:"js-sdk/video.md"},h=a("",17),d=[h];function e(l,p,r,k,o,E){return i(),s("div",null,d)}const y=t(n,[["render",e]]);export{g as __pageData,y as default};
