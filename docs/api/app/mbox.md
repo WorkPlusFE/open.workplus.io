@@ -47,6 +47,8 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 | body.top_avatar | String | N | 顶部图标 |
 | body.top_title | String | N | 顶部标题 |
 | body.data.text_style | String | N | normal(正常)bold(粗体) |
+| actions | Json | N | 消息按钮<br/>第一层数据代表的多少行按钮[目前最多5个]，<br/>第二层数据代表一行有多少个按钮[目前最多5个]<br/><br/>参考[按钮actions](/api/bot/response.html#按钮actions)
+| action_acl | Json | N | 按钮访问控制，参考[按钮访问控制action_acl](/api/bot/response.html#按钮访问控制action-acl)
 
 **请求示例：**
 
