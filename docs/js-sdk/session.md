@@ -6,9 +6,9 @@
 
 **使用说明**
 
-| 客户端   | Android | iOS  |
-| -------- | ------- | ---- |
-| 支持情况 | 支持  | 支持 |
+| 客户端   | Android | iOS  | PC 客户端 |
+| -------- | ------- | ---- | ---- |
+| 支持情况 | 支持  | 支持 | 支持 |
 
 
 ```js
@@ -24,6 +24,7 @@ w6s.session.showUserChatViewByUser({
 | - | - | - |
 | userId |  String | 用户的 userId |
 | domainId |  String | 用户的 domainId |
+| newWindow |  Boolean | 是否在新窗口打开； 仅 PC 客户端支持，默认为 true。 |
 
 
 
@@ -33,9 +34,9 @@ w6s.session.showUserChatViewByUser({
 
 **使用说明**
 
-| 客户端   | Android | iOS  |
-| -------- | ------- | ---- |
-| 支持情况 | 支持  | 支持 |
+| 客户端   | Android | iOS  | PC 客户端 |
+| -------- | ------- | ---- | ---- |
+| 支持情况 | 支持  | 支持 | 支持 |
 
 
 ```js
@@ -49,6 +50,7 @@ w6s.session.openDiscussionById({
 | 参数 | 类型 | 说明|
 | - | - | - |
 | discussionId |  String | 群组的id |
+| newWindow |  Boolean | 是否在新窗口打开； 仅 PC 客户端支持，默认为 true。 |
 
 
 ## 创建群组
@@ -57,15 +59,24 @@ w6s.session.openDiscussionById({
 
 **使用说明**
 
-| 客户端   | Android | iOS  |
-| -------- | ------- | ---- |
-| 支持情况 | 支持  | 支持 |
+| 客户端   | Android | iOS  | PC 客户端 |
+| -------- | ------- | ---- | ----- |
+| 支持情况 | 支持  | 支持 | 支持 |
 
 
 ```js
+// 移动端
 w6s.session.createDiscussionChat();
+
+// PC 客户端
+w6s.session.createDiscussionChat({ newWindow: true });
 ```
 
+**参数说明**
+
+| 参数 | 类型 | 说明|
+| - | - | - |
+| newWindow |  Boolean | 是否在新窗口打开； 仅 PC 客户端支持，默认为 true。 |
 
 ## 打开群组选人界面
 

@@ -1,8 +1,6 @@
-<p><img src="https://open.workplus.io/v4/home.png" title="WorkPlus 开放平台" width="50%" /></p>
+# WorkPlus 开放平台
 
-# 高科开放平台
-
-WorkPlus 开放平台，助力业务系统快速移动化。
+在这里你可以找到应用开发、能力对接等指南和 API 说明，助力您的业务系统快速移动化、数字化。
 
 [https://open.workplus.io](https://open.workplus.io) 
 

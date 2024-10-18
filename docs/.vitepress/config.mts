@@ -192,7 +192,11 @@ function sidebarApi() {
           { text: '被动回调', link: 'callback' },
           { text: '响应消息', link: 'response' },
         ]},
-        { text: '日程', link: 'schedule' }
+        { text: '日程', link: 'schedule' },
+        // { text: '流程大师', base: '/api/bpm/', items: [
+        //   { text: '开放接口', link: 'openApi' },
+        //   { text: '事件订阅', link: 'subscribe' },
+        // ]},
       ]
     }
   ];
@@ -207,6 +211,7 @@ function sidebarJSSDK() {
         { text: '鉴权流程', link: 'overview/auth' },
         { text: '例子及资源', link: 'overview/demo' },
         { text: '自定义方法', link: 'overview/origin' },
+        { text: 'PC 客户端 ', link: 'overview/pc-client' }
       ]
     },
     {
