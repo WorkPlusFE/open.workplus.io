@@ -30,6 +30,11 @@ JS-SDK 部分接口支持在 WorkPlus PC 客户端内执行。
 #### 设备
   - [获取设备信息](/js-sdk/device.html#获取设备信息)
 
+### 在线例子
+
+例子地址：https://open.workplus.io/pc-sdk-demo/ 
+
+可使用上述地址创建内部 PC 平台轻应用，并使用符合版本要求的 WorkPlus PC 客户端进行访问，即可体验相关接口功能。
 
 
 
