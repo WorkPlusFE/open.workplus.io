@@ -193,10 +193,10 @@ function sidebarApi() {
           { text: '响应消息', link: 'response' },
         ]},
         { text: '日程', link: 'schedule' },
-        // { text: '流程大师', base: '/api/bpm/', items: [
-        //   { text: '开放接口', link: 'openApi' },
-        //   { text: '事件订阅', link: 'subscribe' },
-        // ]},
+        { text: '流程大师', base: '/api/bpm/', items: [
+          { text: '开放接口', link: 'openApi' },
+          { text: '事件订阅', link: 'subscription' },
+        ]},
       ]
     }
   ];
