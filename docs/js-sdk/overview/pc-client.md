@@ -16,6 +16,12 @@ JS-SDK 部分接口支持在 WorkPlus PC 客户端内执行。
 
 可以通过`w6s.platform.isPC`来判断应用当前是否在 WorkPlus PC 内执行。
 
+#### 认证
+  - [获取临时 Ticket](/js-sdk/auth.html#获取临时-ticket)
+
+#### 用户
+  - [获取登录用户详情](/js-sdk/user.html#获取登录用户详情)
+
 #### 图片
   - [图片预览](/js-sdk/image.html#图片预览)
 
