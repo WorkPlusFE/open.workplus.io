@@ -1,5 +1,9 @@
 # Token 申请
 
+::: warning 注意
+应用只能拥有一个 AccessToken，重复获取将导致先前的 AccessToken 失效。
+:::
+
 WorkPlus 平台作为企业移动应用的统一入口，提供了用户身份集成，应用接入等基础能力接口。第三方应用主动调用接口时，需带上AccessToken 参数。AccessToken 参数由 DomainId，OrgId，AppKey，AppSecret 获取。
 
 具体需要以下步骤：
@@ -7,6 +11,7 @@ WorkPlus 平台作为企业移动应用的统一入口，提供了用户身份�
 1. 以组织管理员身份登录后台创建应用，并获取 DomainId，OrgId，AppKey 及A ppSecret 等信息；
 2. 通过 DomainId，OrgId，AppKey 及 AppSecret 获取 AccessToken；
 3. 通过 AccessToken 调用相关接口。
+
 
 ## 获取 AppKey 及 AppSecret
 
