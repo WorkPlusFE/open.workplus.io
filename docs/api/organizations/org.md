@@ -623,8 +623,6 @@ POST http://{host}:{port}/v1/admin/organizations/{org_code}/import-orgs?access_t
 
 ## 组织架构树
 
-*不推荐使用!!*
-
 ```js
 GET http://{host}:{port}/v1/admin/organizations/{code}/tree?access_token={access_token}&org_id={org_id}
 ```
@@ -700,8 +698,6 @@ GET http://{host}:{port}/v1/admin/organizations/{code}/tree?access_token={access
 ```
 
 ## 组织架构列表
-
-*不推荐使用!!*
 
 ```js
 GET http://{host}:{port}/v1/admin/organizations/{code}/list-all?access_token={access_token}&org_id={org_id}

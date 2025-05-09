@@ -123,8 +123,6 @@ DELETE http://{host}:{port}/v1/admin/organizations/{org_code}/{id}?access_token=
 
 ### 组织架构列表 
 
-*不推荐使用!*
-
 ```js
 GET http://{host}:{port}/v1/admin/organizations/{code}/list-all?access_token={access_token}&org_id={org_id}
 ```
