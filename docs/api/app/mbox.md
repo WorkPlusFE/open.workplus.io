@@ -13,42 +13,42 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 
 **请求参数：**
 
-| 字段| 类型 | 是否必填|说明|
-|---|---|---|---|
-| access_token | String | Y | 访问令牌 |
-| source_type | String | N | 枚举,NATIVE/ISV,默认值为NATIVE,ISV应用时传ISV |
-| type | String | Y | 消息类型,default/text/iamge/file/article/template |
-| for_all | Boolean | N | 是否全员推送,client_ids、usernames、scopes三者均为空,且for_all=true时,才全员推消息,否则均不生效 |
-| client_ids | List&lt;String&gt; | N | 消息推送的用户标识 |
-| scopes | List&lt;String&gt; | N | 发送范围,组织路径,例如/122/234/ |
-| usernames | List&lt;String&gt; | N | 用户账号列表 |
-| platforms | List | N | 枚举,ANDROID/IOS/PC,默认值为IOS和ANDROID |
-| body |Map|Y|推送消息体|
-| body.at_all | boolean | N | 是否AT所有人员 |
-| body.content | String | N | 发送内容,具体根据消息类型决定 |
-| body.is_gif | int | N | 是否gif图片,1代表是 |
-| body.size | int | N | 大小 |
-| body.width | int | N | 图片宽度 |
-| body.height | int | N | 图片高度 |
-| body.media_id | String | N | 发送的媒体ID |
-| body.path | String | N | 发送的媒体ID |
-| body.file_status | int | N | 文件状态,0为正常 |
-| body.name | String | N | 名称 |
-| body.articles.summary | String | N | 文章摘要 |
-| body.articles.cover_url | String | N | 封面URL 或 封面媒体Id |
-| body.articles.cover_enabled | boolean | N | 是否显示封面,true/false |
-| body.articles.create_time | long | N | 创建时间 |
-| body.articles.title | String | N | 文章标题 |
-| body.articles.url | String | N | 图文详情内容,有些获取url内容,为空时,图文详情显示content内容 |
-| body.template_id | String | N | 模板ID,模板消息必填 |
-| body.data | String | N | 模板数据,模板消息必填,value为变量值,color为颜色,font_size为字号大小 |
-| body.emphasis_keyword | String | N | 高亮属性,保留字段 |
-| body.top_color | String | N | 顶部颜色 |
-| body.top_avatar | String | N | 顶部图标 |
-| body.top_title | String | N | 顶部标题 |
-| body.data.text_style | String | N | normal(正常)bold(粗体) |
-| actions | Json | N | 消息按钮<br/>第一层数据代表的多少行按钮[目前最多5个]，<br/>第二层数据代表一行有多少个按钮[目前最多5个]<br/><br/>参考[按钮actions](/api/bot/response.html#按钮actions)
-| action_acl | Json | N | 按钮访问控制，参考[按钮访问控制action_acl](/api/bot/response.html#按钮访问控制action-acl)
+| 字段                          | 类型                 | 是否必填 | 说明                                                                                                                   |
+|-----------------------------|--------------------|------|----------------------------------------------------------------------------------------------------------------------|
+| access_token                | String             | Y    | 访问令牌                                                                                                                 |
+| source_type                 | String             | N    | 枚举,NATIVE/ISV,默认值为NATIVE,ISV应用时传ISV                                                                                  |
+| type                        | String             | Y    | 消息类型,default/text/iamge/file/article/template                                                                        |
+| for_all                     | Boolean            | N    | 是否全员推送,client_ids、usernames、scopes三者均为空,且for_all=true时,才全员推消息,否则均不生效                                                 |
+| client_ids                  | List&lt;String&gt; | N    | 消息推送的用户标识                                                                                                            |
+| scopes                      | List&lt;String&gt; | N    | 发送范围,组织路径,例如/122/234/                                                                                                |
+| usernames                   | List&lt;String&gt; | N    | 用户账号列表                                                                                                               |
+| platforms                   | List               | N    | 枚举,ANDROID/IOS/PC,默认值为IOS和ANDROID                                                                                    |
+| body                        | Map                | Y    | 推送消息体                                                                                                                |
+| body.at_all                 | boolean            | N    | 是否AT所有人员                                                                                                             |
+| body.content                | String             | N    | 发送内容,具体根据消息类型决定                                                                                                      |
+| body.is_gif                 | int                | N    | 是否gif图片,1代表是                                                                                                         |
+| body.size                   | int                | N    | 大小                                                                                                                   |
+| body.width                  | int                | N    | 图片宽度                                                                                                                 |
+| body.height                 | int                | N    | 图片高度                                                                                                                 |
+| body.media_id               | String             | N    | 发送的媒体ID                                                                                                              |
+| body.path                   | String             | N    | 发送的媒体ID                                                                                                              |
+| body.file_status            | int                | N    | 文件状态,0为正常                                                                                                            |
+| body.name                   | String             | N    | 名称                                                                                                                   |
+| body.articles.summary       | String             | N    | 文章摘要                                                                                                                 |
+| body.articles.cover_url     | String             | N    | 封面URL 或 封面媒体Id                                                                                                       |
+| body.articles.cover_enabled | boolean            | N    | 是否显示封面,true/false                                                                                                    |
+| body.articles.create_time   | long               | N    | 创建时间                                                                                                                 |
+| body.articles.title         | String             | N    | 文章标题                                                                                                                 |
+| body.articles.url           | String             | N    | 图文详情内容,有些获取url内容,为空时,图文详情显示content内容                                                                                 |
+| body.template_id            | String             | N    | 模板ID,模板消息必填                                                                                                          |
+| body.data                   | Json               | N    | 模板数据,模板消息必填,value为变量值,color为颜色,font_size为字号大小.<br/>详情见下面模板消息示例                                                       |
+| body.emphasis_keyword       | String             | N    | 高亮属性,保留字段                                                                                                            |
+| body.top_color              | String             | N    | 顶部颜色                                                                                                                 |
+| body.top_avatar             | String             | N    | 顶部图标                                                                                                                 |
+| body.top_title              | String             | N    | 顶部标题                                                                                                                 |
+| body.data.text_style        | String             | N    | normal(正常)bold(粗体)                                                                                                   |
+| actions                     | Json               | N    | 消息按钮<br/>第一层数据代表的多少行按钮[目前最多5个]，<br/>第二层数据代表一行有多少个按钮[目前最多5个]<br/><br/>参考[按钮actions](/api/bot/response.html#按钮actions) 
+| action_acl                  | Json               | N    | 按钮访问控制，参考[按钮访问控制action_acl](/api/bot/response.html#按钮访问控制action-acl)                                                 
 
 **请求示例：**
 
