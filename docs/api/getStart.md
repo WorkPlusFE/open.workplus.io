@@ -36,7 +36,7 @@ POST https://demo-api.workplus.io/v1/token
 | Content-Type | application/json |
 
 **请求格式：**
-
+组织应用参数
 ```json
 {
   "grant_type": "client_credentials",
@@ -48,14 +48,27 @@ POST https://demo-api.workplus.io/v1/token
 }
 ```
 
-| 参数            | 类型     | 是否必填 | 说明                       |
-|---------------|--------|------|--------------------------|
-| grant_type    | String | 是    | 固定值 `client_credentials` |
-| scope         | String | 是    | 固定值 `app`                | 
-| domain_id     | String | 是    | 应用所在域的域id                |
-| client_id     | String | 是    | 应用的 appKey               | 
-| client_secret | String | 是    | 应用的 appSecret            | 
-| org_id        | String | 否    | 应用所在组织的组织id，如果是域应用值为空    | 
+域应用参数
+```json
+{
+  "grant_type": "client_credentials",
+  "scope": "app",
+  "domain_id": "DomainId",
+  "owner_id": "DomainId",
+  "client_id": "AppKey",
+  "client_secret": "5tAkUIt1rrnP0WNLg7BWYuuqwzn3xRoO"
+}
+```
+
+| 参数            | 类型     | 是否必填 | 说明                                    |
+|---------------|--------|------|---------------------------------------|
+| grant_type    | String | 是    | 固定值 `client_credentials`              |
+| scope         | String | 是    | 固定值 `app`                             | 
+| domain_id     | String | 是    | 应用所在域的域id                             |
+| client_id     | String | 是    | 应用的 appKey                            | 
+| client_secret | String | 是    | 应用的 appSecret                         | 
+| org_id        | String | 否    | 应用所在组织的组织id[org_id 和 owner_id 不能同时为空] | 
+| owner_id      | String | 否    | 域应用填domain_id[org_id 和 owner_id 不能同时为空]                         | 
 
 **返回数据：**
 
