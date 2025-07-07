@@ -140,7 +140,7 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
     "articles": [
       {
         "summary": "", 
-        "show_cover": false, 
+        "cover_enabled": false, 
         "cover_url": "Z3JvdXAxL00wMC8wMC8zQi9yQkFCR1ZkVlFwYUFicjJ3QUFQa2NkSHlFM280MDMuanBn", 
         "create_time": 1465205632846, 
         "author": "凯里",  
