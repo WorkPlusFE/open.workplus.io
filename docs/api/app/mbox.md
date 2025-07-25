@@ -71,6 +71,9 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
   "client_ids": [
     "c24b6a94cfb14b79af12a1399edc9e31"
   ],
+  "usernames": [
+    "username1"
+  ],
   "platforms": [
     "ANDROID","IOS","PC"
   ]
@@ -114,6 +117,9 @@ curl -i -X POST \
   }, 
   "client_ids": [
     "c24b6a94cfb14b79af12a1399edc9e31"
+  ],
+  "usernames": [
+    "username1"
   ],
   "platforms": [
     "ANDROID","IOS","PC"
