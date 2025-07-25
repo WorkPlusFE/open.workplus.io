@@ -76,6 +76,24 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
   ]
 }
 ```
+Curl示例
+~~~
+curl -i -X POST \
+   -H "Content-Type:application/json" \
+   -d \
+'{
+    "type": "text",
+    "body":
+    {
+        "content": "测试文本消息"
+    },
+    "usernames":
+    [
+        "username1","username2"
+    ]
+}' \
+ 'https://替换成你的域名/v1/apps/mbox?access_token={替换成你的access_token}'
+~~~
 </details>
 
 **图片示例：**
@@ -102,6 +120,31 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
   ]
 }
 ```
+Curl示例
+~~~
+curl -i -X POST \
+   -H "Content-Type:application/json" \
+   -d \
+'{
+  "type": "IMAGE", 
+  "body": {
+    "is_gif": 0, 
+    "size": 1852, 
+    "width": 280, 
+    "media_id": "Z3JvdXAxL00wMC8wMC80OC9yQkFCR1ZkaFI5Q0FjNmp2QUFBSFBIRkhXSkk1NDEuanBn", 
+    "content": "图片内容,base64编码", 
+    "height": 280
+  }, 
+  "usernames": [
+    "username1","username2"
+  ],
+  "platforms": [
+    "ANDROID","IOS","PC"
+  ]
+}' \
+ 'https://替换成你的域名/v1/apps/mbox?access_token={替换成你的access_token}'
+~~~
+
 </details>
 
 **文件示例：**
