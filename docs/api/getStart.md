@@ -92,7 +92,7 @@ POST https://demo-api.workplus.io/v1/token
 | - | - | - |
 | client_id	| String	| 当前登录用户的标识 |
 | access_token	| String	| 应用的身份凭证 |
-| refresh_token	| String	| 更新身份凭证 |
+| refresh_token	| String	| 保留字段，与access_token相同 |
 | issued_time	| String	| access_token的生效时间 |
 | expire_time	| String	| access_token的过期时间 |
 
