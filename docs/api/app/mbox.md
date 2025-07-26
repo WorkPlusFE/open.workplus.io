@@ -11,14 +11,21 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 |---|---|
 | Content-Type |application/json|
 
+**Url请求参数：**
+
+|字段|类型|是否必填| 说明                                                                                                                                                                                  |
+|:----|:----|:----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|access_token|String|Y| 访问令牌                                                                                                                                                                                |
+|direct|Boolean|N| direct = true时，消息直推推送，用于推送少量人员(400人以内)；只支持client_ids、usernames的推送；不支持范围scopes推送<br/>direct = false时，消息队列推送，用于推送大范围人员；支持client_ids、usernames, scopes的推送；支持范围scopes推送 <br/>默认值: false |
+|for_all|Boolean|N| 是否全员推送<br/>client_ids、usernames、scopes三者均为空,for_all=true时,才全员推消息；<br/>否则以范围参数为准[client_ids、usernames、scopes]<br/>默认值: false                                                         |
+
+
 **请求参数：**
 
 | 字段                          | 类型                 | 是否必填 | 说明                                                                                                                   |
 |-----------------------------|--------------------|------|----------------------------------------------------------------------------------------------------------------------|
-| access_token                | String             | Y    | 访问令牌                                                                                                                 |
 | source_type                 | String             | N    | 枚举,NATIVE/ISV,默认值为NATIVE,ISV应用时传ISV                                                                                  |
-| type                        | String             | Y    | 消息类型,default/text/iamge/file/article/template                                                                        |
-| for_all                     | Boolean            | N    | 是否全员推送,client_ids、usernames、scopes三者均为空,且for_all=true时,才全员推消息,否则均不生效                                                 |
+| type                        | String             | Y    | 消息类型, text/iamge/file/article/template/rich_text                                                                     |
 | client_ids                  | List&lt;String&gt; | N    | 消息推送的用户标识                                                                                                            |
 | scopes                      | List&lt;String&gt; | N    | 发送范围,组织路径,例如/122/234/                                                                                                |
 | usernames                   | List&lt;String&gt; | N    | 用户账号列表                                                                                                               |
@@ -60,6 +67,12 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 
 <details>
 <summary>点击查看文本示例</summary>
+
+| 字段           | 类型     | 必填 | 说明               |
+|:-------------|:-------|:---|:-----------------|
+| type         | String | Y  | 消息类型，文本消息值: text |
+| body         | Map    | Y  | 推送消息体            |
+| body.content | String | Y  | 消息内容             |
 
 ```json
 {
@@ -109,6 +122,16 @@ curl -i -X POST \
 
 <details>
 <summary>点击查看图片示例</summary>
+
+| 字段            | 类型      | 必填 | 说明                 |
+|:--------------|:--------|:---|:-------------------|
+| type          | String  | Y  | 消息类型, 文本消息值: image |
+| body          | Map     | Y  | 推送消息体              |
+| body.is_gif   | Boolean | N  | 是否是gif,默认值: false  |
+| body.media_id | String  | Y  | 发送的媒体ID            |
+| body.size     | Int     | N  | 图片大小,默认值： 0        |
+| body.height   | Int     | N  | 图片高度,默认值： 0        |
+| body.width    | Int     | N  | 图片宽度,默认值： 0        |
 
 ```json
 {
@@ -169,11 +192,18 @@ curl -i -X POST \
 <details>
 <summary>点击查看文件示例</summary>
 
+| 字段            | 类型     | 必填 | 说明               |
+|:--------------|:-------|:---|:-----------------|
+| type          | String | Y  | 消息类型,文本消息值: file |
+| body          | Map    | Y  | 推送消息体            |
+| body.name     | String | N  | 文件名              |
+| body.media_id | String | Y  | 发送的媒体ID          |
+| body.size     | Int    | N  | 图片大小,默认值： 0      |
+
 ```json
 {
   "type": "FILE", 
   "body": {
-    "file_status": 0, //文件状态,0代表正常
     "size": 71416, 
     "name": "IMG_0778.GIF", 
     "media_id": "Z3JvdXAxL00wMC8wMC80Ny9yQkFCR1ZkaEdBZUFYRkxmQUFFVy1JYmNRbTgwNjkuZ2lm", 
@@ -193,26 +223,53 @@ curl -i -X POST \
 <details>
 <summary>点击查看图文示例</summary>
 
+
+| 字段                          | 类型          | 必填 | 说明                                            |
+|:----------------------------|:------------|:---|:----------------------------------------------|
+| type                        | String      | Y  | 消息类型, 文本消息值: article                          |
+| body                        | Map         | Y  | 推送消息体                                         |
+| body.articles               | StringArray | Y  | articles数组为1时：代表单图文</br>articles数组为大于1时：代表多图文 |
+| body.articles.summary       | String      | N  | 发送的媒体ID                                       |
+| body.articles.cover_url     | String      | N  | 图文封面URL 或 封面媒体Id                              |
+| body.articles.cover_enabled | Boolean     | N  | 是否显示封面,true/false                             |
+| body.articles.title         | String      | Y  | 文章标题                                          |
+| body.articles.url           | String      | Y  | 图文详情跳转链接                                      |
+
 ```json
 {
-  "type": "ARTICLE", 
-  "body": {
-    "articles": [
+  "type": "article",
+  "body":
+  {
+    "articles":
+    [
       {
-        "summary": "", 
-        "cover_enabled": false, 
-        "cover_url": "Z3JvdXAxL00wMC8wMC8zQi9yQkFCR1ZkVlFwYUFicjJ3QUFQa2NkSHlFM280MDMuanBn", 
-        "create_time": 1465205632846, 
-        "author": "凯里",  
-        "title": "云南丽江", 
-        "content": "<p>这个文章被删除了</p>", 
-        "url": ""
+        "summary": "防汛关键期来临——新技术+“老把式”，提升监测预警能力",
+        "cover_enabled": false,
+        "cover_url": "https://inews.gtimg.com/news_bt/OStKexVGk5VtT7QWWMjPT19ZIDIb8RdIL5EoftBx2N7XoAA/641",
+        "create_time": 1465205632846,
+        "author": "凯里",
+        "title": "防汛关键期来临——新技术+“老把式”，提升监测预警能力",
+        "url": "https://news.qq.com/rain/a/20250716A09MG100"
+      },
+      {
+        "summary": "水利部：今年防汛关键期 黄河、海河等流域可能发生较大洪水",
+        "cover_enabled": false,
+        "cover_url": "https://inews.gtimg.com/om_bt/OHBplHUS5Th8LO1zbNqthZdvLoF2h7_-H0YsERdvO0bosAA/0",
+        "create_time": 1465205632846,
+        "author": "凯里",
+        "title": "水利部：今年防汛关键期 黄河、海河等流域可能发生较大洪水",
+        "url": "https://news.qq.com/rain/a/20250716A06TH500"
       }
     ]
-  }, 
-  "platforms": [
-    "ANDROID", 
-    "IOS", 
+  },
+  "usernames":
+  [
+    "524064"
+  ],
+  "platforms":
+  [
+    "ANDROID",
+    "IOS",
     "PC"
   ]
 }
@@ -223,6 +280,16 @@ curl -i -X POST \
 
 <details>
 <summary>点击查看模板消息示例</summary>
+
+| 字段               | 类型     | 必填 | 说明                                                             |
+|:-----------------|:-------|:---|:---------------------------------------------------------------|
+| type             | String | Y  | 消息类型 ,文本消息值: image                                             |
+| body             | Map    | Y  | 推送消息体                                                          |
+| body.template_id | String | Y  | 模板消息ID                                                         |
+| body.top_color   | String | N  | 顶部颜色                                                           |
+| body.top_avatar  | String | N  | 顶部图标                                                           |
+| body.top_title   | String | N  | 顶部标题                                                           |
+| body.data        | Json   | N  | 模板数据,模板消息必填,value为变量值,color为颜色,font_size为字号大小.<br/>详情见下面模板消息示例 |
 
 ```json
 {
