@@ -79,6 +79,8 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
   ]
 }
 ```
+
+![text-message.png](text-message.png)
 Curl示例
 ~~~
 curl -i -X POST \
@@ -126,6 +128,7 @@ curl -i -X POST \
   ]
 }
 ```
+![image-message.png](image-message.png)
 Curl示例
 ~~~
 curl -i -X POST \
@@ -261,6 +264,64 @@ curl -i -X POST \
   ]
 }
 ```
+模板
+![template-template.png](template-template.png)
+消息
+![template-message.png](template-message.png)
+Curl示例
+~~~
+curl -i -X POST \
+   -H "Content-Type:application/json" \
+   -d \
+'{
+    "type": "TEMPLATE",
+    "body":
+    {
+        "template_id": "0196ec87c52376598999e17768c59e17",
+        "top_color": "#ffff00",
+        "top_avatar": "01971626be367cb3b57ac2313b07eb43",
+        "top_title": "流程大师",
+        "data":
+        [
+            {
+                "key": "sn",
+                "value": "339208499",
+                "color": "#00ff00",
+                "font_size": "14",
+                "text_style": "normal"
+            },
+            {
+                "key": "type",
+                "value": "缴存业务",
+                "color": "#00ff00",
+                "font_size": "14",
+                "text_style": "normal"
+            },
+            {
+                "key": "data",
+                "value": "2016年01月05日",
+                "color": "#00ff00",
+                "font_size": "12",
+                "text_style": "normal"
+            },
+            {
+                "key": "url",
+                "value": "https://www.baidu.com",
+                "color": "#00ff00",
+                "font_size": "12",
+                "text_style": "bold"
+            }
+        ]
+    },
+    "usernames": [
+    "username1","username2"
+  ],
+  "platforms": [
+    "ANDROID","IOS","PC"
+  ]
+}' \
+ 'https://替换成你的域名/v1/apps/mbox?access_token={替换成你的access_token}'
+~~~
 </details>
 
 **富文本消息示例：**
@@ -269,39 +330,47 @@ curl -i -X POST \
 
 **返回数据：**
 
-| 字段| 类型 |说明|
-|---|---|---|
-| id | String | 推送计划ID |
-| material_id | String | 推送的素材ID |
-| app_id | String | 推送者ID |
-| expects | int | 目标推送数 |
-| fails | int | 推送失败数 |
-| oks | int | 成功推送数 |
-| scopes | List&lt;String&gt; | 发送范围,组织路径,例如/122/234/ |
-| client_ids | List&lt;String&gt; | 消息推送的对象标记 |
+| 字段| 类型                 | 说明                       |
+|---|--------------------|--------------------------|
+| id | String             | 推送计划ID                   |
+| app_id | String             | 推送应用ID                   |
+| plan_time | Long               | 推送时间                     |
+| recipients | List&lt;String&gt; | 消息推送的用户标识                |
+| include_usernames | List&lt;String&gt; | 消息推送的用户名                 |
+| exclude_usernames | List&lt;String&gt; | 消息未推送的用户名(用户不存在或不在使用范围)  |
+| include_client_ids | List&lt;String&gt; | 消息推送的用户标识                |
+| exclude_client_ids | List&lt;String&gt; | 消息未推送的用户标识(用户不存在或不在使用范围) |
 
 **返回示例：**
 
 ```json
 {
-  "status": 0, 
-  "message": "Everything is ok.", 
-  "result": {
-    "domain_id": "atwork", 
-    "org_id": "a918d8a6-67e9-4e76-8503-baa73d3c6fd2", 
-    "id": "f3b9250c-96d4-414b-be7f-308f2fdeca99", 
-    "app_id": "92bc3faa-12bd-4afc-9962-01f2410f0bee", 
-    "material_id": "52dec89a-04a0-4127-99b5-a3d136c638a4", 
-    "expects": 0, 
-    "fails": 0, 
-    "oks": 0, 
-    "create_time": 1485053077748, 
-    "refresh_time": 0, 
-    "expect_time": 1485054877748, 
-    "scopes": [ ], 
-    "client_ids": [
-      "/232/301/c24b6a94cfb14b79af12a1399edc9e31"
-    ]
+  "status": 0,
+  "message": "ok",
+  "result":
+  {
+    "recipients":
+    [
+      "a673e99a034646dd9ee458fa1c08b87f"
+    ],
+    "plan_time": 1753493160759,
+    "include_usernames":
+    [
+      "kf13"
+    ],
+    "id": "0198445643377e99a5c4d95e7044d61a",
+    "exclude_client_ids":
+    [],
+    "app_id": "2777878f6bff481882d221df5b57139dA7Zork2YLw6DoYpn",
+    "conversation_id": "5afc0ccbffca95eec7c1b128a0492d5bf8cf0e9d7c95ad94c80695c3d40d909de0db8b0fb4a0c8009bfc88a2968c7ff6407861a09b35e329acdabb8000162b06",
+    "org_id": "b276533349664385b31181fa3455ef8c",
+    "create_time": 1753493160759,
+    "domain_id": "workplus",
+    "include_client_ids":
+    [],
+    "plan_id": "0198445643377e99a5c4d95e7044d61a",
+    "exclude_usernames":
+    []
   }
 }
 ```
