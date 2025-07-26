@@ -80,8 +80,12 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 }
 ```
 
-![text-message.png](text-message.png)
-Curl示例
+**文本消息显示效果：**
+
+![text-message.png](/app/text-message.png)
+
+**Curl示例：**
+
 ~~~
 curl -i -X POST \
    -H "Content-Type:application/json" \
@@ -128,8 +132,12 @@ curl -i -X POST \
   ]
 }
 ```
-![image-message.png](image-message.png)
-Curl示例
+
+**图片消息显示效果：**
+
+![image-message.png](/app/image-message.png)
+
+**Curl示例：**
 ~~~
 curl -i -X POST \
    -H "Content-Type:application/json" \
@@ -264,11 +272,16 @@ curl -i -X POST \
   ]
 }
 ```
-模板
-![template-template.png](template-template.png)
-消息
-![template-message.png](template-message.png)
-Curl示例
+
+**模板消息设置：**
+
+![template-template.png](/app/template-template.png)
+
+**模版消息显示效果：**
+![template-message.png](/app/template-message.png)
+
+**Curl示例：**
+
 ~~~
 curl -i -X POST \
    -H "Content-Type:application/json" \

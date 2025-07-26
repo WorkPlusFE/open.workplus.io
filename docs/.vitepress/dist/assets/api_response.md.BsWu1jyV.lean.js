@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as t}from"./chunks/framework.XredCqQG.js";const c=JSON.parse('{"title":"全局返回值","description":"","frontmatter":{},"headers":[],"relativePath":"api/response.md","filePath":"api/response.md"}'),n={name:"api/response.md"},h=t("",7),p=[h];function e(l,k,E,d,r,o){return a(),i("div",null,p)}const u=s(n,[["render",e]]);export{c as __pageData,u as default};

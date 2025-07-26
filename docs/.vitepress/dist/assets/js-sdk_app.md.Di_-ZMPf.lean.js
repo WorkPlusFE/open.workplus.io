@@ -1,1 +1,0 @@
-import{_ as s,c as t,o as a,a5 as i}from"./chunks/framework.BPJJowRx.js";const g=JSON.parse('{"title":"应用","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/app.md","filePath":"js-sdk/app.md"}'),h={name:"js-sdk/app.md"},e=i("",28),d=[e];function p(n,l,r,k,o,E){return a(),t("div",null,d)}const y=s(h,[["render",p]]);export{g as __pageData,y as default};

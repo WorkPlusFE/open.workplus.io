@@ -1,1 +1,0 @@
-import{_ as s,c as t,o as a,a5 as i}from"./chunks/framework.BPJJowRx.js";const g=JSON.parse('{"title":"支付","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/pay.md","filePath":"js-sdk/pay.md"}'),e={name:"js-sdk/pay.md"},h=i("",11),n=[h];function d(p,l,r,k,o,E){return a(),t("div",null,n)}const y=s(e,[["render",d]]);export{g as __pageData,y as default};

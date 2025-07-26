@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as t,a5 as i}from"./chunks/framework.XredCqQG.js";const g=JSON.parse('{"title":"邮箱","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/email.md","filePath":"js-sdk/email.md"}'),e={name:"js-sdk/email.md"},h=i("",13),n=[h];function l(d,p,r,k,o,E){return t(),a("div",null,n)}const y=s(e,[["render",l]]);export{g as __pageData,y as default};
