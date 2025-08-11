@@ -37,7 +37,7 @@ Content-Type: image/jpeg
 ## 文件下载
 
 ```js
-GET /v1/medias/{media_id}?access_token={access_token}&domain_id={domain_id}&type=获取文件方式(ID/DIGEST,默认ID)
+GET /v1/medias/{media_id}?access_token={access_token}&domain_id={domain_id}
 ```
 **请求头部：**
 
@@ -52,7 +52,6 @@ GET /v1/medias/{media_id}?access_token={access_token}&domain_id={domain_id}&type
 | access_token | String | Y | 访问令牌 |
 | domain_id | String | Y | 域标识 |
 | media_id | String | Y | 文件媒体id |
-| type | String | N | 获取文件方式(ID/DIGEST,默认ID) |
 
 **请求示例：**
 
@@ -72,7 +71,7 @@ Content-Type: image/jpeg
 ## 获取文件信息
 
 ```js
-GET /v1/medias/{media_id}/info?access_token={access_token}&type=获取文件方式(ID/DIGEST,默认ID)
+GET /v1/medias/{media_id_or_media_md5}/info?access_token={access_token}&type={type}
 ```
 
 **请求头部：**
@@ -83,11 +82,11 @@ GET /v1/medias/{media_id}/info?access_token={access_token}&type=获取文件方�
 
 **请求参数：**
 
-| 字段| 类型 | 是否必填|说明|
-|---|---|---|---|
-|access_token|String|Y|访问令牌|
-| media_id |String|Y|文件媒体id|
-| type |String|N|获取文件方式(ID/DIGEST,默认ID)|
+| 字段| 类型 | 是否必填| 说明                     |
+|---|---|---|------------------------|
+|access_token|String|Y| 访问令牌                   |
+| media_id_or_media_md5 |String|Y| 文件媒体id or 文件Md5码  |
+| type |String|N| 获取文件方式(ID/DIGEST,默认ID) |
 
 **请求示例：**
 
