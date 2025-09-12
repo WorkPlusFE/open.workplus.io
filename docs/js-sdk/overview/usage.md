@@ -57,13 +57,13 @@ w6s.auth.getUserTicket({
 <!-- 文档上的 sdk 地址更新可能会滞后 -->
 <!-- 具体请以 https://www.npmjs.com/package/@w6s/sdk 地址上的最新版本为准 -->
 <!-- 可以通过替换版本号(sdk.{版本号}.js），访问对应的版本 -->
-<script src="https://open.workplus.io/static/js-sdk/sdk.2.0.3.js"></script>
+<script src="https://open.beeworks.cn/static/js-sdk/sdk.2.0.3.js"></script>
 ```
 
 引入后，会在全局暴露`w6s`对象，初始化后，将可调用各模块接口。
 
 ::: warning 关于 JS-SDK 资源
-基于 WorkPlus 部分客户网络环境的特殊性，推荐自行部署js-sdk的相关资源，以供自家平台轻应用访问。
+基于 BeeWorks 部分客户网络环境的特殊性，推荐自行部署js-sdk的相关资源，以供自家平台轻应用访问。
 :::
 
 ## JS-API 鉴权

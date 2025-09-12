@@ -1,12 +1,12 @@
 # 主题定制
 
 ::: warning 版本要求 
-该功能需要升级 WorkPlus 到`v4.10.0`或更高版本。
+该功能需要升级 BeeWorks 到`v4.10.0`或更高版本。
 :::
 
 ## 概述
 
-WorkPlus 主题是基于设计规范落地实践的技术方案，支撑 WorkPlus 应用在不同企业文化场景，提供Android、iOS、PC、HTML 全链路生态支持，轻松构建企业专属的应用程序。
+BeeWorks 主题是基于设计规范落地实践的技术方案，支撑 BeeWorks 应用在不同企业文化场景，提供Android、iOS、PC、HTML 全链路生态支持，轻松构建企业专属的应用程序。
 
 ::: tip 提示
 更进一步，我们支持基于主题的千变万化、节日主题、暗黑模式、千人千面、灰度发布等特性。
@@ -206,7 +206,7 @@ iconfont 可译为图标字体，顾名思义就是用字体文件取代图片�
 
 其原理可以简单理解为通过 ttf 字体文件维护一个 unicode 码与图形的映射关系。当使用 iconfont 为项目助力的时候，配置多个图标不再需要去下载数个 png 文件，仅需要维护一套 ttf 字体文件即可。iconfont 不仅具有矢量性、可自由变化大小的特点，而且支持任意改变颜色。从项目角度来看，由于无需针对不同手机分辨率内置多张图片，可以一定程度减小包体积，而且方便UI同学对图标进行统一管理，为无用 icon 和相似 icon 检测做基础。
 
-WorkPlus 在 UI 一致性建设的过程中，已经陆续完成了 200+ 个 iconfont 的替换，去除了许多冗余的 icon。通过主题的介入，基于WorkPlus 平台建设的轻应用，我们也支持使用同一套 iconfont，达到全面 UI 一致的目标。
+BeeWorks 在 UI 一致性建设的过程中，已经陆续完成了 200+ 个 iconfont 的替换，去除了许多冗余的 icon。通过主题的介入，基于WorkPlus 平台建设的轻应用，我们也支持使用同一套 iconfont，达到全面 UI 一致的目标。
 
 我们通过 [iconfont.cn](https://www.iconfont.cn/) 维护管理的部分 icon，如下：
 
@@ -216,15 +216,15 @@ WorkPlus 在 UI 一致性建设的过程中，已经陆续完成了 200+ 个 ico
 
 ### 快速开始
 
-WorkPlus 支持简单快捷的方式，让轻应用前端快速对接当前 WorkPlus 正在使用的主题，仅需要应用主题对应的 CSS 文件即可，CSS 文件里包含了`字体`、`色值`、`iconfont`等主题信息，当前支持`本地`以及`在线`的引入方式。
+BeeWorks 支持简单快捷的方式，让轻应用前端快速对接当前 BeeWorks 正在使用的主题，仅需要应用主题对应的 CSS 文件即可，CSS 文件里包含了`字体`、`色值`、`iconfont`等主题信息，当前支持`本地`以及`在线`的引入方式。
 
 `本地`引入规则如下：
 
 ```js
-<link rel="stylesheet" href="reslocal://open.workplus.io/w6s_skin_theme.css">
+<link rel="stylesheet" href="reslocal://open.beeworks.cn/w6s_skin_theme.css">
 ```
 
-WorkPlus 移动端识别到规则后，会对应返回当前主题包内的 CSS 资源给到前端，无需任何网络交互。
+BeeWorks 移动端识别到规则后，会对应返回当前主题包内的 CSS 资源给到前端，无需任何网络交互。
 
 ::: warning 注意
 目前`本地`方式在http部署的轻应用使用时，根据部署情况，在iOS 里可能会存在跨域问题，需要开发者关注处理，离线应用就不存在该问题。
@@ -318,7 +318,7 @@ CSS 变量对应的值具体以当前使用主题为准，以上仅提供参考�
 
 ### 暗黑模式
 
-前端引入 CSS 后，相关色值 CSS 变量就自然支持暗黑模式了。WorkPlus 会在进入暗黑模式后，对应把色值变量无感知修改掉。
+前端引入 CSS 后，相关色值 CSS 变量就自然支持暗黑模式了。BeeWorks 会在进入暗黑模式后，对应把色值变量无感知修改掉。
 
 例如: 
 
@@ -340,7 +340,7 @@ CSS 变量对应的值具体以当前使用主题为准，以上仅提供参考�
 
 
 ```js
-<link rel="stylesheet" href="reslocal://open.workplus.io/w6s_skin_theme.css?dark=disabled">
+<link rel="stylesheet" href="reslocal://open.beeworks.cn/w6s_skin_theme.css?dark=disabled">
 ```
 
 

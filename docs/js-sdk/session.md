@@ -2,7 +2,7 @@
 
 ## 打开用户聊天页面
 
-传入`userId`、`domianId`，打开到 WorkPlus 与该用户的聊天页面。
+传入`userId`、`domianId`，打开到 BeeWorks 与该用户的聊天页面。
 
 **使用说明**
 

@@ -15,7 +15,7 @@
 ::: warning 需要更高级别的定制？
 此文档描述的“工作台”为原生应用开发的页面，需要通过约定好的方式进行配置和管理。
 
-如果需要一个高度定制的工作台，我们推荐使用 H5 的模式进行整个工作台的页面开发，WorkPlus 支持将 Tab 绑定到访问指定的 H5 页面，并且支持沉浸式头部、离线资源包等。
+如果需要一个高度定制的工作台，我们推荐使用 H5 的模式进行整个工作台的页面开发，BeeWorks 支持将 Tab 绑定到访问指定的 H5 页面，并且支持沉浸式头部、离线资源包等。
 :::
 
 ## 卡片类型
@@ -118,7 +118,7 @@ Banner卡片无第三方业务数据。
         "icon_value": "http://icon.com/a.png",
         "title": "待办",
         "event_type": "Url",
-        "event_value": "http://www.workplus.io/todo"
+        "event_value": "http://www.beeworks.cn/todo"
       }
     ]
   }
@@ -339,7 +339,7 @@ http://data.com?usename=foo
 
 ## 系统行为值
 
-当工作台中的`event_type`定义为`System`时，其点击行为，将会是 WorkPlus 内置的一些行为：
+当工作台中的`event_type`定义为`System`时，其点击行为，将会是 BeeWorks 内置的一些行为：
 
 | 值            | 系统行为 | 描述 |
 | ------------- | -------- | ---- |

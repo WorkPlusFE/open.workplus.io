@@ -1,8 +1,8 @@
 # 自定义方法
 
-`WorkPlus JS-SDK`是在移动端提供的 Cordova 接口能力的基础上进行的二次封装，基于通用性的考虑，一些客户定制的接口并不包含在内。
+`BeeWorks JS-SDK`是在移动端提供的 Cordova 接口能力的基础上进行的二次封装，基于通用性的考虑，一些客户定制的接口并不包含在内。
 
-如果你需要查看完整的 Cordova 文档，请点击[此处](https://open.workplus.io/cordova/)。
+如果你需要查看完整的 Cordova 文档，请点击[此处](https://open.beeworks.cn/cordova/)。
 
 ## exec
 
@@ -72,5 +72,5 @@ w6s.checkApi({
 ```
 
 ::: warning 需使用原始 Cordova 接口的定义参数
-JS-SDK 会优化一些接口的方法和属性名，目前暂不支持内部转换成原始的 Cordova 接口的参数及属性。你可以查看[原始 Cordova 接口文档](https://open.workplus.io/cordova/)进行参数设置。
+JS-SDK 会优化一些接口的方法和属性名，目前暂不支持内部转换成原始的 Cordova 接口的参数及属性。你可以查看[原始 Cordova 接口文档](https://open.beeworks.cn/cordova/)进行参数设置。
 :::

@@ -1,6 +1,6 @@
 # PC 客户端
 
-JS-SDK 部分接口支持在 WorkPlus PC 客户端内执行。
+JS-SDK 部分接口支持在 BeeWorks PC 客户端内执行。
 
 当轻应用或者 H5 页面在 PC 客户端内运行时，可以通过 JS-SDK 方法调用客户端能力，例如发起聊天、创建群聊和预览图片等。
 
@@ -14,7 +14,7 @@ JS-SDK 部分接口支持在 WorkPlus PC 客户端内执行。
 
 接口无特殊说明的，均支持在全平台（Windows、MacOS、Linux 及信创系统）的 PC 客户端上运行。
 
-可以通过`w6s.platform.isPC`来判断应用当前是否在 WorkPlus PC 内执行。
+可以通过`w6s.platform.isPC`来判断应用当前是否在 BeeWorks PC 内执行。
 
 #### 认证
   - [获取临时 Ticket](/js-sdk/auth.html#获取临时-ticket)
@@ -38,9 +38,9 @@ JS-SDK 部分接口支持在 WorkPlus PC 客户端内执行。
 
 ### 在线例子
 
-例子地址：https://open.workplus.io/pc-sdk-demo/ 
+例子地址：https://open.beeworks.cn/pc-sdk-demo/ 
 
-可使用上述地址创建内部 PC 平台轻应用，并使用符合版本要求的 WorkPlus PC 客户端进行访问，即可体验相关接口功能。
+可使用上述地址创建内部 PC 平台轻应用，并使用符合版本要求的 BeeWorks PC 客户端进行访问，即可体验相关接口功能。
 
 
 

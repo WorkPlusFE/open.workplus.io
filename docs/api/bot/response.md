@@ -1,6 +1,6 @@
 # 响应消息
 
-业务方机器人在收到 WorkPlus 回调后，可以根据回调的类型或内容，以及业务需求执行不同的消息接口进行响应。最终实现与用户之间的消息对话式互动。
+业务方机器人在收到 BeeWorks 回调后，可以根据回调的类型或内容，以及业务需求执行不同的消息接口进行响应。最终实现与用户之间的消息对话式互动。
 
 ## 消息接口
 
@@ -51,7 +51,7 @@ POST: /v1/bots/messages/{message_id}/reply?access_token={access_token}
 
 ### 更新消息
 
-机器人消息更新：指用户操作消息按钮后，WorkPlus 向业务方提交用户操作数据的交互。业务方可以根据收到用户提交的信息，请求更新消息内容，及时对用户的交互行为进行反馈。
+机器人消息更新：指用户操作消息按钮后，BeeWorks 向业务方提交用户操作数据的交互。业务方可以根据收到用户提交的信息，请求更新消息内容，及时对用户的交互行为进行反馈。
 
 假如有一个可交互的消息示例如下：
 
@@ -79,7 +79,7 @@ POST: /v1/bots/messages/{message_id}?access_token={access_token}
 
 ### 响应订阅回调
 
-业务方在 WorkPlus 平台订阅事件后，平台会在事件发生时（例如:机器人入群）向业务方回调 URL 推送消息，开发者可以根据事件回传消息。
+业务方在 BeeWorks 平台订阅事件后，平台会在事件发生时（例如:机器人入群）向业务方回调 URL 推送消息，开发者可以根据事件回传消息。
 
 事件订阅支持：**机器人进群**、**机器人被移出群聊**；
 
@@ -95,7 +95,7 @@ POST: /v1/bots/messages/{message_id}?access_token={access_token}
 POST: /v1/bots/subscribe-message?access_token={access_token}
 ```
 
-> 请在收到 WorkPlus 订阅回调后，120秒内响应。
+> 请在收到 BeeWorks 订阅回调后，120秒内响应。
 
 提交参数请参考[消息示例](#消息示例)。
 
@@ -191,8 +191,8 @@ POST: /v1/bots/subscribe-message?access_token={access_token}
 
 | 字段 | 类型 | 是否必填 | 说明 |
 | - | - | - | - |
-| conversation_id | String | Y | 会话是指用户与用户、用户与群组、用户与应用(机器人)的对话交流过程；<br/> 每个会话都有唯一的会话 ID[conversation_id]，WorkPlus 回调  Url 时，会把会话 ID 传给业务方。
-| subscribe_id | String | N | 订阅id，当调用[订阅接口](#响应订阅回调)时必填；<br/>WorkPlus 回调 Url 时，会把会话 ID 传给业务方。
+| conversation_id | String | Y | 会话是指用户与用户、用户与群组、用户与应用(机器人)的对话交流过程；<br/> 每个会话都有唯一的会话 ID[conversation_id]，BeeWorks 回调  Url 时，会把会话 ID 传给业务方。
+| subscribe_id | String | N | 订阅id，当调用[订阅接口](#响应订阅回调)时必填；<br/>BeeWorks 回调 Url 时，会把会话 ID 传给业务方。
 | type | String | Y | 消息类型：text/image/voice/video/file/template/rich_text
 | body | String | Y | 消息体，参考[body参数说明](#body参数说明)
 | usernames | Array | N | 如果有值，则会发给会话的指定成员，<br/> - 群聊：会发给指定群成员<br/> - 单聊：可以发给单聊任何一方<br/><br/>如果没值，则发给会话所有人

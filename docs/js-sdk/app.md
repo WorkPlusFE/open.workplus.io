@@ -60,7 +60,7 @@ w6s.app.showAppChatViewById({
 
 ## 打开搜索页面
 
-打开 WorkPlus 的搜索页面。
+打开 BeeWorks 的搜索页面。
 
 **使用说明**
 

@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "WorkPlus 开发文档"
+  name: "BeeWorks 开发文档"
   tagline: '在这里你可以找到应用开发、能力对接等指南和 API 说明，助力您的业务系统快速移动化、数字化。'
   actions:
     - theme: brand
@@ -20,12 +20,12 @@ features:
   - title: 单点登录
     icon: 
       src: /features/sso.svg
-    details: 通过 WorkPlus 开放接口，可以以应用身份对用户进行 Ticket 校验，实现单点登录。
+    details: 通过 BeeWorks 开放接口，可以以应用身份对用户进行 Ticket 校验，实现单点登录。
     link: /light-app/sso
   - title: JS-SDK
     icon: 
       src: /features/js-sdk.svg
-    details: WorkPlus 移动端 WebView 提供强大的原生能力，通过 JS-SDK 可以轻松在 H5 应用中调用原生能力，例如拍照、二维码识别等。
+    details: BeeWorks 移动端 WebView 提供强大的原生能力，通过 JS-SDK 可以轻松在 H5 应用中调用原生能力，例如拍照、二维码识别等。
     link: /js-sdk/overview/usage
   - title: 消息推送
     icon: 

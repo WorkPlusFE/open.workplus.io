@@ -20,7 +20,7 @@
 当前支持上架的应用类型包括：`轻应用`、`服务号`及`原生应用`。
 ### 轻应用
 
-H5 网页应用，也是 WorkPlus 移动平台上主要的应用类型，可通过 JS-SDK 调用原生能力，并支持多种自定义配置，是业务系统快速移动化的重要手段。
+H5 网页应用，也是 BeeWorks 移动平台上主要的应用类型，可通过 JS-SDK 调用原生能力，并支持多种自定义配置，是业务系统快速移动化的重要手段。
 
 ### 服务号
 
@@ -30,7 +30,7 @@ H5 网页应用，也是 WorkPlus 移动平台上主要的应用类型，可通�
 
 ### 原生应用
 
-在 WorkPlus 应用中心上架原生应用，大多设置跟轻应用类似，只是入口需要上传相应安装包或者指定某个系统级别应用。
+在 BeeWorks 应用中心上架原生应用，大多设置跟轻应用类似，只是入口需要上传相应安装包或者指定某个系统级别应用。
 
 更多说明，请查看[上架原生应用](/light-app/nativeApp.md)。
 
@@ -71,10 +71,10 @@ H5 网页应用，也是 WorkPlus 移动平台上主要的应用类型，可通�
 
 ```js
 // 设置启动地址如下：
-https://test-app.workplus.io?ticket={{ticket}}&language={{language}}
+https://test-app.beeworks.cn?ticket={{ticket}}&language={{language}}
 
 // 当应用启动时，ticket及language会根据当前用户信息及语言进行填充：
-https://test-app.workplus.io?ticket=demo-ticket&language=en
+https://test-app.beeworks.cn?ticket=demo-ticket&language=en
 ```
 
 支持的参数占位符包括以下属性：
@@ -100,7 +100,7 @@ https://test-app.workplus.io?ticket=demo-ticket&language=en
 除了设置占位符来获取用户信息，通常为了避免缓存，上架新版本时，可以尝试在启动地址后加入版本信息参数，如下：
 
 ```js
-https://test-app.workplus.io?v=1.2.0
+https://test-app.beeworks.cn?v=1.2.0
 ```
 
 ::: tip 关于启动地址

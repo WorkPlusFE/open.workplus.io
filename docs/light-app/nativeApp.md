@@ -32,26 +32,26 @@
 
 ![上架原生应用（system）](/app/native-system.png)
 
-目前平台内置的系统应用包括：`日历`、`邮箱`及`官方邮箱`。其中，`官方邮箱`为 WorkPlus 平台内置的邮箱功能。
+目前平台内置的系统应用包括：`日历`、`邮箱`及`官方邮箱`。其中，`官方邮箱`为 BeeWorks 平台内置的邮箱功能。
 
 ## 应用参数
 
-第三⽅原⽣应⽤可以通过在应⽤管理界⾯中添加参数名和参数值，⽤于校验应⽤来源以及调⽤的合法性，同时，WorkPlus 平台还提供⼀次性 Ticket ⽤于实现 WorkPlus 平台与第三⽅原⽣应⽤间的单点登录。
+第三⽅原⽣应⽤可以通过在应⽤管理界⾯中添加参数名和参数值，⽤于校验应⽤来源以及调⽤的合法性，同时，BeeWorks 平台还提供⼀次性 Ticket ⽤于实现 BeeWorks 平台与第三⽅原⽣应⽤间的单点登录。
 
 应⽤参数设置是以`Key-Value`⽅式存在，通过设置 Key 关键字相对获取到 Value 相应数值。
 
-例如⽤户可以输⼊ from 作为 Key 值，workplus-app 作为 Value 值填⼊参数设置中。如果从Workplus的应⽤中⼼点击打开第三⽅应⽤，就可以通过相应的 key 值获取到 value 值。
+例如⽤户可以输⼊ from 作为 Key 值，workplus-app 作为 Value 值填⼊参数设置中。如果从 BeeWorks 的应⽤中⼼点击打开第三⽅应⽤，就可以通过相应的 key 值获取到 value 值。
 
 ::: warning 提醒
 当前原生应用仅支持设置固定的参数和值，不支持通过链接占位符的方式来添加参数。
 
-另外，Workplus 还会传递了⼀些平台参数如下：
+另外，BeeWorks 还会传递了⼀些平台参数如下：
 
 - KEY_TICKET：⽤于平台与第三⽅接⼊的认证；
 - KEY_FROM_PLATFORM：⽤于区别 Android 和 iOS 平台；
 - KEY_DEVICE_ID：当前设备 ID；
-- KEY_TENANT_ID：当前 WorkPlus 平台租户ID 也叫 域ID；
-- KEY_API_HOST：当前 WorkPlus 平台访问后台 RestAPI 地址。
+- KEY_TENANT_ID：当前 BeeWorks 平台租户ID 也叫 域ID；
+- KEY_API_HOST：当前 BeeWorks 平台访问后台 RestAPI 地址。
 :::
 
 ## 获取参数
@@ -99,11 +99,11 @@ for (int i = 0; i < arr.count; i ++) {
 
 ## 打开表现
 
-在移动端中，打开 WorkPlus 应⽤中⼼，点击第三⽅应⽤图标后:
+在移动端中，打开 BeeWorks 应⽤中⼼，点击第三⽅应⽤图标后:
 
 - 若应⽤尚未在该手机上安装，则会提示⽤户下载并安装应⽤；
-- 若应⽤已安装，则会根据后台设置的跳转协议打开相关应⽤，并将后台设置的参数值传递过去(如果已设置的情况下)，同时会附带传送 WorkPlus 平台的⼀次性 Ticket 值。
+- 若应⽤已安装，则会根据后台设置的跳转协议打开相关应⽤，并将后台设置的参数值传递过去(如果已设置的情况下)，同时会附带传送 BeeWorks 平台的⼀次性 Ticket 值。
 
 ::: tip 对于 iOS
-如果应⽤尚未安装到⼿机，在 WorkPlus 应⽤中⼼点击相应的应⽤时，如果在管理后台已设置了 plist 下载地址，则会提示相关下载提示，如果管理后台设置了 AppStore 下载地址，则会进⼊ AppStore 进⾏下载。
+如果应⽤尚未安装到⼿机，在 BeeWorks 应⽤中⼼点击相应的应⽤时，如果在管理后台已设置了 plist 下载地址，则会提示相关下载提示，如果管理后台设置了 AppStore 下载地址，则会进⼊ AppStore 进⾏下载。
 :::

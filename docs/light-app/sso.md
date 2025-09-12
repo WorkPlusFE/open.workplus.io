@@ -7,9 +7,9 @@
 
 ## 什么是单点登录
 
-第三方应用在接入 WorkPlus 平台时，往往需要集成 WorkPlus 的用户系统、应用通知等能力，而在使用这些能力之前，通常会对用户的合法性进行校验，此时就需要做“单点登录”验证。
+第三方应用在接入 BeeWorks 平台时，往往需要集成 BeeWorks 的用户系统、应用通知等能力，而在使用这些能力之前，通常会对用户的合法性进行校验，此时就需要做“单点登录”验证。
 
-目前 WorkPlus 实现单点登录的机制如下：
+目前 BeeWorks 实现单点登录的机制如下：
 
 1. 客户端打开第三方应用时，第三方应用可以通过`js-sdk`或从`url`上获得临时 Ticket；
 2. 第三方应用后端服务通过[应用参数获取应用 Token](/api/getStart.md)；
@@ -41,7 +41,7 @@
 PC 客户端目前主要的方式就是截取应用启动地址上的参数，每个应用被打开时，客户端会获取临时 Ticket 及用户信息并拼接在应用启动地址上，如下：
 
 ```js
-http://test-app.workplus.io?ticket=ticket&user_id=xxx&domain_id=xx
+http://test-app.beeworks.cn?ticket=ticket&user_id=xxx&domain_id=xx
 ```
 
 参数包括以下属性:
@@ -58,6 +58,6 @@ http://test-app.workplus.io?ticket=ticket&user_id=xxx&domain_id=xx
 应用的启动地址，请尽可能遵照标准来设置。例如常见的单页面应用会使用`#hash`的方式做前端路由，但是`井号`在链接访问上是没有意义的，我们建议链接的属性，应该是先`search(query)`再`hash`，如：
 
 ```html
-https://www.workplus.io?key1=val1&key2=val2#hash
+https://www.beeworks.cn?key1=val1&key2=val2#hash
 ```
 :::

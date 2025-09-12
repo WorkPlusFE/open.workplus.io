@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-# WorkPlus APP
+# BeeWorks APP
 
 ## iOS 分发模式
 
@@ -45,7 +45,7 @@ sidebar: auto
 
 支持`高德地图`、`百度地图`。
 
-> 从 4.11.0 开始，WorkPlus 支持切换高德 sdk 以及百度 sdk，因此可以根据客户需求进行申请。
+> 从 4.11.0 开始，BeeWorks 支持切换高德 sdk 以及百度 sdk，因此可以根据客户需求进行申请。
 
 申请时，需要提供的信息如下：
 

@@ -63,7 +63,7 @@ w6s.event.unbindBackButtonEvent();
 
 ## 页面离开
 
-当页面不可见时，WorkPlus 会产生回调，开发者可以监听此`pause事件`，并处理特定的业务逻辑。
+当页面不可见时，BeeWorks 会产生回调，开发者可以监听此`pause事件`，并处理特定的业务逻辑。
 
 **使用说明**
 
@@ -80,7 +80,7 @@ w6s.event.bindPauseEvent(() => {
 
 ## 页面返回
 
-当页面重新可见并可交互时，WorkPlus 会产生回调，开发者可监听此`resume事件`，并处理特定的业务逻辑。
+当页面重新可见并可交互时，BeeWorks 会产生回调，开发者可监听此`resume事件`，并处理特定的业务逻辑。
 
 **使用说明**
 

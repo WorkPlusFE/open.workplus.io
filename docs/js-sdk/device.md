@@ -25,7 +25,7 @@ w6s.device.getIpAddress({
 | ipAddress | 手机连接网络的ip地址  |
 
 ## 获取设备信息
-获取当前设备和 WorkPlus 的一些信息。
+获取当前设备和 BeeWorks 的一些信息。
 
 **使用说明**
 
@@ -85,7 +85,7 @@ w6s.device.getPedometerData({
 
 ## 获取 App 信息
 
-获取 WorkPlus App 版本等信息。
+获取 BeeWorks App 版本等信息。
 
 **使用说明**
 

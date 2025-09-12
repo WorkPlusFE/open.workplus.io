@@ -1,6 +1,6 @@
 # 被动回调
 
-WorkPlus 会有以下操作或行为触发时，回调业务方机器人后台配置的回调 URL:
+BeeWorks 会有以下操作或行为触发时，回调业务方机器人后台配置的回调 URL:
 
 1. 在群聊@机器人并发送消息；
 2. 在聊天会话里发送机器人指令；
@@ -9,7 +9,7 @@ WorkPlus 会有以下操作或行为触发时，回调业务方机器人后台�
 
 ## 签名及加密
 
-为了让业务方确认调用来自 WorkPlus，WorkPlus 以 POST 方式回调业务方 URL 会带上消息签名，业务方需要验证此参数的正确性后再进行业务操作。
+为了让业务方确认调用来自 BeeWorks，BeeWorks 以 POST 方式回调业务方 URL 会带上消息签名，业务方需要验证此参数的正确性后再进行业务操作。
 
 回调URL如下：
 
@@ -62,7 +62,7 @@ rand_msg = random(16B) + msg_len(4B) + msg + receiveid
 ```
 
 * 明文字符串由16个字节的随机字符串、4个字节的 msg 长度、明文 msg 和 receiveid 拼接组成。其中 msg_len 为 msg 的字节数，网络字节序；
-* receiveId 是业务方在 WorkPlus 上对应的应用ID；
+* receiveId 是业务方在 BeeWorks 上对应的应用ID；
 
 ![bot-secret](/bot/bot-secret.png)
 

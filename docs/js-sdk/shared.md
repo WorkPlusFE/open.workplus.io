@@ -56,7 +56,7 @@ w6s.util.voiceToText({
 
 
 ```js
-w6s.util.copyText('open.workplus.io');
+w6s.util.copyText('open.beeworks.cn');
 ```
 
 > 该方法没有回调，若要提示复制成功信息，在方法执行后提示即可。

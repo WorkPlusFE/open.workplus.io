@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as c,a5 as a}from"./chunks/framework.XredCqQG.js";const E=JSON.parse('{"title":"概述","description":"","frontmatter":{},"headers":[],"relativePath":"js-sdk/README.md","filePath":"js-sdk/README.md"}'),d={name:"js-sdk/README.md"},t=a("",4),s=[t];function i(r,l,_,n,p,h){return c(),o("div",null,s)}const f=e(d,[["render",i]]);export{E as __pageData,f as default};

@@ -4,7 +4,7 @@
 应用只能拥有一个 AccessToken，重复获取将导致先前的 AccessToken 失效。
 :::
 
-WorkPlus 平台作为企业移动应用的统一入口，提供了用户身份集成，应用接入等基础能力接口。第三方应用主动调用接口时，需带上AccessToken 参数。AccessToken 参数由 DomainId，OrgId，AppKey，AppSecret 获取。
+BeeWorks 平台作为企业移动应用的统一入口，提供了用户身份集成，应用接入等基础能力接口。第三方应用主动调用接口时，需带上AccessToken 参数。AccessToken 参数由 DomainId，OrgId，AppKey，AppSecret 获取。
 
 具体需要以下步骤：
 
@@ -24,7 +24,7 @@ WorkPlus 平台作为企业移动应用的统一入口，提供了用户身份�
 通过 DomainId，OrgId，AppKey 及 AppSecret 调用以下接口获取 AccessToken:
 
 ```js
-POST https://demo-api.workplus.io/v1/token
+POST https://demo-api.beeworks.cn/v1/token
 ```
 
 > 实际 API 接口地址，以所部署环境为准。

@@ -2,7 +2,7 @@
 
 ## 在线 Demo
 
-请使用 WorkPlus 扫一扫，查看在线 Demo：
+请使用 BeeWorks 扫一扫，查看在线 Demo：
 
 ![sdk demo](/js-sdk/sdk-demo-qrcode.png =200x)
 
@@ -23,7 +23,7 @@
 
 **JS-SDK 输出文件：**
 
-<!-- https://open.workplus.io/static/js-sdk/sdk.{{$themeConfig.version}}.js -->
+<!-- https://open.beeworks.cn/static/js-sdk/sdk.{{$themeConfig.version}}.js -->
 
 [JS-SDK GitHub 下载地址](https://github.com/WorkPlusFE/js-sdk/releases)。
 
@@ -35,15 +35,15 @@
 
 * android.cordova.min.js
 
-<!-- https://open.workplus.io/static/android.cordova.min.js -->
+<!-- https://open.beeworks.cn/static/android.cordova.min.js -->
 
 
-<a href="https://open.workplus.io/static/android.cordova.min.js" download="android.cordova.min.js" target="_blank">下载 android.cordova.min.js</a>
+<a href="https://open.beeworks.cn/static/android.cordova.min.js" download="android.cordova.min.js" target="_blank">下载 android.cordova.min.js</a>
 
 * ios.cordova.min.js
 
-<!-- https://open.workplus.io/static/ios.cordova.min.js -->
+<!-- https://open.beeworks.cn/static/ios.cordova.min.js -->
 
 
-<a href="https://open.workplus.io/static/ios.cordova.min.js" download="ios.cordova.min.js" target="_blank">下载 ios.cordova.min.js</a>
+<a href="https://open.beeworks.cn/static/ios.cordova.min.js" download="ios.cordova.min.js" target="_blank">下载 ios.cordova.min.js</a>
 

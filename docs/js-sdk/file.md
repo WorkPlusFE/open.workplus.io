@@ -8,7 +8,7 @@
 
 ## 选择文件
 
-打开 WorkPlus 文件选择管理器，支持单选或多选，并自动上传文件到后台媒体中心，返回对应 mediaId。
+打开 BeeWorks 文件选择管理器，支持单选或多选，并自动上传文件到后台媒体中心，返回对应 mediaId。
 
 **使用说明**
 
@@ -86,7 +86,7 @@ w6s.file.openFileDetail({
 原生打开文件，pdf、excel、word 及 ppt 等。
 
 ::: tip 与"打开文件详情"的区别
-该方法是直接通过系统的方式去打开本地文件，而`打开文件详情`则是打开一个 WorkPlus 的文件预览页面，该页面具备下载或预览的功能。
+该方法是直接通过系统的方式去打开本地文件，而`打开文件详情`则是打开一个 BeeWorks 的文件预览页面，该页面具备下载或预览的功能。
 :::
 
 **使用说明**
@@ -141,7 +141,7 @@ w6s.file.isFileExist({
 | exist | Boolean, 表示文件是否存在  |
 
 ## 文件下载
-下载文件到本地，可以在 WorkPlus 文件选择器中看到。
+下载文件到本地，可以在 BeeWorks 文件选择器中看到。
 
 **使用说明**
 
@@ -261,7 +261,7 @@ w6s.file.getFilePath({
 
 | 参数 | 类型 | 说明|
 | - | - | - |
-| system | string | 表示 WorkPlus 定义的路径，目前支持`file`, `dropbox`类型, 分别获取下载文件目录, 跟网盘目录 |
+| system | string | 表示 BeeWorks 定义的路径，目前支持`file`, `dropbox`类型, 分别获取下载文件目录, 跟网盘目录 |
 | custom | string | 轻应用自定义的用户目录，如传入参数`"custom" : "abc"`, app 将创建`sdcard_root/app_file/username/abc`的文件目录, 并返回路径给调用者 |
 
 注意，以上参数`system`优先级较高, 即两个类型同时传入时, 以`system`为准。
