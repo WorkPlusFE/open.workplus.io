@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as t}from"./chunks/framework.D4ctqEPk.js";const y=JSON.parse('{"title":"账号同步","description":"","frontmatter":{},"headers":[],"relativePath":"api/sync.md","filePath":"api/sync.md"}'),n={name:"api/sync.md"},h=t("",91),k=[h];function p(l,e,d,E,r,g){return a(),i("div",null,k)}const F=s(n,[["render",p]]);export{y as __pageData,F as default};

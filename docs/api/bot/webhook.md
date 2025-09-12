@@ -5,6 +5,7 @@ POST: webhook机器人地址
 ```
 webhook机器人地址创建机器人里由系统生成
 
+![webhook](/webhook/webhook.png)
 
 ## 调用频率限制
 
@@ -102,11 +103,11 @@ webhook机器人地址创建机器人里由系统生成
 |字段|类型|是否必填|说明|
 |:----|:----|:----|:----|
 |type|String|Y|消息类型text/image/voice/video/file/template/rich_text|
-|body|String|Y|消息体，**参考body 参数说明**|
+|body|String|Y|消息体，参考[body 参数说明](/api/bot/response#body参数说明)|
 |usernames|Array|N|如果有值，则会发给会话的指定成员，  群聊：会发给指定成员  频道：会发给指定成员如果没值，则发给会话所有人|
 |user_ids|Array|N|如果有值，则会发给会话的指定成员，  群聊：会发给指定成员  频道：会发给指定成员如果没值，则发给会话所有人|
-|actions|Json|N|消息按钮第一层数据代表的多少行按钮[目前最多5个]，第二层数据代表一行有多少个按钮[目前最多5个]**参考[消息按钮说明 - action参数说明]**|
-|action_acl|Json|N|按钮访问控制 **参考[消息按钮说明 - action_acl参数说明]**|
+|actions|Json|N|消息按钮第一层数据代表的多少行按钮[目前最多5个]，第二层数据代表一行有多少个按钮[目前最多5个]参考[消息按钮说明 - action参数说明](/api/bot/response#按钮actions)|
+|action_acl|Json|N|按钮访问控制 参考[消息按钮说明 - action_acl参数说明](/api/bot/response#按钮访问控制action-acl)|
 
 
 

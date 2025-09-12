@@ -187,6 +187,7 @@ function sidebarApi() {
           { text: '接口Token', link: 'token' },
           { text: '被动回调', link: 'callback' },
           { text: '响应消息', link: 'response' },
+          { text: 'Webhook', link: 'webhook' },
         ]},
         { text: '日程', link: 'schedule' },
         { text: '流程大师', base: '/api/bpm/', items: [

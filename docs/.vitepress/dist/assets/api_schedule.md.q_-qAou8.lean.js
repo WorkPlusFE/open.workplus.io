@@ -1,1 +1,0 @@
-import{_ as s,c as t,o as i,a5 as a}from"./chunks/framework.XredCqQG.js";const o=JSON.parse('{"title":"日程","description":"","frontmatter":{},"headers":[],"relativePath":"api/schedule.md","filePath":"api/schedule.md"}'),l={name:"api/schedule.md"},n=a("",35),e=[n];function h(k,p,d,E,r,g){return i(),t("div",null,e)}const u=s(l,[["render",h]]);export{o as __pageData,u as default};

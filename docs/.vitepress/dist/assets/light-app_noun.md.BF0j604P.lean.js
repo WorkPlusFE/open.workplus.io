@@ -1,0 +1,1 @@
+import{_ as e,c as a,o,a5 as t}from"./chunks/framework.D4ctqEPk.js";const m=JSON.parse('{"title":"名词解析","description":"","frontmatter":{},"headers":[],"relativePath":"light-app/noun.md","filePath":"light-app/noun.md"}'),r={name:"light-app/noun.md"},c=t("",13),d=[c];function n(p,i,s,h,l,_){return o(),a("div",null,d)}const f=e(r,[["render",n]]);export{m as __pageData,f as default};
