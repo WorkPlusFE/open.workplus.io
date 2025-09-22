@@ -3,7 +3,7 @@
 ## 消息回调
 
 ```js
-POST http://XXXXXX?signature={signature}&timestamp={timestamp}&nonce={nonce}&sgin={sgin}
+POST http://XXXXXX?signature={signature}&timestamp={timestamp}&nonce={nonce}&signature256={sign}
 ```
 
 **请求头部：**
@@ -14,23 +14,23 @@ POST http://XXXXXX?signature={signature}&timestamp={timestamp}&nonce={nonce}&sgi
 
 **请求参数：**
 
-| 字段	             | 类型	| 是否必填	 | 说明                                                   |
-|-----------------|---|-------|------------------------------------------------------|
-| http://XXXXXX	  | String| 	Y	   | 回调地址                                                 |
-| signature	      | String	| Y	    | sha1签名,明文模式下,用message计算签名,其余情况用encrypt计算             |
-| sgin	           | String	| N	    | sha256签名,明文模式下,用message计算签名,其余情况用encrypt计算           |
-| timestamp	      | String	| Y	    | 时间戳                                                  |
-| nonce	          | String	| Y	    | 随机数                                                  |
-| encrypt	        | String	| Y	    | 密文,安全模式及兼容模式下,返回该字段                                  |
-| message	        | String	| Y	    | 明文,明文模式及兼容模式下,返回该字段                                  |
-| to_user_name	   | String	| Y	    | 消息接收对象                                               |
-| from_user_name	 | String	| Y 	   | 消息发送对象                                               |
-| create_time	    | String	| Y	    | 回调消息时间                                               |
-| msg_type	       | String| 	Y	   | 消息类型,text/image/voice/video/file/location/link/event |
-| content	        | String	| N	    | 文本消息内容                                               |
-| media_id	       | String	| N	    | 媒体类消息的媒体ID                                           |
-| event	          | String | N	    | 事件类型,SUBSCRIBE, SCAN, LOCATION, CLICK, VIEW          |
-| event_key	      | String	| N	    | 事件标识                                                 |
+| 字段	             | 类型	     | 是否必填	 | 说明                                                   |
+|-----------------|---------|-------|------------------------------------------------------|
+| http://XXXXXX	  | String  | 	Y	   | 回调地址                                                 |
+| signature	      | String	 | Y	    | sha1签名,明文模式下,用message计算签名,其余情况用encrypt计算             |
+| signature256	   | String	 | N	    | sha256签名,明文模式下,用message计算签名,其余情况用encrypt计算           |
+| timestamp	      | String	 | Y	    | 时间戳                                                  |
+| nonce	          | String	 | Y	    | 随机数                                                  |
+| encrypt	        | String	 | Y	    | 密文,安全模式及兼容模式下,返回该字段                                  |
+| message	        | String	 | Y	    | 明文,明文模式及兼容模式下,返回该字段                                  |
+| to_user_name	   | String	 | Y	    | 消息接收对象                                               |
+| from_user_name	 | String	 | Y 	   | 消息发送对象                                               |
+| create_time	    | String	 | Y	    | 回调消息时间                                               |
+| msg_type	       | String  | 	Y	   | 消息类型,text/image/voice/video/file/location/link/event |
+| content	        | String	 | N	    | 文本消息内容                                               |
+| media_id	       | String	 | N	    | 媒体类消息的媒体ID                                           |
+| event	          | String  | N	    | 事件类型,SUBSCRIBE, SCAN, LOCATION, CLICK, VIEW          |
+| event_key	      | String	 | N	    | 事件标识                                                 |
 
 **请求示例：**
 

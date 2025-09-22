@@ -14,7 +14,7 @@ BeeWorks 会有以下操作或行为触发时，回调业务方机器人后台�
 回调URL如下：
 
 ```Text
-POST: 业务方回调URL?signature={signature}&timestamp={timestamp}&nonce={nonce}&encrypted={encrypted}&sign={sha256}
+POST: 业务方回调URL?signature={signature}&timestamp={timestamp}&nonce={nonce}&encrypted={encrypted}&signature256={sha256}
 ```
 
 回调URL参数说明：
@@ -25,7 +25,7 @@ POST: 业务方回调URL?signature={signature}&timestamp={timestamp}&nonce={nonc
 | timestamp | 是    | 时间戳，用于签名                                |
 | nonce     | 是    | 随机数，用于签名                                |
 | encrypted | 是    | 回调消息是否加密；true: 加密，false: 未加密            |
-| sign      | 否    | sha256签名,明文模式下,用data计算签名,密文情况用encrypt计算 |
+| signature256      | 否    | sha256签名,明文模式下,用data计算签名,密文情况用encrypt计算 |
 
 回调消息体说明：
 
@@ -61,7 +61,7 @@ msg_signature=sha256(sort(token、timestamp、nonce、echoStr))
 
 1. sort 的含义是将参数值按照字母字典排序，然后从小到大拼接成一个字符串 sha256 处理结果要编码为可见字符，再格式化成16进制，全部小写；
 2. echoStr: 明文模式下取值明文回调的data字段，密文模式下取值明文回调的encrypt字段；
-3. 比较 msg_signature 和回调 url 上的 sign 是否相等，相等则表示验证通过。
+3. 比较 msg_signature 和回调 url 上的 signature256 是否相等，相等则表示验证通过。
 
 ### 消息加密详解
 
