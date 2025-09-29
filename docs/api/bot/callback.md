@@ -31,16 +31,16 @@ POST: 业务方回调URL?signature={signature}&timestamp={timestamp}&nonce={nonc
 
 - 明文格式：
 
-| 名称 | 类型 | 是否有值 | 说明 |
-| - | - | - | - |
-| by | string | 是 | command = 指令，action = 按钮 |
-| data | string | 是 | 明文请求消息体 |
+| 名称 | 类型 | 是否有值 | 说明                                |
+| - | - | - |-----------------------------------|
+| by | string | 是 | command = 指令，action = 按钮 ，im = 消息 |
+| data | string | 是 | 明文请求消息体                           |
 
 - 密文格式：
 
 | 名称 | 类型 | 是否有值 | 说明 |
 | - | - | - | - |
-| by | string | 是 | command = 指令，action = 按钮 |
+| by | string | 是 | command = 指令，action = 按钮 ，im = 消息 |
 | encrypt | string | 是 | 密文请求消息体 |
 
 
