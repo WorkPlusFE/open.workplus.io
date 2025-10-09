@@ -123,15 +123,15 @@ curl -i -X POST \
 <details>
 <summary>点击查看图片示例</summary>
 
-| 字段            | 类型      | 必填 | 说明                 |
-|:--------------|:--------|:---|:-------------------|
-| type          | String  | Y  | 消息类型, 文本消息值: image |
-| body          | Map     | Y  | 推送消息体              |
-| body.is_gif   | Boolean | N  | 是否是gif,默认值: false  |
-| body.media_id | String  | Y  | 发送的媒体ID            |
-| body.size     | Int     | N  | 图片大小,默认值： 0        |
-| body.height   | Int     | N  | 图片高度,默认值： 0        |
-| body.width    | Int     | N  | 图片宽度,默认值： 0        |
+| 字段            | 类型     | 必填 | 说明                 |
+|:--------------|:-------|:---|:-------------------|
+| type          | String | Y  | 消息类型, 文本消息值: image |
+| body          | Map    | Y  | 推送消息体              |
+| body.is_gif   | int    | N  | 是否gif图片,1代表是       |
+| body.media_id | String | Y  | 发送的媒体ID            |
+| body.size     | Int    | N  | 图片大小,默认值： 0        |
+| body.height   | Int    | N  | 图片高度,默认值： 0        |
+| body.width    | Int    | N  | 图片宽度,默认值： 0        |
 
 ```json
 {
