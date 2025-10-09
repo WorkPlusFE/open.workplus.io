@@ -79,7 +79,7 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
   "type": "TEXT", 
   "body": {
     "at_all": false, 
-    "content": "2"
+    "content": "测试文本消息"
   }, 
   "client_ids": [
     "c24b6a94cfb14b79af12a1399edc9e31"
