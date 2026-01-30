@@ -28,6 +28,7 @@ POST /v1/apps/schedules?access_token={access_token}
 |reminder|Object|Y|日程提醒，参考ScheduleReminder参数说明|
 |owner|String|Y|日程组织者用户名|
 |attendees|List[String]|N|日程参与者用户名|
+|attendees_with_status|List[Object]|N|日程参与人，可自定义参会人，参考AttendeeWithStatus参数说明|
 |attachments|List[Object]|N|日程附件，参考Attachment参数说明|
 |attendee_notice|Boolean|N|是否通知参与人，默认为true|
 |repeat_end_date|Long|N|日程重复结束时间戳，为空则为永不结束|
@@ -35,6 +36,13 @@ POST /v1/apps/schedules?access_token={access_token}
 |source|String|Y|数据源，声明日程数据来源，双方协商一个固定值|
 |source_id|String|Y|组织者日程id|
 |source_uid|String|Y|日程唯一id|
+
+AttendeeWithStatus参数说明：
+
+| 参数名   | 数据类型 | 是否必填 | 说明                                                         |
+| :------- | :------- | :------- | :----------------------------------------------------------- |
+| username | String   | Y        | 用户名                                                       |
+| status   | String   | Y        | 参会人状态：init - 初始状态，accepted - 接受，pending - 待定 |
 
 ScheduleReminder参数说明：
 
@@ -168,6 +176,7 @@ POST /v1/apps/schedules/{schedule_id}?access_token={access_token}
 |end_time|Long|Y|日程结束时间戳|
 |reminder|Object|Y|日程提醒，参考ScheduleReminder参数说明|
 |attendees|List[String]|N|日程参与者用户名|
+|attendees_with_status|List[Object]|N|日程参与人，可自定义参会人，参考AttendeeWithStatus参数说明|
 |attachments|List[Object]|N|日程附件，参考Attachment参数说明|
 |attendee_notice|Boolean|N|是否通知参与人，默认为true|
 |repeat_end_date|Long|N|日程重复结束时间戳，为空则为永不结束|
