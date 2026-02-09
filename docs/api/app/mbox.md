@@ -25,7 +25,7 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 | 字段                          | 类型                 | 是否必填 | 说明                                                                                                                   |
 |-----------------------------|--------------------|------|----------------------------------------------------------------------------------------------------------------------|
 | source_type                 | String             | N    | 枚举,NATIVE/ISV,默认值为NATIVE,ISV应用时传ISV                                                                                  |
-| type                        | String             | Y    | 消息类型, text/iamge/file/article/template/rich_text                                                                     |
+| type                        | String             | Y    | 消息类型, text/iamge/file/video/article/template/rich_text                                                               |
 | client_ids                  | List&lt;String&gt; | N    | 消息推送的用户标识                                                                                                            |
 | scopes                      | List&lt;String&gt; | N    | 发送范围,组织路径,例如/122/234/                                                                                                |
 | usernames                   | List&lt;String&gt; | N    | 用户账号列表                                                                                                               |
@@ -213,6 +213,45 @@ curl -i -X POST \
   ],
   "platforms": [
     "ANDROID","IOS","PC"
+  ]
+}
+```
+</details>
+
+**视频示例：**
+
+<details>
+<summary>点击查看视频示例</summary>
+
+| 字段            | 类型     | 必填 | 说明                |
+|:--------------|:-------|:---|:------------------|
+| type          | String | Y  | 消息类型,视频消息值: video |
+| body          | Map    | Y  | 推送消息体             |
+| body.name     | String | N  | 视频文件名             |
+| body.media_id | String | Y  | 视频的媒体ID           |
+| body.size     | Int    | Y  | 视频大小,默认值： 0       |
+| body.duration | Long   | Y  | 视频时间长，单位秒,默认值： 0  |
+| body.content  | String | N  | 视频封面图转base64格式    |
+| body.width    | Int    | N  | 视频长度,默认值： 0       |
+| body.height   | Int    | N  | 视频宽度,默认值： 0       |
+
+```json
+{
+  "type": "video",
+  "body": {
+    "content": "视频封面图二进制转base64格式",
+    "height": "200",
+    "width": "360",
+    "media_id": "019c41539a7572baac03a1cd70dced9b",
+    "size": 497226
+  },
+  "client_ids": [
+    "c24b6a94cfb14b79af12a1399edc9e31"
+  ],
+  "platforms": [
+    "ANDROID",
+    "IOS",
+    "PC"
   ]
 }
 ```
