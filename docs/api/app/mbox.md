@@ -239,7 +239,7 @@ curl -i -X POST \
 {
   "type": "video",
   "body": {
-    "content": "视频封面图二进制转base64格式",
+    "content": "视频封面图二进制转base64格式,控制封面图大小在20KB以内",
     "height": "200",
     "width": "360",
     "media_id": "019c41539a7572baac03a1cd70dced9b",
