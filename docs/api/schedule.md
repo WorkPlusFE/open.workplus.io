@@ -58,7 +58,7 @@ Attachment参数说明：
 |:----|:----|:----|:----|
 |media_id|String|Y|媒体id|
 |name|String|Y|文件名|
-|file_type|String|Y|日程重复类型：none - 不重复；daily - 每天重复；weekly - 每周重复；monthly - 每月重复； yearly - 每年重复； workday - 工作日重复文件类型|
+|file_type|String|Y|图片类型（例如:image/jpeg）|
 |size|Long|Y|文件大小|
 |thumbnail|String|N|文件缩略图媒体id|
 
