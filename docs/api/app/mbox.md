@@ -16,7 +16,7 @@ POST /v1/apps/mbox?access_token={access_token}&source_type={source_type}&for_all
 |字段|类型|是否必填| 说明                                                                                                                                                                                  |
 |:----|:----|:----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |access_token|String|Y| 访问令牌                                                                                                                                                                                |
-|direct|Boolean|N| direct = true时，消息直推推送，用于推送少量人员(400人以内)；只支持client_ids、usernames的推送；不支持范围scopes推送<br/>direct = false时，消息队列推送，用于推送大范围人员；支持client_ids、usernames, scopes的推送；支持范围scopes推送 <br/>默认值: false |
+|direct|Boolean|N| direct = true时，消息直推推送，用于推送少量人员(400人以内)；只支持client_ids、usernames的推送；不支持范围scopes推送，不支持消息撤回<br/>direct = false时，消息队列推送，用于推送大范围人员；支持client_ids、usernames, scopes的推送；支持范围scopes推送，支持[消息撤回](#消息撤回) <br/>默认值: false |
 |for_all|Boolean|N| 是否全员推送<br/>client_ids、usernames、scopes三者均为空,for_all=true时,才全员推消息；<br/>否则以范围参数为准[client_ids、usernames、scopes]<br/>默认值: false                                                         |
 
 
@@ -451,6 +451,7 @@ curl -i -X POST \
 
 | 字段| 类型                 | 说明                       |
 |---|--------------------|--------------------------|
+| plan_id | String             | 推送计划ID，`direct=false`时用于消息撤回 |
 | id | String             | 推送计划ID                   |
 | app_id | String             | 推送应用ID                   |
 | plan_time | Long               | 推送时间                     |
@@ -507,3 +508,75 @@ curl -i -X POST \
 | status | message |说明|
 |---|---|---|
 | 10011 |token not found.|访问令牌不存在|
+
+## 消息撤回
+
+```js
+POST /v1/apps/mbox-recall
+```
+
+**说明：**
+
+- **只有发送消息时设置 `direct=false`（消息队列推送）才支持撤回，`direct=true` 的直推消息不支持撤回。** `direct` 是消息推送接口的参数，调用撤回接口时无需再传。
+- 使用消息推送接口返回的 `plan_id`（或同一次队列推送返回的 `id`）作为撤回参数。发送接口没有创建推送计划、返回 `dummy` 时，不支持撤回。
+- 一次撤回整个推送计划，不支持指定部分接收人。
+- 撤回为异步处理，接口返回成功表示已发起撤回，不表示所有客户端已完成消息移除。
+
+**请求头部：**
+
+|请求头|说明 |
+|---|---|
+| Content-Type |application/json|
+
+**请求参数：**
+
+| 字段 | 类型 | 是否必填 | 说明 |
+|---|---|---|---|
+| plan_id | String | Y | 需要撤回的推送计划ID，使用消息推送接口返回的 `plan_id` 或 `id` |
+
+**请求示例：**
+
+```json
+{
+  "plan_id": "0198445643377e99a5c4d95e7044d61a"
+}
+```
+
+**Curl示例：**
+
+~~~
+curl -i -X POST \
+   -H "Content-Type:application/json" \
+   -d \
+'{
+    "plan_id": "0198445643377e99a5c4d95e7044d61a"
+}' \
+ 'https://替换成你的域名/v1/apps/mbox-recall'
+~~~
+
+**返回数据：**
+
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| plan_id | String | 本次发起撤回的推送计划ID |
+
+**返回示例：**
+
+```json
+{
+  "status": 0,
+  "message": "ok",
+  "result": {
+    "plan_id": "0198445643377e99a5c4d95e7044d61a"
+  }
+}
+```
+
+**错误返回值：**
+
+| status | message |说明|
+|---|---|---|
+| 204302 |Message plan not found.|推送计划不存在，例如计划ID错误、计划已清理，或消息未创建推送计划|
+| 204304 |Message plan cancelled.|推送计划已经取消，重复撤回时可能返回此错误|
+
+业务错误可能仍使用HTTP 200返回，请同时检查返回数据中的 `status`，`status=0` 才表示本次请求成功。
