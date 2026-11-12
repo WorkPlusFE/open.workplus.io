@@ -445,7 +445,121 @@ curl -i -X POST \
 
 **富文本消息示例：**
 
-请前往[富文本消息](/api/app/richText.html)页面查看详细说明。
+<details>
+<summary>点击查看富文本消息示例</summary>
+
+| 字段 | 类型 | 必填 | 说明 |
+|:---|:---|:---|:---|
+| type | String | Y | 消息类型，富文本消息值：`RICH_TEXT` |
+| body | Map | Y | 推送消息体 |
+| body.content | String | Y | 富文本对象序列化后的 JSON 字符串，包含 `title` 和 `content` |
+
+**body.content 格式：**
+
+`body.content` 的类型为 String。先按下面的结构编辑富文本对象，再将整个对象序列化为 JSON 字符串，放入 `body.content`；发送 HTTP 请求时，再将完整请求体序列化为 JSON。
+
+下面展示的是 `body.content` 字符串解析后的内容，便于修改：
+
+```json
+{
+  "title": "这是富文本的标题",
+  "content": [
+    [
+      {"tag": "text", "style": {"lineThrough": true, "bold": true, "italic": true, "color": "default"}, "text": "这是第一段文字\n"},
+      {"user_id": "1fee2dd7a3ba457db5beb78b12ba10cf", "name": "张三", "tag": "at"},
+      {"tag": "text", "text": " ", "style": {"lineThrough": false, "bold": false, "italic": false, "color": "default"}},
+      {"user_id": "all", "name": "全部人员", "tag": "at"},
+      {"style": {"lineThrough": false, "bold": false, "italic": false, "color": "default"}, "text": " \n", "tag": "text"},
+      {"text": "百度一下", "tag": "a", "href": "https://www.baidu.com"},
+      {"style": {"lineThrough": false, "bold": false, "italic": false, "color": "default"}, "text": " \n", "tag": "text"},
+      {"style": {"lineThrough": false, "bold": false, "italic": false, "color": "blue"}, "text": "这是第二段文字蓝色的\n", "tag": "text"},
+      {"style": {"lineThrough": false, "bold": false, "italic": false, "color": "red"}, "tag": "text", "text": "这是第三段文字红色的\n"},
+      {"style": {"lineThrough": false, "bold": false, "italic": false, "color": "grey"}, "text": "这是第四段文字灰色的", "tag": "text"}
+    ],
+    [
+      {"thumbnail_id": "c42b6543bc164f709bbbb066640bcf9b", "original_media_id": "3505e93f2831473ab9daf4c95e9fc951", "is_gif": false, "height": 1920, "width": 888, "size": 223563, "tag": "img", "media_id": "d42040947d644a1fbcecd2c3edd08bc6"}
+    ]
+  ]
+}
+```
+
+**字段说明：**
+
+以下字段均位于 `body.content` 字符串解析后的对象中。
+
+| 字段 | 类型 | 必填 | 说明 |
+|:---|:---|:---|:---|
+| title | String | N | 富文本标题，替换为实际标题 |
+| content | List&lt;List&lt;Map&gt;&gt; | Y | 二维数组，外层每个数组表示一个段落，内层按顺序存放该段落的元素 |
+| tag | String | Y | 元素类型，本示例使用 `text`（文字）、`at`（@人员）、`a`（链接）、`img`（图片） |
+
+**body.content 怎么修改：**
+
+| 修改内容 | 对应字段 | 说明 |
+|:---|:---|:---|
+| 标题 | title | 修改为实际标题，例如“项目进度通知” |
+| 文字 | text 元素的 text | 修改文字内容；换行可在对象中使用 `\n`，序列化后会自动转义 |
+| 字体样式 | text 元素的 style | `bold` 为粗体，`italic` 为斜体，`lineThrough` 为删除线，`underline` 为下划线，值均为 Boolean；`style` 可省略 |
+| 文字颜色 | text 元素的 style.color | 支持 `default`、`blue`、`red`、`grey`；`default` 根据客户端主题显示默认颜色 |
+| @指定人员 | at 元素的 user_id、name | 分别填写实际用户 ID 和显示名称；`user_id` 与外层 `usernames` 的用户账号含义不同 |
+| @全部人员 | at 元素的 user_id、name | `user_id` 填写 `all`，`name` 可填写“全部人员” |
+| 超链接 | a 元素的 text、href | 分别填写链接显示文字和目标地址 |
+| 图片 | img 元素的 media_id、width、height | 分别填写实际图片媒体 ID、宽度和高度，宽高单位为像素；图片须独占一个段落 |
+| 图片补充信息 | img 元素的 thumbnail_id、original_media_id、is_gif、size | 缩略图和原图媒体 ID 按实际情况填写；`is_gif` 为 Boolean；`size` 为原图大小，单位字节，填写原图 ID 时须提供 |
+| 新增或删除段落 | content 外层数组 | 添加或删除段落数组，段落内的元素按数组顺序展示 |
+| 接收人 | 请求体的 usernames | 修改为实际接收账号；富文本中的 @元素不用于指定消息接收范围 |
+
+**序列化示例：**
+
+下面以修改标题和文字为例。包含 @人员、链接或图片时，同样先编辑上面的富文本对象，再序列化。
+
+```javascript
+const richText = {
+  title: "项目进度通知",
+  content: [
+    [
+      { tag: "text", text: "第一行内容\n第二行内容", style: { bold: true, color: "blue" } }
+    ]
+  ]
+};
+
+const request = {
+  type: "RICH_TEXT",
+  body: {
+    content: JSON.stringify(richText)
+  },
+  usernames: ["ryan001"],
+  platforms: ["ANDROID", "IOS", "PC"]
+};
+
+// 将结果作为 HTTP 请求体发送，Content-Type 为 application/json。
+const requestBody = JSON.stringify(request);
+```
+
+使用 JSON 序列化工具会自动处理双引号、反斜杠和换行。完整请求中的 `\"` 是字符串内双引号的 JSON 转义，`\\n` 对应富文本中的换行；修改内容后重新序列化即可，无需手动拼接转义字符。
+
+**完整请求示例：**
+
+```json
+{
+  "type": "RICH_TEXT",
+  "body": {
+    "content": "{\"title\":\"这是富文本的标题\",\"content\":[[{\"tag\":\"text\",\"style\":{\"lineThrough\":true,\"bold\":true,\"italic\":true,\"color\":\"default\"},\"text\":\"这是第一段文字\\n\"},{\"user_id\":\"1fee2dd7a3ba457db5beb78b12ba10cf\",\"name\":\"张三\",\"tag\":\"at\"},{\"tag\":\"text\",\"text\":\" \",\"style\":{\"lineThrough\":false,\"bold\":false,\"italic\":false,\"color\":\"default\"}},{\"user_id\":\"all\",\"name\":\"全部人员\",\"tag\":\"at\"},{\"style\":{\"lineThrough\":false,\"bold\":false,\"italic\":false,\"color\":\"default\"},\"text\":\" \\n\",\"tag\":\"text\"},{\"text\":\"百度一下\",\"tag\":\"a\",\"href\":\"https://www.baidu.com\"},{\"style\":{\"lineThrough\":false,\"bold\":false,\"italic\":false,\"color\":\"default\"},\"text\":\" \\n\",\"tag\":\"text\"},{\"style\":{\"lineThrough\":false,\"bold\":false,\"italic\":false,\"color\":\"blue\"},\"text\":\"这是第二段文字蓝色的\\n\",\"tag\":\"text\"},{\"style\":{\"lineThrough\":false,\"bold\":false,\"italic\":false,\"color\":\"red\"},\"tag\":\"text\",\"text\":\"这是第三段文字红色的\\n\"},{\"style\":{\"lineThrough\":false,\"bold\":false,\"italic\":false,\"color\":\"grey\"},\"text\":\"这是第四段文字灰色的\",\"tag\":\"text\"}],[{\"thumbnail_id\":\"c42b6543bc164f709bbbb066640bcf9b\",\"original_media_id\":\"3505e93f2831473ab9daf4c95e9fc951\",\"is_gif\":false,\"height\":1920,\"width\":888,\"size\":223563,\"tag\":\"img\",\"media_id\":\"d42040947d644a1fbcecd2c3edd08bc6\"}]]}"
+  },
+  "usernames": [
+    "ryan001"
+  ],
+  "platforms": [
+    "ANDROID",
+    "IOS",
+    "PC"
+  ]
+}
+```
+
+更多元素类型及参数请参考[富文本消息](/api/app/richText.html)。
+
+</details>
 
 **返回数据：**
 
